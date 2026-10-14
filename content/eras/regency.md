@@ -6,7 +6,10 @@ period: { from: 1795, to: 1837 }
 summary: >-
   The age of Beau Brummell, when fashionable London men swapped knee breeches and
   display for dark, well-cut coats, full-length trousers and immaculate linen.
-links: [beau-brummell, cravat, great-male-renunciation, victorian]
+regions: [uk]
+relations:
+  - { to: cravat, kind: era-of }
+  - { to: great-male-renunciation, kind: related }
 sources:
   - title: Regency era
     publisher: Wikipedia

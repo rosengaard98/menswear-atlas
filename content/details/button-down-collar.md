@@ -8,7 +8,14 @@ summary: >-
   Collar points fastened to the shirt front with two small buttons. Polo players
   did it to stop their collars flapping; Brooks Brothers turned it into a product
   in the 1890s.
-links: [polo, brooks-brothers, ocbd, collar-roll, back-collar-button, john-e-brooks]
+regions: [uk, us]
+relations:
+  - { to: ocbd, kind: part-of }
+  - { to: polo, kind: originated-in }
+  - { to: brooks-brothers, kind: introduced-by, year: 1896 }
+  - { to: john-e-brooks, kind: introduced-by }
+  - { to: collar-roll, kind: related }
+picture: { kind: drawing, from: ocbd, view: Front, focus: [300, 160], size: 190 }
 sources:
   - title: Brooks Brothers Introduces Button-Down Shirts
     publisher: EBSCO Research Starters

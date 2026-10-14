@@ -8,7 +8,10 @@ summary: >-
   The brighter, more casual heir to Ivy style. A satirical handbook revived interest
   in it in 1980, and brands such as Ralph Lauren and Lacoste took it to the mass
   market.
-links: [ivy-league-look, ocbd, ralph-lauren, polo-shirt, take-ivy]
+regions: [us]
+relations:
+  - { to: ralph-lauren, kind: influenced-by }
+  - { to: polo-shirt, kind: includes }
 sources:
   - title: Preppy
     publisher: Wikipedia

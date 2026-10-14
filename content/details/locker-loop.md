@@ -7,7 +7,12 @@ period: { from: 1960, to: null }
 summary: >-
   The small fabric loop at the yoke seam of many button-downs. Usually credited to
   GANT in the 1960s, and remembered for a campus custom of tearing it off.
-links: [ocbd, box-pleat, yoke, gant, ivy-league-look]
+regions: [us]
+relations:
+  - { to: ocbd, kind: part-of }
+  - { to: gant, kind: introduced-by }
+  - { to: box-pleat, kind: related }
+picture: { kind: drawing, from: ocbd, view: Back, focus: [300, 158], size: 110 }
 sources:
   - title: The Reason Why Button-Down Shirts Have Loops on the Back
     publisher: Mental Floss

@@ -8,7 +8,12 @@ summary: >-
   The New York clothier founded in 1818 that helped invent ready-made clothing in
   America, introduced the button-down collar, and became one of the two great
   outfitters of the Ivy League look.
-links: [ocbd, button-down-collar, john-e-brooks, ivy-league-look, sack-suit, j-press, postwar]
+regions: [us]
+relations:
+  - { to: sack-suit, kind: introduced, year: 1895 }
+  - { to: john-e-brooks, kind: related }
+  - { to: j-press, kind: related }
+  - { to: ivy-league-look, kind: influenced }
 sources:
   - title: Brooks Brothers
     publisher: Wikipedia

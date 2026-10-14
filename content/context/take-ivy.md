@@ -7,7 +7,11 @@ summary: >-
   A 1965 Japanese photobook of students on Ivy League campuses. It became the style
   bible for Japan's Ivy fans and, after an English edition in 2010, for a new
   generation everywhere.
-links: [ivy-league-look, van-jacket, postwar, ocbd, preppy]
+regions: [japan, us]
+relations:
+  - { to: ivy-league-look, kind: related, note: Photographs the Ivy look on campus }
+  - { to: van-jacket, kind: related }
+  - { to: postwar, kind: belongs-to-era }
 sources:
   - title: Take Ivy
     publisher: Wikipedia

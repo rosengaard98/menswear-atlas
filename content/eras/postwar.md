@@ -7,7 +7,10 @@ summary: >-
   The years Ivy went mainstream. Veterans brought chinos to campus, the button-down
   became America's favourite shirt, and by the late 1950s most suits sold were cut
   in the Ivy style.
-links: [interwar, ivy-league-look, ocbd, chinos, brooks-brothers, take-ivy, peacock-revolution]
+regions: [us, japan]
+relations:
+  - { to: chinos, kind: era-of }
+  - { to: peacock-revolution, kind: related }
 sources:
   - title: Brooks Brothers Introduces Button-Down Shirts
     publisher: EBSCO Research Starters

@@ -7,7 +7,11 @@ summary: >-
   A third button at the centre back of a button-down collar, usually explained as a
   way to keep the tie in place. Brooks Brothers dropped it in the late 1960s and
   later brought it back on some sport shirts.
-links: [button-down-collar, ocbd, brooks-brothers, detachable-collar]
+regions: [us]
+relations:
+  - { to: button-down-collar, kind: part-of }
+  - { to: detachable-collar, kind: related, note: Possibly inspired by the detachable collar's back stud }
+picture: { kind: drawing, from: ocbd, view: Back, focus: [300, 92], size: 130 }
 sources:
   - title: "Back In Action: Brooks Brothers Revives Third Collar Button"
     publisher: Ivy Style

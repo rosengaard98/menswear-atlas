@@ -5,8 +5,11 @@
   "scripts": {
     "validate": "node tools/validate.mjs",
     "wanted": "node tools/wanted.mjs",
+    "web": "node tools/web.mjs",
     "build": "node tools/build.mjs",
     "render": "node tools/render.mjs",
+    "picture": "node tools/picture.mjs",
+    "test": "node tools/test.mjs",
     "check": "node tools/validate.mjs && node tools/build.mjs"
   },
   "license": "UNLICENSED",
@@ -15,7 +18,9 @@
     "yaml": "^2.9.1"
   },
   "devDependencies": {
-    "@resvg/resvg-js": "^2.6.2"
+    "@resvg/resvg-js": "^2.6.2",
+    "playwright-core": "1.56.0",
+    "sharp": "^0.35.5"
   },
   "private": true,
   "type": "module"

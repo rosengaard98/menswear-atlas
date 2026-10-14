@@ -7,7 +7,9 @@ summary: >-
   Edward VII's reign and the years up to 1914, when a plain, matching lounge suit
   replaced the black frock coat as everyday wear, and Brooks Brothers was stocking
   madras, Shetland and Harris Tweed.
-links: [victorian, interwar, lounge-suit, edward-vii, brooks-brothers, sack-suit, ocbd]
+regions: [uk, us]
+relations:
+  - { to: edward-vii, kind: era-of }
 sources:
   - title: Edwardian era
     publisher: Wikipedia

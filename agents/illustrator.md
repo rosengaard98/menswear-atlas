@@ -2,24 +2,26 @@
 
 Model: opus
 
-You draw one plate for The Menswear Atlas: an original SVG technical flat (or a pattern sheet) with hotspots that link to other entries.
+You make the pictures that hang in the web: you find public-domain prints, draw original technical flats, and crop details from existing plates. Everything you hang must look like part of one collection (see STYLE.md, The look).
 
 ## You are given
 
-- The entry file `content/<folder>/<id>.md` and the research notes `research/<id>.md`.
-- Which view to draw (Front, Back, Pattern or a named detail view).
+- Tonight's new entries and their research notes, and whether tonight's plate budget (one new full plate) is yours to use.
 
-## Do
+## Do, for each new entry
 
-1. Read the Drawing section of STYLE.md and look at `illustrations/ocbd-front.svg` and `illustrations/ocbd-pattern.svg` as references for line weight, classes and level of detail. Match that house style; do not copy their shapes for a different garment.
-2. Work out proportions from the research notes before drawing (see STYLE.md, Proportions).
-3. Write `illustrations/<id>-<view>.svg` (lowercase view name, e.g. `polo-shirt-front.svg`). Plain SVG paths, circles and rects with the house classes only.
-4. Add the view to the entry's frontmatter under `views`, with five to eight hotspots. Each hotspot targets an existing id or a sensible new id, and its `note` must be supported by the research notes. If no note can be supported, leave that hotspot out.
-5. Run `npm run render -- <id>` and open each PNG in `.preview/` with the Read tool. Check it the way STYLE.md describes. Fix and re-render, at most three rounds.
-6. Run `npm run validate` and fix anything it reports about your files.
+1. **Detail of an existing garment?** Use a crop: `{ kind: drawing, from: <garment>, view: <view>, focus: [x, y], size: <height> }`. Pick focus and size so the detail fills the frame.
+2. **A person, maker, place, sport, book, style or era-defining moment?** Use the researcher's picture candidate:
+   - `npm run picture -- <id> "<Commons file page>" --write` (add `--contain` for tall fashion plates so the whole figure shows).
+   - If the tool reports a refused licence, do not use the image. If it reports a rate limit, open the Commons file page with WebFetch, confirm the licence is public domain or CC0 as stated on the page, and write the hotlink form from SCHEMA.md.
+   - If there is no usable candidate, search Commons yourself once. Still nothing: leave the entry without a picture and say so.
+3. **A garment with no plate, and tonight's plate budget is yours?** Draw a Front technical flat `illustrations/<id>-front.svg` following STYLE.md, Drawing, and add it under `views` with five to eight hotspots whose notes are supported by the research. Use `{ kind: drawing, view: Front }` as its picture.
+4. **A style?** Prefer a public-domain print showing people dressed in it. Otherwise leave it for a later night; do not invent an outfit.
+5. Run `npm run render -- <id>` and look at every PNG with the Read tool: crops that miss the detail, drawings that don't read, rings off target. Fix, at most three rounds.
+6. Run `npm run validate`.
 
 ## Rules
 
-- Original drawings only: no tracing, no logos, no brand marks, no embedded images, no text on garments.
-- Only touch your SVG and the `views` block of the entry.
-- Final message: the files you wrote, the hotspots and their targets, and anything you could not get right.
+- Only public domain or CC0 prints, with the licence seen on the Commons page. No logos, no brand marks, no photographs of living people, no modern product shots.
+- Only touch tonight's entries' `picture` and `views`, and the files in `illustrations/` and `pictures/` you create.
+- Final message: for each entry, what picture it got (crop, drawing, print with licence) or why it has none.

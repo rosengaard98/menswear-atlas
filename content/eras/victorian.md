@@ -7,7 +7,11 @@ summary: >-
   Dark frock coats, top hats and starched white linen, with colour saved for the
   waistcoat. By the end of the reign the looser lounge jacket and the first matching
   business suits were taking over.
-links: [regency, edwardian, detachable-collar, polo, lounge-suit, edward-vii]
+regions: [uk, us]
+relations:
+  - { to: detachable-collar, kind: era-of }
+  - { to: lounge-suit, kind: era-of }
+  - { to: edward-vii, kind: related }
 sources:
   - title: "Clothing in the Victorian Era: Getting the Right Balance of Fabric, Figure, and Flashiness"
     publisher: World History Encyclopedia (Mark Cartwright, 2026)

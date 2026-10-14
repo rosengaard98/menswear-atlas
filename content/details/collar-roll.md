@@ -7,7 +7,10 @@ summary: >-
   The soft curve a good button-down collar makes between the neckband and the
   buttoned point. It comes from long points and an unlined collar, and button-down
   enthusiasts have argued about it for decades.
-links: [button-down-collar, ocbd, brooks-brothers]
+regions: [us]
+relations:
+  - { to: button-down-collar, kind: part-of }
+picture: { kind: drawing, from: ocbd, view: Pattern, focus: [145, 562], size: 290 }
 sources:
   - title: "The Oxford Cloth Button Down Shirt Series, Part I"
     publisher: Put This On

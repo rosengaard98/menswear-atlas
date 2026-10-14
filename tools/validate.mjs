@@ -3,9 +3,7 @@ import { loadAll, loadSite, wantedList } from "./lib.mjs";
 
 const { nodes, errors, warnings } = loadAll();
 const site = loadSite();
-if (site.featured && !nodes.has(site.featured)) errors.push(`content/site.yml: featured "${site.featured}" has no entry`);
-const featured = nodes.get(site.featured);
-if (featured && !(featured.views?.length > 0)) errors.push(`content/site.yml: featured "${site.featured}" needs at least one view`);
+if (!site.title || !site.timeline?.from || !site.timeline?.to) errors.push("content/site.yml: needs title and timeline.from/to");
 
 for (const w of warnings) console.log(`warn  ${w}`);
 for (const e of errors) console.log(`error ${e}`);

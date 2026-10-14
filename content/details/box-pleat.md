@@ -5,7 +5,11 @@ name: Box pleat
 summary: >-
   A pleat made of two folds turned away from each other. On the button-down it
   sits at the centre back, below the yoke, and gives the shoulders room to move.
-links: [ocbd, yoke, locker-loop]
+regions: [us]
+relations:
+  - { to: ocbd, kind: part-of }
+  - { to: yoke, kind: related }
+picture: { kind: drawing, from: ocbd, view: Back, focus: [300, 230], size: 250 }
 sources:
   - title: box pleat
     publisher: Merriam-Webster

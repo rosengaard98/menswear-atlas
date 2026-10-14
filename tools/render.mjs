@@ -13,7 +13,7 @@ const PREVIEW_CSS = `
   .shade{fill:#c9d4e0}
   .line{fill:none;stroke:#1d2a40;stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round}
   .seam{fill:none;stroke:#1d2a40;stroke-width:1.1;stroke-dasharray:4 3}
-  .fold{fill:none;stroke:#1d2a40;stroke-width:1;opacity:.45}
+  .fold{fill:none;stroke:#1d2a40;stroke-width:1;stroke-opacity:.45}
   .guide{fill:none;stroke:#6b7a8f;stroke-width:1.2;stroke-dasharray:10 5}
   .grain{fill:none;stroke:#6b7a8f;stroke-width:1.4}
   .button{fill:#fbfbf8;stroke:#1d2a40;stroke-width:1.4}
@@ -47,6 +47,19 @@ for (const node of targets) {
     fs.writeFileSync(file, png);
     console.log(`${path.relative(ROOT, file)}`);
     (view.hotspots ?? []).forEach((h, i) => console.log(`   ${i + 1}. ${h.label} -> ${h.target} (${h.x}, ${h.y})`));
+    count++;
+  }
+  // the node's picture in the web, when it is a drawing (possibly a crop of a view)
+  const pic = node.picture;
+  if (pic?.kind === "drawing" && pic._svg && pic._viewBox) {
+    const [vx, vy, vw, vh] = pic._viewBox;
+    const svg = pic._svg
+      .replace(/viewBox="[^"]*"/, `viewBox="${vx} ${vy} ${vw} ${vh}"`)
+      .replace(/<svg([^>]*)>/, `<svg$1><style>${PREVIEW_CSS}</style><rect x="${vx}" y="${vy}" width="${vw}" height="${vh}" fill="#ffffff"/>`);
+    const png = new Resvg(svg, { fitTo: { mode: "width", value: 480 }, font: { loadSystemFonts: true } }).render().asPng();
+    const file = path.join(outDir, `${node.id}-picture.png`);
+    fs.writeFileSync(file, png);
+    console.log(`${path.relative(ROOT, file)}  (picture in the web)`);
     count++;
   }
 }

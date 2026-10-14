@@ -7,7 +7,12 @@ summary: >-
   A basketweave cotton shirting with a slightly coarse, chequered texture. It is
   the oxford in OCBD, and its name comes from a story about a Scottish mill and
   four universities.
-links: [ocbd, brooks-brothers, polo, pinpoint-oxford]
+regions: [uk, us]
+relations:
+  - { to: ocbd, kind: part-of }
+  - { to: polo, kind: related, note: Early polo players wore shirts of oxford cotton }
+  - { to: pinpoint-oxford, kind: related }
+picture: { kind: drawing, svg: oxford-cloth-weave.svg }
 sources:
   - title: Plain weave
     publisher: Encyclopaedia Britannica

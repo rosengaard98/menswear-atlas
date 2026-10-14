@@ -1,41 +1,46 @@
 # The Menswear Atlas
 
-A clickable history of men's clothing. Garments are drawn as technical flats with rings on their details; open a ring to see where that detail came from, then follow the links to the eras, styles, makers and people behind it. A team of agents researches and adds new entries every night.
+A web of men's clothing history. Garments, details, styles, makers, people and places hang as framed pictures on a timeline, joined by threads that say how they connect: what introduced what, what came from where, what was revived as what. Click a picture to see its threads; open its entry for the full story, its sources and, for garments, a plate with rings on each detail.
 
-Start with the oxford cloth button-down: the collar button leads to the polo field, the back pleat to the yoke, the pattern view to the pieces the shirt is cut from.
+A team of agents researches and adds to it every night, and a gardener tends it once a week.
 
-## How it grows
+## The team
 
-Every entry links to others with `[[id]]`, and many of those links point at topics nobody has written yet. Those unwritten topics are the queue. Each night a scheduled Claude run:
+The nightly run (`ORCHESTRATOR.md`) is led by the **curator**, who picks about three topics, keeping the web broad across decades, regions and kinds, and then sends out:
 
-1. picks about three topics from `BACKLOG.md` and the queue (`npm run wanted`),
-2. sends a researcher agent after each one, which writes sourced notes to `research/`,
-3. writes the entries, and at most one new illustrated plate through an illustrator agent,
-4. has a separate fact-checker agent test every sentence against the listed sources,
-5. runs `npm run check`, commits to `main` and pushes. GitHub Pages rebuilds the site.
+| agent | does | brief |
+|---|---|---|
+| Researchers (in parallel) | find sourced facts, connections and a public-domain picture candidate | `agents/researcher.md` |
+| Writer | turns the notes into entries | `agents/writer.md` |
+| Weaver | connects the new entries to the whole web, folds duplicates | `agents/weaver.md` |
+| Illustrator | hangs a picture on each entry: a print, a drawing or a crop | `agents/illustrator.md` |
+| Fact-checker | tests every sentence, thread and licence against the sources | `agents/fact-checker.md` |
+| Visual reviewer | checks that tonight's pictures belong on the wall | `agents/visual-reviewer.md` |
+| Tester | runs the browser test suite and explains any failure | `agents/tester.md` |
 
-The full procedure is in `ORCHESTRATOR.md`, the briefs in `agents/`, the file format in `SCHEMA.md` and the writing and drawing rules in `STYLE.md`. To steer the atlas, edit the **Next up** list in `BACKLOG.md`.
+The weekly **gardener** (`GARDENER.md`) merges duplicates, adds missing threads, strengthens thin entries, fixes dead sources and opens a GitHub issue with what it did.
 
-## Layout
+To steer the atlas, edit **Next up** in `BACKLOG.md`.
+
+## Files
 
 ```
-content/      one Markdown file per entry, by type (garments, details, eras, styles, makers, people, context)
-illustrations/ SVG plates referenced by entries
-research/     the researcher agents' notes, kept for traceability
-site/         page template, styles and script
-tools/        validate, wanted, build and render scripts
-dist/         the built site (not committed)
+content/        one Markdown file per entry, by kind (SCHEMA.md)
+illustrations/  original SVG drawings
+pictures/       public-domain prints after the house treatment
+research/       the researchers' notes, kept for traceability
+site/           page template, styles and script
+tools/          validate, wanted, web report, render, picture, build, test
+dist/           the built site (not committed)
 ```
 
 ## Run it locally
 
 ```bash
 npm install
-npm run check          # validate every entry and build dist/index.html
-open dist/index.html   # the whole site is one file
-npm run render -- ocbd # draw a plate with numbered hotspot rings into .preview/
+npm run check   # validate every entry and build dist/
+npm test        # build, then click through everything in a headless browser
+npm run web     # coverage and loose ends
 ```
 
-## Publishing
-
-`.github/workflows/pages.yml` builds and deploys on every push to `main`. In the repository settings, under Pages, set the source to GitHub Actions once.
+Open `dist/index.html` in a browser. `.github/workflows/pages.yml` publishes `dist/` to GitHub Pages on every push to `main`.

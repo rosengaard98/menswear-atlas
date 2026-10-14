@@ -7,7 +7,11 @@ period: { from: 1778, to: 1840 }
 summary: >-
   The Regency dandy who made understatement fashionable: dark, close-fitting coats,
   full-length trousers, spotless linen and an elaborately tied cravat.
-links: [regency, cravat, great-male-renunciation]
+regions: [uk]
+relations:
+  - { to: regency, kind: belongs-to-era }
+  - { to: cravat, kind: related }
+  - { to: great-male-renunciation, kind: influenced }
 sources:
   - title: Beau Brummell
     publisher: Wikipedia

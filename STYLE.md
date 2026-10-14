@@ -1,52 +1,66 @@
 # House style
 
+## The look
+
+The atlas looks like the picture wall of an old London club: ivory paper for reading, green baize for the web, every picture hung in a gilt frame with a small brass nameplate, brass threads between them. Old money, never flashy.
+
+Everything that hangs on the wall has to look like it belongs to the same collection:
+
+- **Drawings** are ink line drawings on an ivory mount, in the technical-flat style of `illustrations/ocbd-front.svg`. The site colours them; the files carry no colours.
+- **Archival prints** are public-domain fashion plates, engravings, portraits, photographs and museum objects. `npm run picture` (or the browser, for hotlinked prints) turns all of them into the same warm monochrome print, so a 1810 etching and a 1950 photograph hang together.
+- One picture per entry. Choose the picture that shows the thing itself: the garment, the person, the shop, the game. Never a logo, a modern product shot or anything decorative.
+
 ## Writing
 
 The reader cares about clothes and wants to know why things are the way they are. Write like a knowledgeable shop assistant at a good outfitter, not like a brochure.
 
-- **Every factual sentence must come from a source in the entry's `sources` list.** If the sources disagree, say so plainly ("Brooks dates it to 1896; other accounts say 1900"). If something is only a story or a maker's own claim, say that too.
+- **Every factual sentence must come from a source in the entry's `sources` list.** When sources disagree, say so plainly ("Brooks dates it to 1896; other accounts say 1900"). When something is a story or a maker's own claim, say that too.
 - Plain, direct sentences. British spelling (colour, centre). Sentence case for names and headings.
-- No marketing words (iconic, timeless, effortless, elevate, must-have, staple of every wardrobe). No "not X, but Y" constructions, no rhetorical questions, no em-dash asides.
-- Summary: one or two sentences that tell a stranger what the thing is and why it matters. It is shown on the entry and used for search.
-- Body: 150-450 words. Start with the most interesting true thing, not with a definition from a dictionary. Use `##` headings only when there are two or more distinct parts (origin, construction, how it changed).
+- No marketing words (iconic, timeless, effortless, elevate, must-have, staple). No "not X, but Y" constructions, no rhetorical questions, no em-dash asides.
+- Summary: one or two sentences that tell a stranger what the thing is and why it matters. It is what the web's card shows.
+- Body: 150-450 words. Start with the most interesting true thing. Use `##` headings only when there are two or more distinct parts.
 - Specifics beat adjectives: years, measurements in inches as the trade uses them, names of makers, mills, people and places.
-- Quote sparingly: under 15 words, at most one quote per source in an entry. Paraphrase everything else in your own words.
+- Quote sparingly: under 15 words, at most one quote per source in an entry. Paraphrase the rest in your own words.
 - Italicise titles of books and publications: `*Take Ivy*`, `*Men's Wear*`.
-- Link generously with `[[id]]`, both to existing entries and to topics that deserve an entry later. Add at most eight new not-yet-written ids per entry, so the queue stays meaningful.
+- Link generously with `[[id]]`, to existing entries and to topics that deserve an entry later. At most eight new not-yet-written ids per entry, so the queue stays meaningful.
+
+## Breadth
+
+The atlas is about men's clothing everywhere, not one look. Ivy and English tailoring are where it started, not where it ends. Styles are nodes like any other: Neapolitan and Milanese tailoring, English country, the St James's club look, French sportswear, Mod, Ametora and Japanese Ivy, workwear, military dress that became civilian. Give regions and periods with few entries priority (`npm run web` shows them).
 
 ## Sources
 
 - At least two independent sources per entry. A maker's own history page counts, but treat its dates as the maker's claim.
 - Good: museum collections and essays (V&A, The Met, FIDM, Kyoto Costume Institute), books with page references, academic articles, trade press archives, Encyclopaedia Britannica, established menswear writers (Put This On, Permanent Style, Ivy Style, Die, Workwear!, Heddels).
-- Wikipedia is fine as one of the sources, never as the only one.
+- Wikipedia is fine as one source, never the only one.
 - Never cite a page you have not opened in this run. Never invent a title, author, date or page number.
 
 ## Drawing
 
-Plates are original SVG line drawings in the style of a fashion **technical flat**: the garment laid flat, seen straight on, no body, no shading beyond the classes below. Pattern views show the pieces a garment is cut from. Do not trace photographs, copy another illustrator's drawing, or draw logos or brand marks.
+Plates and drawings are original SVG line drawings in the style of a fashion **technical flat**: the garment laid flat, straight on, no body, no shading beyond the classes below. Pattern views show the pieces a garment is cut from. Do not trace photographs, copy another illustrator's drawing, or draw logos.
 
-**Canvas.** Garments: `viewBox="0 0 600 720"`, centred, with about 30 units of margin. Small details or pattern sheets may use another viewBox, but keep it portrait or square.
+**Canvas.** Garments: `viewBox="0 0 600 720"`, centred, with about 30 units of margin. Other drawings: portrait 4:5 (for example `0 0 480 600`), so they fill a frame.
 
-**Classes.** Colour comes from classes only, so the site can theme the drawing for light and dark. Never write a hex colour, a `style` attribute or a `<style>` block; `fill`/`stroke` attributes may only be `"none"` or `"currentColor"`.
+**Classes.** Colour comes from classes only. Never write a hex colour, a `style` attribute or a `<style>` block; `fill`/`stroke` attributes may only be `"none"` or `"currentColor"`. Do not use `opacity` on shapes.
 
 | class | for |
 |---|---|
-| `cloth` | filled garment pieces, with the outline (draw the outline as part of the shape) |
+| `cloth` | filled garment pieces, with their outline |
 | `cloth-alt` | a second fabric or an inside surface: under-collar, gusset, loop |
 | `shade` | a filled shadow area without outline, such as the inside of the neck |
-| `line` | open outlines and edges that are not filled: placket edges, pleat folds near the top |
-| `seam` | topstitching, drawn as a dashed line about 3 to 6 units inside an edge |
-| `fold` | soft creases and drape, faint; use a few, not many |
-| `guide` | fold lines and pleat lines on pattern pieces |
-| `grain` | grainline arrows and "place on fold" brackets on pattern pieces |
+| `line` | open outlines and edges that are not filled |
+| `seam` | topstitching, a dashed line 3 to 6 units inside an edge |
+| `fold` | soft creases and drape, faint; a few, not many |
+| `guide` | fold and pleat lines on pattern pieces |
+| `grain` | grainline arrows and "place on fold" brackets |
 | `button` | buttons (circles, radius 4 to 6) |
 | `hole` | buttonholes or tiny filled marks |
-| `label`, `label-sm` | text on pattern pieces only, sentence case: "Sleeve", "cut 2" |
+| `label`, `label-sm` | text on pattern pieces only, sentence case |
 
-**Order.** Draw back to front: sleeves, cuffs, body, pockets, placket, collar. Shapes drawn later sit on top. Where two shapes share an edge, make the paths share the same curve so the outlines don't double up.
+**Order.** Draw back to front: sleeves, cuffs, body, pockets, placket, collar. Where two shapes share an edge, give both the same curve so outlines don't double up.
 
-**Proportions.** Get the real proportions right before the details: collar point length, button spacing, cuff depth, pocket size. When the research gives measurements, use them (a 15.5 shirt is about 18.5 inches across the shoulders, so roughly 18 units per inch on the 600-wide canvas).
+**Proportions.** Get real proportions right before details. On the 600-wide canvas a 15.5 shirt is about 18 units per inch.
 
-**Hotspots.** Put each ring on the thing it describes, not next to it: on the collar button, on the pleat, on the cuff. Keep rings at least 40 units apart. Five to eight per view is plenty.
+**Hotspots.** Put each ring on the thing it describes. Keep rings at least 40 units apart. Five to eight per view.
 
-**Check your drawing.** Run `npm run render -- <id>` and open the PNGs in `.preview/` with the Read tool. Look for: shapes that don't close, outlines doubling up, things floating off the garment, rings that miss their target, text that overlaps. Fix and render again, at most three rounds.
+**Check.** Run `npm run render -- <id>` and open the PNGs in `.preview/` with the Read tool. Look for shapes that don't close, doubled outlines, floating pieces, rings that miss, overlapping text. Fix and render again, at most three rounds.

@@ -8,7 +8,12 @@ summary: >-
   The horseback game that British officers and tea planters took up in Manipur in
   the 1850s. Its players buttoned their collars down, and menswear has borrowed
   its name ever since.
-links: [button-down-collar, ocbd, oxford-cloth, polo-shirt, brooks-brothers, rene-lacoste, ralph-lauren, victorian]
+regions: [india, uk, argentina]
+relations:
+  - { to: polo-shirt, kind: gave-name-to }
+  - { to: victorian, kind: belongs-to-era }
+  - { to: rene-lacoste, kind: related }
+  - { to: ralph-lauren, kind: related }
 sources:
   - title: "King of Games: Politics, Polo, and the Raj"
     publisher: History Today

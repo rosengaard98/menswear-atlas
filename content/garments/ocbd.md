@@ -8,7 +8,14 @@ summary: >-
   The shirt Brooks Brothers built around a polo player's collar: long, soft points
   buttoned to the front, cut in a sturdy basketweave cotton. After the Second World
   War it was the most popular shirt in America and a pillar of the Ivy League look.
-links: [brooks-brothers, polo, ivy-league-look, preppy, postwar, take-ivy, polo-shirt]
+regions: [us]
+relations:
+  - { to: brooks-brothers, kind: introduced-by, year: 1896 }
+  - { to: polo, kind: originated-in }
+  - { to: ivy-league-look, kind: part-of }
+  - { to: preppy, kind: part-of }
+  - { to: postwar, kind: belongs-to-era }
+  - { to: polo-shirt, kind: related, note: Brooks sold its first button-downs as polo shirts }
 views:
   - label: Front
     svg: ocbd-front.svg
@@ -122,6 +129,7 @@ views:
         y: 534
         label: Pocket
         note: The top edge folds over to form the pocket hem before it is stitched on.
+picture: { kind: drawing, view: Front }
 sources:
   - title: Brooks Brothers Introduces Button-Down Shirts
     publisher: EBSCO Research Starters

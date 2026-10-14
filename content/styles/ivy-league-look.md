@@ -8,7 +8,15 @@ summary: >-
   The campus wardrobe of the American East Coast: sack suits, button-downs, chinos
   and loafers. It grew up at elite universities between the wars, went mainstream
   in the 1950s and faded at the end of the 1960s.
-links: [ocbd, brooks-brothers, j-press, sack-suit, chinos, penny-loafer, interwar, postwar, take-ivy, preppy, peacock-revolution]
+regions: [us]
+relations:
+  - { to: preppy, kind: revived-as }
+  - { to: sack-suit, kind: includes }
+  - { to: chinos, kind: includes }
+  - { to: penny-loafer, kind: includes }
+  - { to: j-press, kind: related }
+  - { to: peacock-revolution, kind: related, note: Supplanted by it in the late 1960s }
+  - { to: interwar, kind: belongs-to-era }
 sources:
   - title: Ivy League (clothing)
     publisher: Wikipedia
