@@ -11,6 +11,7 @@ regions: [us]
 relations:
   - { to: button-down-collar, kind: part-of }
   - { to: detachable-collar, kind: related, note: Possibly inspired by the detachable collar's back stud }
+  - { to: brooks-brothers, kind: related, note: "Brooks dropped it in the late 1960s and brought it back on some sport shirts by 2011 (Ivy Style)" }
 picture: { kind: drawing, from: ocbd, view: Back, focus: [300, 92], size: 130 }
 sources:
   - title: "Back In Action: Brooks Brothers Revives Third Collar Button"
@@ -24,7 +25,7 @@ sources:
     url: https://en.wikipedia.org/wiki/Detachable_collar
 added: 2026-10-14
 ---
-The usual explanation is the necktie. When ties were narrow enough to pass between the button and the fold of the collar, a button at the back held the tie in place and stopped the collar riding up. Ivy Style suggests the idea came from the [[detachable-collar]], which was fastened to the shirt with a stud at the back and another at the front.
+The usual explanation is the necktie. When ties were narrow enough to pass between the button and the fold of the collar, a button at the back held the tie in place. Ivy Style suggests the idea came from the [[detachable-collar]], which was fastened to the shirt with a stud at the back and another at the front.
 
 [[brooks-brothers]] removed the button from its shirts in the late 1960s. Ties had grown wide by then, too wide to tuck under it, which is probably why. According to a Brooks spokesman, older customers were angry and stocked up on the last shirts that had it.
 

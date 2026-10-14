@@ -4,10 +4,6 @@ The nightly curator takes topics from **Next up** first, top down, then fills ga
 
 ## Next up
 
-- neapolitan-tailoring: style, Italy. Spalla camicia, the soft Naples jacket, the tailoring houses; first Italian node in the web.
-- english-country: style, UK. Tweed, waxed cotton, brogues, the clothes of country estates and field sports.
-- duke-of-windsor: person, UK. Edward VIII as Prince of Wales and Duke of Windsor; his influence on 1920s and 1930s dress on both sides of the Atlantic.
-- polo-shirt: garment, with a Front plate. Lacoste 1926, Lewis Lacey, Ralph Lauren 1972; how the knit shirt took the name.
 - savile-row: context, UK. The street, its history and its houses.
 - john-e-brooks: person, US. What is documented about him beyond the polo story.
 
@@ -17,15 +13,15 @@ The nightly curator takes topics from **Next up** first, top down, then fills ga
 - Styles: St James's club dress, Milanese tailoring, French sportswear and the Riviera, Mod, Ametora and Japanese Ivy, Trad, workwear, heritage revival (2005-2015).
 - Garments: navy blazer, sack suit, repp tie, penny loafer, Shetland sweater, Norfolk jacket, waxed cotton jacket, rugby shirt, tweed sport coat, grey flannel trousers, tennis sweater, duffle coat, Chesterfield coat, chinos.
 - Details: shoulder construction (spalla camicia, roped, natural), lapel roll, trouser break, vents, horn buttons, repp vs regimental stripes, the Harris Tweed orb mark, the detachable collar.
-- Makers: J. Press, Anderson & Sheppard, Henry Poole, Rubinacci, Gant, Alden, Barbour, John Smedley, Lock & Co.
-- People: Fred Astaire, Kensuke Ishizu, Ralph Lauren, Gianni Agnelli, René Lacoste.
+- Makers: J. Press, Anderson & Sheppard, Henry Poole, Rubinacci, Gant, Alden, Barbour, John Smedley, Lock & Co., Kiton, Cesare Attolini, Izod.
+- People: Fred Astaire, Kensuke Ishizu, Ralph Lauren, Gianni Agnelli, René Lacoste, Frederick Scholte (the drape cut), Vincenzo Attolini.
 - Context: Jermyn Street, Harris Tweed, Pitti Uomo, *The Official Preppy Handbook*, Henley Royal Regatta.
 
 ## Folded
 
 Topics that turned out not to need their own entry, and where they are covered instead.
 
-- (none yet)
+- Lewis Lacey (no id): folded into polo-shirt, under "Who was first", by the curator on 2026-10-14. Wikipedia dates his polo-player shirts to 1920 or 1923 on sources not opened in this run, and nothing describes the shirt itself; give him an entry only if better sources turn up.
 
 ## Gardened
 

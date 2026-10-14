@@ -11,7 +11,7 @@ regions: [uk, us]
 relations:
   - { to: ocbd, kind: part-of }
   - { to: polo, kind: related, note: Early polo players wore shirts of oxford cotton }
-  - { to: pinpoint-oxford, kind: related }
+  - { to: brooks-brothers, kind: related, note: Brooks put its polo collar on oxford cloth }
 picture: { kind: drawing, svg: oxford-cloth-weave.svg }
 sources:
   - title: Plain weave
@@ -39,6 +39,6 @@ The usual story is that a Scottish mill in the nineteenth century wove four shir
 
 ## On the button-down
 
-[[brooks-brothers]] moved its [[button-down-collar|polo collar]] onto white cotton cheviot, a cloth the trade knew as oxford, and later had a heavy oxford woven for its own shirts. Until the early twentieth century [[polo|polo]] players themselves wore thick, long-sleeved shirts of oxford cotton.
+[[brooks-brothers]] moved its [[button-down-collar|polo collar]] onto white cotton cheviot, a cloth the trade knew as oxford. Until the early twentieth century [[polo|polo]] players themselves wore thick, long-sleeved shirts of oxford cotton.
 
-Part of the appeal is the lived-in look heavy oxford takes on with wear. Non-iron finishes changed that: Put This On called non-iron oxford the death knell of the original shirt's character.
+Non-iron finishes changed that: Put This On called non-iron oxford the death knell of the original shirt's character.
