@@ -6,7 +6,6 @@
   const TYPES = DATA.types;
   const REL = DATA.relations;
   const SITE = DATA.site;
-  const L = DATA.layout;
   const SVGS = DATA.svgs;
   const ORDER = Object.keys(TYPES);
   const THIS_YEAR = new Date().getFullYear();
@@ -76,318 +75,6 @@
   }
   function footer() {
     return `<footer class="foot"><div class="wrap"><span>Updated ${esc(DATA.built)}. Every entry lists its sources; pictures are original drawings or public-domain prints.</span><span>New entries are researched and added every night. <a href="#run-log">Run log</a></span></div></footer>`;
-  }
-
-  // ---------- the web ----------
-  function buildWeb(root, focusId) {
-    const pos = L.pos;
-    const S = L.sizes;
-    const box = (id) => (nodes.has(id) ? S.entry : S.wanted);
-    const ids = Object.keys(pos).sort((a, b) => pos[a][0] - pos[b][0]);
-
-    // threads: typed relations, plus dashed threads to topics not written yet
-    const threads = [];
-    for (const e of DATA.edges) if (pos[e.from] && pos[e.to]) threads.push({ a: e.from, b: e.to, wanted: false });
-    for (const w of DATA.wanted) for (const from of w.linkedFrom) if (pos[from] && pos[w.id]) threads.push({ a: from, b: w.id, wanted: true });
-    const near = new Map(ids.map((id) => [id, new Set()]));
-    for (const t of threads) { near.get(t.a)?.add(t.b); near.get(t.b)?.add(t.a); }
-
-    const centre = (id) => { const [x, y] = pos[id]; const b = box(id); return [x, y - b.h / 2 + (nodes.has(id) ? 65 : 20)]; };
-    const paths = threads.map((t, i) => {
-      const [x1, y1] = centre(t.a), [x2, y2] = centre(t.b);
-      const mx = (x1 + x2) / 2, my = (y1 + y2) / 2, dx = x2 - x1, dy = y2 - y1;
-      const bend = 0.12;
-      return `<path data-i="${i}" class="${t.wanted ? "to-wanted" : ""}" d="M${x1},${y1} Q${(mx - dy * bend).toFixed(1)},${(my + dx * bend).toFixed(1)} ${x2},${y2}"/>`;
-    }).join("");
-
-    const nodeHTML = ids.map((id) => {
-      const [x, y] = pos[id];
-      const b = box(id);
-      const style = `left:${x - b.w / 2}px;top:${y - b.h / 2}px;width:${b.w}px`;
-      const n = nodes.get(id);
-      if (!n) {
-        const w = wanted.get(id);
-        return `<button type="button" class="node is-wanted" data-id="${esc(id)}" data-type="_wanted" style="${style}" aria-label="${esc(w.label)}, not written yet"><span class="frame"><span class="wanted-label">${esc(w.label)}</span></span></button>`;
-      }
-      const yr = n.type === "person" ? years(n.period) : n.period?.from ?? "";
-      return `<button type="button" class="node" data-id="${esc(id)}" data-type="${esc(n.type)}" style="${style}" aria-label="${esc(n.name)}, ${esc(typeOne(n.type))}${yr ? `, ${yr}` : ""}">${frameHTML(n)}<span class="nameplate"><span class="sc">${esc(n.name)}</span>${yr ? `<span class="y">${esc(String(yr))}</span>` : ""}</span></button>`;
-    }).join("");
-
-    const typesShown = ORDER.filter((t) => t !== "era" && [...nodes.values()].some((n) => n.type === t));
-    root.innerHTML = `
-      <div class="web-ruler" aria-hidden="true"></div>
-      <div class="web-stage" style="width:${L.width}px;height:${L.height}px">
-        <div class="web-bands">${L.eras.map((e) => `<div class="web-band" style="left:${e.x0}px;width:${e.x1 - e.x0}px"></div>`).join("")}</div>
-        <svg class="web-threads" width="${L.width}" height="${L.height}" viewBox="0 0 ${L.width} ${L.height}" aria-hidden="true">${paths}</svg>
-        <div class="web-nodes">${nodeHTML}</div>
-      </div>
-      <div class="web-tools">
-        <div class="finder-web"><label class="sr-only" for="webfind">Find in the web</label><input id="webfind" type="search" placeholder="Find a garment, maker or person" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="suggest"><ul class="suggest" id="suggest" role="listbox" hidden></ul></div>
-        <div class="chips" role="group" aria-label="Show or hide kinds of entry">${typesShown.map((t) => `<button type="button" class="chip" data-type="${t}" aria-pressed="true">${esc(TYPES[t].many)}</button>`).join("")}<button type="button" class="chip" data-type="_wanted" aria-pressed="true">Being researched</button></div>
-        <div class="zoom"><button type="button" data-z="out" aria-label="Zoom out">−</button><button type="button" data-z="in" aria-label="Zoom in">+</button><button type="button" class="fit" data-z="fit">Whole web</button></div>
-      </div>
-      <aside class="web-card" hidden></aside>`;
-
-    const stage = root.querySelector(".web-stage");
-    const ruler = root.querySelector(".web-ruler");
-    const card = root.querySelector(".web-card");
-    const pathEls = [...root.querySelectorAll(".web-threads path")];
-    const nodeEls = new Map([...root.querySelectorAll(".node")].map((el) => [el.dataset.id, el]));
-    let tx = 0, ty = 0, k = 1, raf = 0;
-
-    const RULER_H = 46;
-    function apply() {
-      stage.style.transform = `translate(${tx}px, ${ty}px) scale(${k})`;
-      root.classList.toggle("is-far", k < 0.5);
-      root.classList.toggle("is-very-far", k < 0.3);
-      if (!raf) raf = requestAnimationFrame(() => { raf = 0; drawRuler(); });
-    }
-    function drawRuler() {
-      const vw = root.clientWidth;
-      const x0 = -tx / k, x1 = (vw - tx) / k;
-      const yearAt = (x) => L.start + (x - L.padX) / L.yearPx;
-      const screenX = (year) => (L.padX + (year - L.start) * L.yearPx) * k + tx;
-      const pxPerYear = L.yearPx * k;
-      const step = [5, 10, 25, 50, 100].find((s) => s * pxPerYear >= 64) ?? 100;
-      const minor = step >= 25 ? step / 5 : step / 5 >= 1 ? step / 5 : 1;
-      let html = "";
-      const y0 = Math.max(L.start, Math.floor(yearAt(x0) / minor) * minor), y1 = Math.min(L.end, yearAt(x1));
-      for (let y = Math.ceil(y0 / minor) * minor; y <= y1; y += minor) {
-        const x = screenX(y);
-        const major = y % step === 0;
-        html += `<span class="tick${major ? " major" : ""}" style="left:${x.toFixed(1)}px"></span>`;
-        if (major) html += `<span class="num" style="left:${x.toFixed(1)}px">${y}</span>`;
-      }
-      for (const e of L.eras) {
-        const a = Math.max((e.x0) * k + tx, 0), b = Math.min(e.x1 * k + tx, vw);
-        if (b - a > 40) html += `<span class="era" style="left:${((a + b) / 2).toFixed(1)}px">${esc(e.name)}</span>`;
-      }
-      ruler.innerHTML = html;
-    }
-
-    function viewport() {
-      const open = !card.hidden;
-      const narrow = root.clientWidth <= 544;
-      const cardW = open && !narrow ? card.offsetWidth + 24 : 0;
-      const cardH = open && narrow ? card.offsetHeight + 8 : 56;
-      return { w: root.clientWidth - cardW, h: root.clientHeight - RULER_H - cardH };
-    }
-    function fit() {
-      let minx = Infinity, miny = Infinity, maxx = -Infinity, maxy = -Infinity;
-      for (const id of ids) {
-        const [x, y] = pos[id]; const b = box(id);
-        minx = Math.min(minx, x - b.w / 2); maxx = Math.max(maxx, x + b.w / 2);
-        miny = Math.min(miny, y - b.h / 2); maxy = Math.max(maxy, y + b.h / 2);
-      }
-      const { w, h: vh } = viewport();
-      if (w <= 544) {
-        // on a phone, fill the height and start in the middle of the years; drag sideways for the rest
-        k = clamp(vh / (maxy - miny + 80), 0.3, 0.9);
-        const midX = pos[ids[Math.floor(ids.length / 2)]][0];
-        tx = w / 2 - midX * k;
-      } else {
-        k = clamp(Math.min(w / (maxx - minx + 160), vh / (maxy - miny + 80)), 0.12, 1.1);
-        tx = (w - (maxx - minx) * k) / 2 - minx * k;
-      }
-      ty = RULER_H + (vh - (maxy - miny) * k) / 2 - miny * k;
-      apply();
-    }
-    function zoomAt(f, cx, cy) {
-      const nk = clamp(k * f, 0.12, 2.4);
-      tx = cx - (cx - tx) * (nk / k); ty = cy - (cy - ty) * (nk / k); k = nk; apply();
-    }
-    function fly(apply2) {
-      root.classList.add("is-flying");
-      apply2(); apply();
-      setTimeout(() => root.classList.remove("is-flying"), 600);
-    }
-    function flyTo(id) {
-      const [x, y] = centre(id);
-      const { w, h: vh } = viewport();
-      fly(() => { k = Math.max(k, 0.8); tx = w / 2 - x * k; ty = RULER_H + vh / 2 - y * k; });
-    }
-
-    // selection and highlighting
-    let selected = null;
-    function light(id) {
-      root.classList.toggle("has-focus", !!id);
-      const lit = id ? new Set([id, ...near.get(id)]) : new Set();
-      for (const [nid, el] of nodeEls) { el.classList.toggle("is-lit", lit.has(nid)); el.classList.toggle("is-selected", nid === selected); }
-      pathEls.forEach((p, i) => { const t = threads[i]; p.classList.toggle("is-lit", !!id && (t.a === id || t.b === id)); });
-    }
-    function select(id, { flyThere = true } = {}) {
-      selected = id;
-      light(id);
-      openCard(id);
-      if (flyThere) flyTo(id);
-    }
-    function deselect() { selected = null; light(null); card.hidden = true; }
-
-    function openCard(id) {
-      const n = nodes.get(id);
-      const groups = relGroups(id);
-      const relHTML = [...groups].map(([label, list]) => `<dt>${esc(label)}</dt><dd>${list.map((o) => `<button type="button" data-go="${esc(o)}" class="${nodes.has(o) ? "" : "is-wanted"}">${esc(nameOf(o))}</button>`).join("")}</dd>`).join("");
-      if (n) {
-        const meta = [typeOne(n.type), years(n.period, true)].filter(Boolean).join(", ");
-        card.innerHTML = `<button type="button" class="close" aria-label="Close">×</button>
-          <div class="card-pic">${frameHTML(n)}</div>
-          <p class="soft sc" style="margin:0">${esc(meta)}</p>
-          <h2>${esc(n.name)}</h2>
-          <p>${esc(n.summary)}</p>
-          <a class="open" href="#${esc(n.id)}">Read the entry</a>
-          ${relHTML ? `<dl class="rels">${relHTML}</dl>` : ""}
-          ${creditHTML(n)}`;
-      } else {
-        const w = wanted.get(id);
-        card.innerHTML = `<button type="button" class="close" aria-label="Close">×</button>
-          <p class="soft sc" style="margin:0">Being researched</p>
-          <h2>${esc(w.label)}</h2>
-          <p>Not written yet. ${w.linkedFrom.length > 1 ? `${w.linkedFrom.length} entries link here` : "One entry links here"}, and each night's run starts with the most-linked topics.</p>
-          ${w.notes[0] ? `<p class="soft">${esc(w.notes[0].note)}</p>` : ""}
-          <a class="open" href="#${esc(id)}">What is known so far</a>
-          ${relHTML ? `<dl class="rels">${relHTML}</dl>` : ""}`;
-      }
-      card.hidden = false;
-      card.scrollTop = 0;
-    }
-    card.addEventListener("click", (e) => {
-      e.stopPropagation();
-      if (e.target.closest(".close")) { deselect(); return; }
-      const go = e.target.closest("[data-go]");
-      if (go) select(go.dataset.go);
-    });
-    card.addEventListener("pointerdown", (e) => e.stopPropagation());
-    card.addEventListener("wheel", (e) => e.stopPropagation());
-
-    // pointer: drag to pan, two fingers to pinch, click to select
-    const pts = new Map();
-    let drag = null, pinch = null, moved = false;
-    root.addEventListener("pointerdown", (e) => {
-      if (e.target.closest(".web-tools, .web-card")) return;
-      pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
-      if (pts.size === 1) { drag = { x: e.clientX, y: e.clientY, tx, ty }; moved = false; }
-      if (pts.size === 2) {
-        const [a, b] = [...pts.values()];
-        const r = root.getBoundingClientRect();
-        pinch = { d: Math.hypot(a.x - b.x, a.y - b.y), k, tx, ty, cx: (a.x + b.x) / 2 - r.left, cy: (a.y + b.y) / 2 - r.top };
-        moved = true;
-      }
-    });
-    const onMove = (e) => {
-      if (!pts.has(e.pointerId)) return;
-      pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
-      if (pts.size === 2 && pinch) {
-        const [a, b] = [...pts.values()];
-        const f = Math.hypot(a.x - b.x, a.y - b.y) / pinch.d;
-        const nk = clamp(pinch.k * f, 0.12, 2.4);
-        tx = pinch.cx - (pinch.cx - pinch.tx) * (nk / pinch.k); ty = pinch.cy - (pinch.cy - pinch.ty) * (nk / pinch.k); k = nk;
-        apply();
-      } else if (drag) {
-        const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
-        if (!moved && Math.abs(dx) + Math.abs(dy) > 5) { moved = true; root.classList.add("is-dragging"); }
-        if (moved) { tx = drag.tx + dx; ty = drag.ty + dy; apply(); }
-      }
-    };
-    const onUp = (e) => {
-      if (!pts.has(e.pointerId)) return;
-      pts.delete(e.pointerId);
-      if (pts.size < 2) pinch = null;
-      if (pts.size === 0) { drag = null; root.classList.remove("is-dragging"); }
-    };
-    const sig = { signal: pageAbort.signal };
-    window.addEventListener("pointermove", onMove, sig);
-    window.addEventListener("pointerup", onUp, sig);
-    window.addEventListener("pointercancel", onUp, sig);
-    root.addEventListener("click", (e) => {
-      if (moved) { moved = false; return; }
-      if (e.target.closest(".web-tools, .web-card")) return;
-      const nodeEl = e.target.closest(".node");
-      if (nodeEl) select(nodeEl.dataset.id, { flyThere: false });
-      else deselect();
-    });
-    root.addEventListener("wheel", (e) => {
-      if (!(e.ctrlKey || e.metaKey)) return;
-      e.preventDefault();
-      const r = root.getBoundingClientRect();
-      zoomAt(Math.exp(-e.deltaY * 0.0022), e.clientX - r.left, e.clientY - r.top);
-    }, { passive: false });
-    root.addEventListener("dblclick", (e) => {
-      if (e.target.closest(".web-tools, .web-card, .node")) return;
-      const r = root.getBoundingClientRect();
-      fly(() => zoomAt(1.8, e.clientX - r.left, e.clientY - r.top));
-    });
-
-    // hover lights the neighbourhood when nothing is selected
-    root.addEventListener("pointerover", (e) => {
-      if (selected || e.pointerType !== "mouse") return;
-      const el = e.target.closest(".node"); if (el) light(el.dataset.id);
-    });
-    root.addEventListener("pointerout", (e) => {
-      if (selected || e.pointerType !== "mouse") return;
-      if (e.target.closest(".node") && !e.relatedTarget?.closest?.(".node")) light(null);
-    });
-    root.addEventListener("focusin", (e) => { const el = e.target.closest(".node"); if (el && !selected) light(el.dataset.id); });
-
-    // keyboard
-    root.addEventListener("keydown", (e) => {
-      if (e.target.closest("input")) return;
-      const step = 90;
-      const map = { ArrowLeft: [step, 0], ArrowRight: [-step, 0], ArrowUp: [0, step], ArrowDown: [0, -step] };
-      if (map[e.key] && !e.target.closest(".node")) { tx += map[e.key][0]; ty += map[e.key][1]; apply(); e.preventDefault(); }
-      else if (e.key === "+" || e.key === "=") zoomAt(1.25, root.clientWidth / 2, root.clientHeight / 2);
-      else if (e.key === "-") zoomAt(0.8, root.clientWidth / 2, root.clientHeight / 2);
-      else if (e.key === "0") fly(fit);
-      else if (e.key === "Escape") deselect();
-      else if (e.key === "Enter" && e.target.closest(".node")) { e.preventDefault(); select(e.target.closest(".node").dataset.id); }
-    });
-
-    // tools
-    root.querySelector(".zoom").addEventListener("click", (e) => {
-      const z = e.target.closest("button")?.dataset.z;
-      if (z === "in") fly(() => zoomAt(1.4, root.clientWidth / 2, root.clientHeight / 2));
-      if (z === "out") fly(() => zoomAt(1 / 1.4, root.clientWidth / 2, root.clientHeight / 2));
-      if (z === "fit") { deselect(); fly(fit); }
-    });
-    const hidden = new Set();
-    root.querySelector(".chips").addEventListener("click", (e) => {
-      const b = e.target.closest(".chip"); if (!b) return;
-      const t = b.dataset.type;
-      hidden.has(t) ? hidden.delete(t) : hidden.add(t);
-      b.setAttribute("aria-pressed", String(!hidden.has(t)));
-      for (const el of nodeEls.values()) el.classList.toggle("is-muted", hidden.has(el.dataset.type));
-    });
-
-    const input = root.querySelector("#webfind");
-    const list = root.querySelector(".suggest");
-    let matches = [], active = 0;
-    const all = [...[...nodes.values()].map((n) => ({ id: n.id, name: n.name, words: [n.name, ...(n.aka || [])].join(" ").toLowerCase(), kind: typeOne(n.type) })),
-      ...DATA.wanted.map((w) => ({ id: w.id, name: w.label, words: w.label.toLowerCase(), kind: "being researched" }))];
-    function suggest() {
-      const q = input.value.trim().toLowerCase();
-      matches = q ? all.filter((a) => a.words.includes(q)).sort((a, b) => a.words.indexOf(q) - b.words.indexOf(q)).slice(0, 7) : [];
-      active = 0;
-      list.hidden = !matches.length;
-      input.setAttribute("aria-expanded", String(!!matches.length));
-      list.innerHTML = matches.map((m, i) => `<li><button type="button" role="option" aria-selected="${i === 0}" data-go="${esc(m.id)}"><span>${esc(m.name)}</span><span class="soft">${esc(m.kind)}</span></button></li>`).join("");
-    }
-    const pick = (id) => { list.hidden = true; input.value = ""; input.setAttribute("aria-expanded", "false"); select(id); };
-    input.addEventListener("input", suggest);
-    input.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
-        if (!matches.length) return;
-        e.preventDefault();
-        active = (active + (e.key === "ArrowDown" ? 1 : matches.length - 1)) % matches.length;
-        [...list.querySelectorAll("button")].forEach((b, i) => b.setAttribute("aria-selected", String(i === active)));
-      } else if (e.key === "Enter" && matches[active]) { e.preventDefault(); pick(matches[active].id); }
-      else if (e.key === "Escape") { list.hidden = true; input.value = ""; }
-    });
-    list.addEventListener("click", (e) => { const b = e.target.closest("[data-go]"); if (b) pick(b.dataset.go); });
-
-    let rz;
-    window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { selected ? flyTo(selected) : fit(); }, 200); }, sig);
-
-    fit();
-    if (focusId && pos[focusId]) select(focusId);
   }
 
   // ---------- plate with hotspot rings (garments) ----------
@@ -461,13 +148,18 @@
   // ---------- pages ----------
   function renderHome(focusId) {
     document.title = SITE.title;
-    app.innerHTML = `${masthead(true)}
+    app.innerHTML = '<div class="tw-root"></div>';
+    window.mountWeb(app.firstElementChild, DATA, { signal: pageAbort.signal, focusId });
+  }
+
+  function renderCatalogue() {
+    document.title = `Catalogue · ${SITE.title}`;
+    app.innerHTML = `${masthead(false)}
       <main>
-        <div class="wrap intro"><p style="font-size:var(--step-1);color:var(--ink)">${esc(SITE.tagline)}</p><p class="how">Drag to move around. Pinch, or hold Ctrl and scroll, to zoom.<br>Click a picture to see what it connects to.</p></div>
-        <div class="web" tabindex="0" aria-label="The web of entries. Use Tab to move between pictures, arrow keys to pan, plus and minus to zoom."></div>
+        <div class="wrap intro"><div><h1>Catalogue</h1><p>${esc(SITE.intro)}</p></div><p class="how"><a href="#">Back to the web</a></p></div>
         <div class="wrap">
           <section class="block" aria-labelledby="h-index">
-            <div class="block-head"><h2 id="h-index">The catalogue</h2><p>Every entry, by kind. ${esc(SITE.intro)}</p></div>
+            <div class="block-head"><h2 id="h-index">Every entry, by kind</h2></div>
             <div class="finder"><label for="find">Find</label><input id="find" type="search" placeholder="Collar, Brooks, 1950s" autocomplete="off"></div>
             <div class="index"></div>
           </section>
@@ -478,7 +170,6 @@
         </div>
       </main>
       ${footer()}`;
-    buildWeb(app.querySelector(".web"), focusId);
     const index = app.querySelector(".index");
     const drawIndex = (q) => {
       const needle = q.trim().toLowerCase();
@@ -624,6 +315,7 @@
     pageAbort = new AbortController();
     if (!raw) renderHome();
     else if (raw === "run-log") renderRuns();
+    else if (raw === "catalogue") renderCatalogue();
     else if (raw.startsWith("~")) renderHome(raw.slice(1));
     else if (nodes.has(raw)) renderEntry(nodes.get(raw));
     else if (wanted.has(raw)) renderWanted(wanted.get(raw));

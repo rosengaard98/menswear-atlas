@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { marked } from "marked";
 import { ROOT, PICTURES, TYPES, RELATIONS, loadAll, loadSite, loadRuns, outgoing, wantedList, relationEdges, WIKI_RE, humanize } from "./lib.mjs";
-import { layoutWeb, anchorYear } from "./layout.mjs";
+import { anchorYear } from "./layout.mjs";
 
 const { nodes, errors } = loadAll();
 const runLog = loadRuns();
@@ -58,8 +58,6 @@ const relatedIds = new Map([...nodes.keys()].map((id) => [id, new Set()]));
 for (const e of edges) { relatedIds.get(e.from)?.add(e.to); relatedIds.get(e.to)?.add(e.from); }
 for (const n of nodes.values()) n._mentions = [...outgoing(n).keys()].filter((id) => !relatedIds.get(n.id).has(id));
 
-const layout = layoutWeb({ nodes, wanted, edges, site });
-
 fs.rmSync(path.join(ROOT, "dist"), { recursive: true, force: true });
 fs.mkdirSync(path.join(ROOT, "dist/pictures"), { recursive: true });
 // morning reports are published next to the site: /reports/<date>.pdf
@@ -112,19 +110,35 @@ const data = {
   nodes: out,
   edges,
   wanted,
-  layout,
   svgs,
   runs: runLog.runs,
   built: new Date().toISOString().slice(0, 10),
 };
 
+// web.css is written for the home page only: every rule is scoped under .tw-root so it
+// cannot touch the entry pages (and nothing on them can touch it).
+function scopeCss(css) {
+  let out = "", i = 0;
+  const block = (start) => { let d = 0, j = start; for (; j < css.length; j++) { if (css[j] === "{") d++; else if (css[j] === "}" && --d === 0) return j; } return css.length; };
+  css = css.replace(/\/\*[\s\S]*?\*\//g, "");
+  while (i < css.length) {
+    const open = css.indexOf("{", i); if (open < 0) break;
+    const sel = css.slice(i, open).trim(), close = block(open), inner = css.slice(open + 1, close);
+    if (sel.startsWith("@keyframes")) out += `${sel}{${inner}}\n`;
+    else if (sel.startsWith("@media")) out += `${sel}{${scopeCss(inner)}}\n`;
+    else out += sel.split(",").map((x) => { x = x.trim(); return x.startsWith(".tw-root") ? x : x === "*" ? ".tw-root *" : `.tw-root ${x}`; }).join(",") + `{${inner}}\n`;
+    i = close + 1;
+  }
+  return out;
+}
 const read = (p) => fs.readFileSync(path.join(ROOT, p), "utf8");
 const json = JSON.stringify(data).replace(/</g, "\\u003c");
 const html = read("site/index.html")
   .replace("{{title}}", esc(site.title))
   .replace("{{description}}", esc(site.tagline))
-  .replace("/*{{styles}}*/", () => read("site/styles.css"))
+  .replace("/*{{styles}}*/", () => read("site/styles.css") + "\n" + scopeCss(read("site/web.css")))
   .replace("{{data}}", () => json)
+  .replace("/*{{web}}*/", () => read("site/web.js"))
   .replace("/*{{script}}*/", () => read("site/app.js"));
 
 fs.writeFileSync(path.join(ROOT, "dist/index.html"), html);

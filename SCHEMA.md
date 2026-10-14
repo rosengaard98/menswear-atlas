@@ -23,7 +23,7 @@ type: detail                  # required. one of the kinds above, matching the f
 name: Box pleat               # required. sentence case, as a reader would say it
 aka: [inverted pleat]         # optional. other names; searchable
 period: { from: 1896, to: null }  # required for era (from + to) and style (from). optional otherwise. to: null = still going
-anchor: 1800                  # optional. the year to place the entry in the web, when period.from would mislead
+anchor: 1800                  # optional. the year used for sorting and filtering, when period.from would mislead
                               # (people default to birth + 25)
 regions: [uk, us]             # expected. any of: uk, us, italy, france, japan, india, germany,
                               # scandinavia, spain, argentina, global, other

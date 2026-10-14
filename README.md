@@ -1,6 +1,6 @@
 # The Menswear Atlas
 
-A web of men's clothing history. Garments, details, styles, makers, people and places hang as framed pictures on a timeline, joined by threads that say how they connect: what introduced what, what came from where, what was revived as what. Click a picture to see its threads; open its entry for the full story, its sources and, for garments, a plate with rings on each detail.
+A web of men's clothing history. Garments, details, styles, makers, people and places lie on a tailor's table as cloth swatches, mounted prints, woven labels and paper tickets, joined by hanging thread that says how they connect: what introduced what, what came from where, what was revived as what. Nothing is placed by date; a tape measure along the bottom filters by year, and search lights up everything related to a word. Hover a piece and the table behind it turns to its cloth or picture; click it for its ticket, and open the entry for the full story, its sources and, for garments, a plate with rings on each detail.
 
 A team of agents researches and adds to it every night, and a gardener tends it once a week.
 

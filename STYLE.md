@@ -2,7 +2,7 @@
 
 ## The look
 
-The atlas looks like the picture wall of an old London club: ivory paper for reading, green baize for the web, every picture hung in a gilt frame with a small brass nameplate, brass threads between them. Old money, never flashy.
+The atlas looks like a bespoke tailor's table in an old London club: ivory paper for reading, green baize for the web, cloth swatches with pinked edges, mounted prints, woven labels and paper tickets lying on it, thread between them, brass for the tools. Old money, never flashy. Entries with no picture are shown as a swatch of cloth (or a label or ticket), so a missing picture is never a blank.
 
 Everything that hangs on the wall has to look like it belongs to the same collection:
 

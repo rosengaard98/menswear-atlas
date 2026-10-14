@@ -30,37 +30,89 @@ async function page(width, height, scheme) {
 }
 const go = async (p, hash) => { await p.goto(url + "#" + hash); await p.waitForTimeout(150); };
 
-// 1. the web
-for (const [w, h, scheme, name] of [[1366, 900, "light", "web-desktop-light"], [1366, 900, "dark", "web-desktop-dark"], [400, 860, "light", "web-phone"]]) {
-  const p = await page(w, h, scheme);
-  await p.goto(url); await p.waitForTimeout(700);
+// 1. the web: the home page draws every entry and every queued topic, fits the screen
+for (const [w, h, name] of [[1366, 900, "web-desktop"], [400, 860, "web-phone"]]) {
+  const p = await page(w, h, "light");
+  await p.goto(url); await p.waitForTimeout(1600);
   checks++;
-  const count = await p.locator(".node").count();
-  const expected = [...nodes.values()].filter((n) => n.type !== "era").length + wanted.length;
-  if (count !== expected) fail(name, `web shows ${count} pictures, expected ${expected}`);
+  const count = await p.locator(".tw-node").count();
+  const expected = nodes.size + wanted.length;
+  if (count !== expected) fail(name, `web shows ${count} pieces, expected ${expected}`);
   const overflow = await p.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   if (overflow > 1) fail(name, `page scrolls sideways by ${overflow}px`);
+  // every real piece sits inside the screen after the first fit
+  checks++;
+  const outside = await p.evaluate(() => [...document.querySelectorAll(".tw-real .tw-body")].filter((el) => { const r = el.getBoundingClientRect(); return r.right < 0 || r.left > innerWidth || r.bottom < 0 || r.top > innerHeight; }).length);
+  if (outside) fail(name, `${outside} pieces start outside the screen`);
+  await p.waitForTimeout(1200);
   await p.screenshot({ path: path.join(out, `${name}.png`) });
   if (p._errors.length) fail(name, p._errors.join(" | "));
   await p.close();
 }
 
-// 2. every web card opens with the right name (sampled when the web is large)
+// 2. every piece opens its ticket with the right name; search, filters and the tape measure work
 {
   const p = await page(1366, 900, "light");
-  await p.goto(url); await p.waitForTimeout(600);
-  const ids = [...nodes.keys()].filter((id) => nodes.get(id).type !== "era");
+  await p.goto(url); await p.waitForTimeout(1200);
+  const ids = [...nodes.keys()];
   const sample = ids.length > 150 ? ids.filter((_, i) => i % Math.ceil(ids.length / 150) === 0) : ids;
   for (const id of sample) {
     checks++;
-    await p.evaluate((id) => document.querySelector(`.node[data-id="${id}"]`)?.click(), id);
-    const title = await p.locator(".web-card h2").textContent({ timeout: 2000 }).catch(() => null);
-    if (title !== nodes.get(id).name) fail(`web card ${id}`, `card shows "${title}"`);
+    await p.evaluate((id) => document.querySelector(`.tw-node[data-id="${id}"]`)?.click(), id);
+    const title = await p.locator("#tw-panel h2").textContent({ timeout: 2000 }).catch(() => null);
+    if (title !== nodes.get(id).name) fail(`web ticket ${id}`, `ticket shows "${title}"`);
   }
-  await p.evaluate((id) => document.querySelector(`.node[data-id="${id}"]`)?.click(), sample[0]);
-  await p.waitForTimeout(700);
-  await p.screenshot({ path: path.join(out, "web-card.png") });
-  if (p._errors.length) fail("web cards", p._errors.join(" | "));
+  for (const w of wanted.slice(0, 5)) {
+    checks++;
+    await p.evaluate((id) => document.querySelector(`.tw-node[data-id="${id}"]`)?.click(), w.id);
+    const title = await p.locator("#tw-panel h2").textContent({ timeout: 2000 }).catch(() => null);
+    if (title !== w.label) fail(`web ticket ${w.id}`, `ticket shows "${title}"`);
+  }
+  // search: "ivy" must find the Ivy League look and dim the rest
+  checks++;
+  await p.keyboard.press("Escape");
+  await p.fill("#tw-q", "ivy"); await p.waitForTimeout(500);
+  const found = await p.locator("#tw-count").textContent();
+  const hits = await p.locator(".tw-node.hit").count(), dim = await p.locator(".tw-node.dim").count();
+  if (!/found/.test(found ?? "") || hits < 1 || dim < 1) fail("web search", `"ivy" gave "${found}", ${hits} lit, ${dim} dimmed`);
+  if (!(await p.locator('.tw-node[data-id="ivy-league-look"].hit').count())) fail("web search", "the Ivy League look is not highlighted for \"ivy\"");
+  await p.waitForTimeout(1200);
+  await p.screenshot({ path: path.join(out, "web-search.png") });
+  await p.fill("#tw-q", "");
+  // kind filter
+  checks++;
+  await p.locator("#tw-kinds button").first().click();
+  const out1 = await p.locator(".tw-node.out").count();
+  if (out1 < 1) fail("web filter", "choosing a kind hid nothing");
+  await p.locator("#tw-kinds button").first().click();
+  // tape measure: pushing the left clip forward dims early pieces
+  checks++;
+  await p.locator("#tw-clipL").focus();
+  for (let i = 0; i < 30; i++) await p.keyboard.press("ArrowRight");
+  const label = await p.locator("#tw-tlabel").textContent();
+  const early = await p.locator('.tw-node[data-id="regency"].out').count();
+  if (!/to today/.test(label ?? "") || !early) fail("web tape", `tape says "${label}", Regency dimmed: ${early}`);
+  // hover shows the caption and a backdrop
+  checks++;
+  await p.evaluate(() => document.querySelector("#tw-clipL").dispatchEvent(new KeyboardEvent("keydown", { key: "Home" })));
+  await p.locator("#tw-panel .x").click({ timeout: 1000 }).catch(() => {});
+  const box = await p.evaluate(() => { const r = document.querySelector('.tw-node[data-id="english-country"] .tw-body').getBoundingClientRect(); return [r.x + r.width / 2, r.y + r.height / 2]; });
+  await p.mouse.move(box[0], box[1]); await p.waitForTimeout(1500);
+  const cap = await p.locator("#tw-caption h2").textContent().catch(() => null);
+  const bgOn = await p.locator(".tw-bg.on").count();
+  if (cap !== "English country" || !bgOn) fail("web hover", `caption "${cap}", backdrop ${bgOn}`);
+  await p.screenshot({ path: path.join(out, "web-hover.png") });
+  if (p._errors.length) fail("web interactions", p._errors.join(" | "));
+  await p.close();
+}
+
+// 2b. the catalogue page lists every entry
+{
+  const p = await page(1280, 900, "light");
+  await go(p, "catalogue");
+  checks++;
+  const links = await p.locator(".index a").count();
+  if (links !== nodes.size) fail("catalogue", `lists ${links} entries, expected ${nodes.size}`);
   await p.close();
 }
 
