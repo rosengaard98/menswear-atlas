@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720">
+  <!-- Oxford cloth button-down shirt, simplified sewing pattern (half-scale pieces, no seam allowances). Classes: see STYLE.md -->
+
+  <!-- Front, cut 2 -->
+  <path class="cloth" d="M132,34 L204,58 C194,96 190,132 196,168 L198,404 C175,418 110,452 30,452 L30,96 C78,100 118,80 132,34 Z"/>
+  <path class="guide" d="M50,99 L50,451"/>
+  <path class="grain" d="M72,170 L72,370 M66,182 L72,170 L78,182 M66,358 L72,370 L78,358"/>
+  <text class="label" x="135" y="255" text-anchor="middle">Front</text>
+  <text class="label-sm" x="135" y="273" text-anchor="middle">cut 2</text>
+
+  <!-- Back, cut 1 on the fold -->
+  <path class="cloth" d="M226,118 L390,112 C384,132 382,150 388,172 L392,430 C360,452 300,478 226,480 Z"/>
+  <path class="guide" d="M246,117 L246,190 M266,116 L266,190"/>
+  <text class="label-sm" x="256" y="206" text-anchor="middle">pleat</text>
+  <path class="grain" d="M230,215 L246,215 L246,440 L230,440 M236,211 L230,215 L236,219 M236,436 L230,440 L236,444"/>
+  <text class="label-sm" x="0" y="0" text-anchor="middle" transform="translate(262,330) rotate(-90)">place on fold</text>
+  <path class="grain" d="M360,200 L360,400 M354,212 L360,200 L366,212 M354,388 L360,400 L366,388"/>
+  <text class="label" x="312" y="320" text-anchor="middle">Back</text>
+  <text class="label-sm" x="312" y="338" text-anchor="middle">cut 1 on fold</text>
+
+  <!-- Yoke, cut 2 on the fold -->
+  <path class="cloth" d="M424,50 C446,50 462,44 470,32 L578,56 C574,72 574,92 578,108 L424,108 Z"/>
+  <text class="label" x="508" y="82" text-anchor="middle">Yoke</text>
+  <text class="label-sm" x="508" y="99" text-anchor="middle">cut 2 on fold</text>
+
+  <!-- Sleeve, cut 2 -->
+  <path class="cloth" d="M424,214 C446,150 568,150 588,214 L556,462 L456,462 Z"/>
+  <path class="line" d="M528,462 L528,412"/>
+  <text class="label-sm" x="528" y="404" text-anchor="middle">placket</text>
+  <path class="line" d="M490,462 L490,452 M502,462 L502,452"/>
+  <path class="grain" d="M470,210 L470,410 M464,222 L470,210 L476,222 M464,398 L470,410 L476,398"/>
+  <text class="label" x="522" y="300" text-anchor="middle">Sleeve</text>
+  <text class="label-sm" x="522" y="318" text-anchor="middle">cut 2</text>
+
+  <!-- Collar leaf, cut 2 -->
+  <path class="cloth" d="M30,600 L62,534 C120,528 170,528 228,534 L260,600 C190,588 100,588 30,600 Z"/>
+  <path class="line" d="M48,588 L56,580 M242,588 L234,580"/>
+  <text class="label" x="145" y="560" text-anchor="middle">Collar</text>
+  <text class="label-sm" x="145" y="577" text-anchor="middle">cut 2</text>
+
+  <!-- Collar stand, cut 2 -->
+  <path class="cloth" d="M32,672 C100,684 190,684 262,672 C270,662 268,648 258,642 C190,652 100,652 36,642 C26,648 24,662 32,672 Z"/>
+  <text class="label-sm" x="147" y="671" text-anchor="middle">Collar stand, cut 2</text>
+
+  <!-- Cuff, cut 4 -->
+  <rect class="cloth" x="300" y="528" width="118" height="52" rx="10"/>
+  <path class="line" d="M312,554 L324,554"/>
+  <circle class="button" cx="404" cy="554" r="4"/>
+  <text class="label" x="359" y="552" text-anchor="middle">Cuff</text>
+  <text class="label-sm" x="359" y="569" text-anchor="middle">cut 4</text>
+
+  <!-- Pocket, cut 1 -->
+  <path class="cloth" d="M456,524 L552,524 L552,598 C552,614 540,620 504,622 C468,620 456,614 456,598 Z"/>
+  <path class="guide" d="M456,544 L552,544"/>
+  <text class="label" x="504" y="580" text-anchor="middle">Pocket</text>
+  <text class="label-sm" x="504" y="598" text-anchor="middle">cut 1</text>
+</svg>

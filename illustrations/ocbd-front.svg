@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720">
+  <!-- Oxford cloth button-down shirt, front, technical flat. Classes: see STYLE.md -->
+
+  <!-- sleeves -->
+  <path class="cloth" d="M128,128 C100,240 78,360 58,470 L117,482 C128,400 138,330 150,268 C146,230 140,180 128,128 Z"/>
+  <path class="cloth" d="M472,128 C500,240 522,360 542,470 L483,482 C472,400 462,330 450,268 C454,230 460,180 472,128 Z"/>
+  <path class="fold" d="M110,220 C100,280 92,330 88,380"/>
+  <path class="fold" d="M490,220 C500,280 508,330 512,380"/>
+  <path class="fold" d="M78,474 L81,450 M92,477 L96,452"/>
+  <path class="fold" d="M522,474 L519,450 M508,477 L504,452"/>
+
+  <!-- cuffs -->
+  <path class="cloth" d="M58,470 L117,482 L109,524 Q107,531 100,530 L55,521 Q48,519 49,512 Z"/>
+  <path class="cloth" d="M542,470 L483,482 L491,524 Q493,531 500,530 L545,521 Q552,519 551,512 Z"/>
+  <path class="seam" d="M61,477 L113,488 M103,524 L54,514"/>
+  <path class="seam" d="M539,477 L487,488 M497,524 L546,514"/>
+  <circle class="button" cx="98" cy="506" r="4.5"/>
+  <circle class="button" cx="502" cy="506" r="4.5"/>
+
+  <!-- body -->
+  <path class="cloth" d="M238,92 L128,128 C140,180 146,230 150,268 L156,600 C170,650 230,672 300,672 C370,672 430,650 444,600 L450,268 C454,230 460,180 472,128 L362,92 C340,104 260,104 238,92 Z"/>
+  <path class="seam" d="M135,132 C146,182 152,230 156,268 M465,132 C454,182 448,230 444,268"/>
+  <path class="seam" d="M162,600 C176,644 234,664 300,664 C366,664 424,644 438,600"/>
+  <path class="fold" d="M160,290 C175,300 185,320 188,345 M440,290 C425,300 415,320 412,345"/>
+  <path class="fold" d="M200,520 C215,540 222,560 224,585 M400,520 C385,540 378,560 376,585"/>
+
+  <!-- side gussets -->
+  <path class="cloth-alt" d="M156,585 L157,600 L167,603 Z"/>
+  <path class="cloth-alt" d="M444,585 L443,600 L433,603 Z"/>
+
+  <!-- chest pocket, curved bottom -->
+  <path class="cloth" d="M342,232 L408,232 L408,300 C408,314 398,320 375,322 C352,320 342,314 342,300 Z"/>
+  <path class="seam" d="M342,243 L408,243 M346,243 L346,300 C346,311 355,316 375,318 C395,316 404,311 404,300 L404,243"/>
+
+  <!-- fold-over placket and buttons -->
+  <path class="line" d="M286,152 L286,671 M314,152 L314,671"/>
+  <path class="seam" d="M289,156 L289,668 M311,156 L311,668"/>
+  <circle class="button" cx="300" cy="214" r="5.5"/>
+  <circle class="button" cx="300" cy="301" r="5.5"/>
+  <circle class="button" cx="300" cy="389" r="5.5"/>
+  <circle class="button" cx="300" cy="476" r="5.5"/>
+  <circle class="button" cx="300" cy="564" r="5.5"/>
+
+  <!-- collar: back of the collar seen over the neck, inside of the neck, front of the stand -->
+  <path class="cloth" d="M222,104 C226,72 262,58 300,58 C338,58 374,72 378,104 L356,100 C350,84 328,76 300,76 C272,76 250,84 244,100 Z"/>
+  <path class="seam" d="M230,100 C236,76 266,64 300,64 C334,64 364,76 370,100"/>
+  <path class="shade" d="M244,100 C250,84 272,76 300,76 C328,76 350,84 356,100 L304,146 L296,146 Z"/>
+  <path class="cloth" d="M287,136 L313,136 L314,156 L286,156 Z"/>
+  <circle class="button" cx="300" cy="148" r="5"/>
+
+  <!-- collar leaves: long, unlined points with a bowed front edge (the roll) -->
+  <path class="cloth" d="M244,100 L222,104 C226,142 238,182 254,216 L260,218 C268,196 290,178 297,141 C284,126 264,110 244,100 Z"/>
+  <path class="cloth" d="M356,100 L378,104 C374,142 362,182 346,216 L340,218 C332,196 310,178 303,141 C316,126 336,110 356,100 Z"/>
+  <path class="seam" d="M228,106 C232,142 243,180 257,210 M263,210 C271,192 287,176 292,146"/>
+  <path class="seam" d="M372,106 C368,142 357,180 343,210 M337,210 C329,192 313,176 308,146"/>
+  <path class="fold" d="M246,120 C254,150 262,176 268,198 M354,120 C346,150 338,176 332,198"/>
+  <circle class="button" cx="258" cy="205" r="4.5"/>
+  <circle class="button" cx="342" cy="205" r="4.5"/>
+</svg>

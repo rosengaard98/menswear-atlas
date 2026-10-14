@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720">
+  <!-- Oxford cloth button-down shirt, back, technical flat. Classes: see STYLE.md -->
+
+  <!-- sleeves -->
+  <path class="cloth" d="M128,128 C100,240 78,360 58,470 L117,482 C128,400 138,330 150,268 C146,230 140,180 128,128 Z"/>
+  <path class="cloth" d="M472,128 C500,240 522,360 542,470 L483,482 C472,400 462,330 450,268 C454,230 460,180 472,128 Z"/>
+  <path class="fold" d="M110,220 C100,280 92,330 88,380 M490,220 C500,280 508,330 512,380"/>
+  <path class="fold" d="M70,472 L73,450 M84,475 L88,452 M530,472 L527,450 M516,475 L512,452"/>
+
+  <!-- sleeve plackets, no button -->
+  <path class="cloth" d="M95,478 L100,431 L104,424 L108,431 L104,480 Z"/>
+  <path class="cloth" d="M505,478 L500,431 L496,424 L492,431 L496,480 Z"/>
+
+  <!-- cuffs -->
+  <path class="cloth" d="M58,470 L117,482 L109,524 Q107,531 100,530 L55,521 Q48,519 49,512 Z"/>
+  <path class="cloth" d="M542,470 L483,482 L491,524 Q493,531 500,530 L545,521 Q552,519 551,512 Z"/>
+  <path class="seam" d="M61,477 L113,488 M103,524 L54,514 M539,477 L487,488 M497,524 L546,514"/>
+
+  <!-- body, with a longer back shirttail -->
+  <path class="cloth" d="M238,92 L128,128 C140,180 146,230 150,268 L156,600 C170,656 230,684 300,684 C370,684 430,656 444,600 L450,268 C454,230 460,180 472,128 L362,92 C340,86 260,86 238,92 Z"/>
+  <path class="seam" d="M135,132 C146,182 152,230 156,268 M465,132 C454,182 448,230 444,268"/>
+  <path class="seam" d="M162,600 C176,650 234,676 300,676 C366,676 424,650 438,600"/>
+  <path class="fold" d="M200,520 C215,540 222,560 224,585 M400,520 C385,540 378,560 376,585"/>
+  <path class="cloth-alt" d="M156,585 L157,600 L167,603 Z"/>
+  <path class="cloth-alt" d="M444,585 L443,600 L433,603 Z"/>
+
+  <!-- yoke seam -->
+  <path class="line" d="M135,152 C200,160 400,160 465,152"/>
+  <path class="seam" d="M134,146 C200,154 400,154 466,146"/>
+
+  <!-- box pleat: two folds turned away from each other -->
+  <path class="line" d="M284,158 L283,215 M316,158 L317,215"/>
+  <path class="fold" d="M283,215 L279,350 M317,215 L321,350"/>
+  <path class="seam" d="M284,166 L316,166"/>
+
+  <!-- locker loop -->
+  <path class="cloth-alt" d="M295,159 C294,181 306,181 305,159 L302,159 C303,174 297,174 298,159 Z"/>
+
+  <!-- collar seen from behind, with the centre-back button -->
+  <path class="cloth" d="M232,100 C240,80 268,72 300,72 C332,72 360,80 368,100 L382,116 C350,104 326,102 300,102 C274,102 250,104 218,116 Z"/>
+  <path class="seam" d="M226,110 C254,99 276,97 300,97 C324,97 346,99 374,110"/>
+  <circle class="button" cx="300" cy="87" r="5"/>
+</svg>
