@@ -3,7 +3,7 @@
   "kind": "nightly",
   "started": "00:55",
   "finished": "01:45",
-  "commit": "",
+  "commit": "54779135efa8e48df85e714f24c15bf9f494788e",
   "totals": {
     "before": {
       "entries": 25,
@@ -213,6 +213,6 @@
     "ametora needs its sources repaired: ivy-style.com/?p=3510 and putthison.com/?p=4622 load unrelated posts.",
     "The Semiovox source on zazou is dated 14 October 2026, one day before the run; it was opened and is cited only for claims named as its own.",
     "Social editor (sonnet) ok: three-slide carousel and caption for sack-suit in social/2026-10-15/ (slides=3, captionChars=708, hashtags=8); slide 3 shows placeholder frames for the five linked entries, none of which has a picture. Logged here because the validator does not accept the role social-editor (tools/validate.mjs needs it added).",
-    "Existing entries changed tonight: brooks-brothers and edwardian (sack-suit date now gives both 1895 and 1901), ametora (unverified influenced-by sack-suit relation removed). Not listed under topics because the report tool counts every topic row as a new entry."
+    "Existing entries changed tonight: brooks-brothers and edwardian (sack-suit date now gives both 1895 and 1901), ametora net unchanged (the weaver's unverified influenced-by sack-suit relation was removed again). Not listed under topics because the report tool counts every topic row as a new entry."
   ]
 }
