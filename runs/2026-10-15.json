@@ -1,0 +1,218 @@
+{
+  "date": "2026-10-15",
+  "kind": "nightly",
+  "started": "00:55",
+  "finished": "01:45",
+  "commit": "",
+  "totals": {
+    "before": {
+      "entries": 25,
+      "relations": 112,
+      "wanted": 65
+    },
+    "after": {
+      "entries": 28,
+      "relations": 126,
+      "wanted": 76
+    }
+  },
+  "topics": [
+    {
+      "id": "sack-suit",
+      "source": "wanted",
+      "outcome": "added"
+    },
+    {
+      "id": "zazou",
+      "source": "gap",
+      "outcome": "added"
+    },
+    {
+      "id": "frederick-scholte",
+      "source": "wanted",
+      "outcome": "added"
+    }
+  ],
+  "agents": [
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "sack-suit",
+      "status": "partial",
+      "summary": "research/sack-suit.md; found no source for Brooks's 1895 date, blogs give 1901; sack coat dates from the 1840s-50s (FIT).",
+      "numbers": {
+        "sources": 7,
+        "connections": 6,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Brooks 1901 date backed only by blogs",
+        "Commons fetch blocked, no picture candidate",
+        "Ivy sack details rest on Wikipedia"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "zazou",
+      "status": "partial",
+      "summary": "research/zazou.md; enough for a style entry (France, 1940-44), no public-domain picture.",
+      "numbers": {
+        "sources": 5,
+        "connections": 8,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Sources largely repeat Wikipedia; no museum or book source opened",
+        "Commons rate-limited; only Commons zazou image is Free Art License",
+        "No era covers 1939-45"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "frederick-scholte",
+      "status": "partial",
+      "summary": "research/frederick-scholte.md; solid sources, no picture candidate confirmed.",
+      "numbers": {
+        "sources": 8,
+        "connections": 5,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Commons category fetch blocked; Met images restricted",
+        "Guards apprenticeship from Wikipedia only",
+        "Wikipedia and Anderson & Sheppard disagree on when the drape began"
+      ]
+    },
+    {
+      "role": "writer",
+      "model": "opus",
+      "topic": "sack-suit, zazou, frederick-scholte",
+      "status": "ok",
+      "summary": "Wrote three entries; validate 0 errors.",
+      "numbers": {
+        "entries": 3,
+        "newLinks": 20,
+        "relations": 10
+      },
+      "problems": [
+        "Bodies close to the 450-word limit"
+      ]
+    },
+    {
+      "role": "weaver",
+      "model": "opus",
+      "topic": "sack-suit, zazou, frederick-scholte",
+      "status": "ok",
+      "summary": "Wove the three entries in, corrected brooks-brothers and edwardian sack-suit date, no folds.",
+      "numbers": {
+        "relationsAdded": 5,
+        "backLinks": 0,
+        "folds": 0,
+        "orphans": 0
+      },
+      "problems": [
+        "zazou has no era (no era covers 1940-44)",
+        "Added ametora influenced-by sack-suit on a source the fact-checker could not open; curator removed it"
+      ]
+    },
+    {
+      "role": "illustrator",
+      "model": "opus",
+      "topic": "sack-suit, zazou, frederick-scholte",
+      "status": "partial",
+      "summary": "Drew a front technical-flat plate for sack-suit with 5 hotspots (plate budget used); zazou and frederick-scholte left without a picture; fixed three reviewer points in a second round.",
+      "numbers": {
+        "prints": 0,
+        "drawings": 1,
+        "crops": 0,
+        "none": 2,
+        "renderRounds": 5
+      },
+      "problems": [
+        "Commons rate limit (429) and blocked file-page fetch; no PD print confirmed for zazou or frederick-scholte"
+      ]
+    },
+    {
+      "role": "fact-checker",
+      "model": "opus",
+      "topic": "sack-suit, zazou, frederick-scholte, brooks-brothers, edwardian, ametora",
+      "status": "partial",
+      "summary": "3 contradicted and 37 unsupported claims out of 190; ametora (from an earlier night) largely unverifiable because its sources were blocked or point to the wrong post.",
+      "numbers": {
+        "claims": 190,
+        "supported": 150,
+        "unsupported": 37,
+        "contradicted": 3,
+        "relations": 33,
+        "relationsUnsupported": 7,
+        "pictures": 0,
+        "licenceProblems": 0
+      },
+      "problems": [
+        "Several source fetches blocked or timed out (Lapham's, Ivy Style, Fader, EBSCO)",
+        "ametora: ivy-style.com/?p=3510 and putthison.com/?p=4622 load unrelated posts",
+        "dieworkwear.com/?p=30 is the Eddie Bauer parka post, mislabelled as a sack-suit post"
+      ]
+    },
+    {
+      "role": "visual-reviewer",
+      "model": "opus",
+      "topic": "sack-suit, zazou, frederick-scholte",
+      "status": "partial",
+      "summary": "sack-suit plate needed three drawing fixes (done); site-wide template shows a blank no-picture panel and run-together connection links on entry pages.",
+      "numbers": {
+        "reviewed": 3,
+        "pass": 2,
+        "fixes": 7
+      },
+      "problems": [
+        "Site template: no-picture entry page is an empty green panel with a hard-to-read initial",
+        "Site template: connection links have no separators",
+        "Phone web: sack-suit picture touches the OCBD picture",
+        "Test run does not produce web-desktop-light.png or web-card.png named in the brief"
+      ]
+    },
+    {
+      "role": "tester",
+      "model": "sonnet",
+      "topic": "",
+      "status": "ok",
+      "summary": "npm test passed: 191 checks, 0 failures.",
+      "numbers": {
+        "checks": 191,
+        "failures": 0
+      },
+      "problems": []
+    },
+    {
+      "role": "curator",
+      "model": "opus",
+      "topic": "",
+      "status": "ok",
+      "summary": "Next up was empty. Chose sack-suit (most-linked queued garment, construction, plate), zazou (France had no style and the 1940s had no entries) and frederick-scholte (most-linked queued person). Fixed all 3 contradictions and the tonight-entry unsupported claims after the fact-check: stated both 1895 (Wikipedia) and 1901 dates for the No. 1 Sack Suit, corrected the Anderson & Sheppard founding (Anderson & Simmons, 1906), Lily Absinthe buttonholes, zazou anthem/Fishman/false-collar wording, Scholte's 1917 article and apprenticeship wording, softened two hotspot notes, renamed the Die, Workwear! source title, removed the unverified ametora influenced-by sack-suit relation.",
+      "numbers": {
+        "topics": 3,
+        "added": 3,
+        "dropped": 0,
+        "folded": 0,
+        "changed": 3
+      },
+      "problems": [
+        "Older ametora and brooks-brothers claims rest on sources the fact-checker could not open or that point to the wrong post; left for the gardener rather than rewritten tonight",
+        "Site template issues reported by the reviewer cannot be fixed by the run (site/ is off limits)",
+        "Taken as today's date: 2026-10-15 (Europe/Copenhagen; the run started just after midnight)",
+        "Run-log validator rejects role social-editor; its row moved to notes"
+      ]
+    }
+  ],
+  "notes": [
+    "No public-domain pictures could be confirmed tonight: Wikimedia Commons rate-limited the machine and some file pages could not be fetched; zazou and frederick-scholte have no picture.",
+    "zazou has no era band: none covers 1939-1945. Added a wartime era to Ideas.",
+    "ametora needs its sources repaired: ivy-style.com/?p=3510 and putthison.com/?p=4622 load unrelated posts.",
+    "The Semiovox source on zazou is dated 14 October 2026, one day before the run; it was opened and is cited only for claims named as its own.",
+    "Social editor (sonnet) ok: three-slide carousel and caption for sack-suit in social/2026-10-15/ (slides=3, captionChars=708, hashtags=8); slide 3 shows placeholder frames for the five linked entries, none of which has a picture. Logged here because the validator does not accept the role social-editor (tools/validate.mjs needs it added).",
+    "Existing entries changed tonight: brooks-brothers and edwardian (sack-suit date now gives both 1895 and 1901), ametora (unverified influenced-by sack-suit relation removed). Not listed under topics because the report tool counts every topic row as a new entry."
+  ]
+}

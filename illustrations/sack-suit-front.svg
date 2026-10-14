@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720">
+  <!-- Sack coat (Ivy version), front, technical flat. Classes: see STYLE.md.
+       Drawn from the research notes only: single-breasted three-roll-two front with the top
+       button under the lapel roll, soft natural shoulder with no pad, no front darts, a
+       straight, boxy body with no waist suppression hanging from chest to hem.
+       The two-panel back and hooked vent are behind and not shown. Proportions, not measurements. -->
+
+  <!-- sleeves -->
+  <path class="cloth" d="M142,118 C158,116 188,124 208,140 L212,400 L184,612 L122,606 C104,470 104,280 142,118 Z"/>
+  <path class="cloth" d="M458,118 C442,116 412,124 392,140 L388,400 L416,612 L478,606 C496,470 496,280 458,118 Z"/>
+  <path class="fold" d="M128,250 C124,320 122,380 122,440 M472,250 C476,320 478,380 478,440"/>
+  <circle class="button" cx="133" cy="590" r="4"/>
+  <circle class="button" cx="132" cy="576" r="4"/>
+  <circle class="button" cx="131" cy="562" r="4"/>
+  <circle class="button" cx="467" cy="590" r="4"/>
+  <circle class="button" cx="468" cy="576" r="4"/>
+  <circle class="button" cx="469" cy="562" r="4"/>
+
+  <!-- body: straight from the low armhole to the hem, no waist -->
+  <path class="cloth" d="M256,80 C210,92 172,106 142,118 C152,176 182,250 186,300 C184,420 182,560 180,682 C208,686 238,686 262,682 C278,652 286,606 290,580 C298,622 318,664 338,682 C362,686 392,686 420,682 C418,560 416,420 414,300 C418,250 448,176 458,118 C428,106 390,92 344,80 C323,72 277,72 256,80 Z"/>
+  <path class="seam" d="M187,676 C210,679 236,679 257,676 M413,676 C390,679 364,679 343,676"/>
+  <!-- front edge of the overlapping forepart, cut away below the bottom button -->
+  <path class="line" d="M284,440 L284,562 C284,568 287,574 290,580"/>
+
+  <!-- pockets: welted breast pocket, two flap hip pockets -->
+  <path class="cloth" d="M350,332 L402,324 L404,336 L352,344 Z"/>
+  <path class="cloth" d="M200,532 L278,534 L278,564 C254,566 224,566 198,562 Z"/>
+  <path class="seam" d="M203,557 C226,561 254,561 273,559"/>
+  <path class="cloth" d="M400,532 L322,534 L322,564 C346,566 376,566 402,562 Z"/>
+  <path class="seam" d="M397,557 C374,561 346,561 327,559"/>
+
+  <!-- buttons: middle and bottom; the top one sits under the lapel roll -->
+  <circle class="button" cx="300" cy="452" r="6"/>
+  <circle class="button" cx="300" cy="536" r="6"/>
+
+  <!-- inside of the neck, between the roll lines -->
+  <path class="shade" d="M272,128 L275,104 C289,92 311,92 325,104 L328,128 C316,230 300,340 284,440 C283,340 279,230 272,128 Z"/>
+
+  <!-- lapels, rolling down to the middle button -->
+  <path class="cloth" d="M284,440 C268,380 218,280 202,206 L238,196 L272,128 C279,230 283,340 284,440 Z"/>
+  <path class="cloth" d="M284,440 C306,380 382,280 398,206 L362,196 L328,128 C316,230 300,340 284,440 Z"/>
+  <path class="seam" d="M272,388 C258,340 222,272 209,212 M304,388 C318,340 376,272 391,212"/>
+  <!-- top buttonhole, left showing on the rolled lapel -->
+  <rect class="hole" x="299" y="362" width="11" height="3" rx="1.5"/>
+
+  <!-- collar, its back seen over the neck -->
+  <path class="cloth" d="M238,196 L223,182 C232,140 243,100 256,80 C277,72 323,72 344,80 C357,100 368,140 377,182 L362,196 L328,128 L325,104 C311,92 289,92 275,104 L272,128 Z"/>
+  <path class="seam" d="M230,180 C238,140 248,104 261,86 C279,80 321,80 339,86 C352,104 362,140 370,180"/>
+</svg>

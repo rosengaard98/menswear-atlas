@@ -6,13 +6,13 @@ The nightly curator takes topics from **Next up** first, top down, then fills ga
 
 ## Ideas
 
-- Eras: First World War dress, wartime utility clothing and rationing (1939-1945), the peacock revolution (1965-1979), the 1980s.
+- Eras: First World War dress, wartime utility clothing and rationing (1939-1945), the peacock revolution (1965-1979), the 1980s. A wartime era (1939-1945) would give zazou a band; none covers it yet.
 - Styles: St James's club dress, Milanese tailoring, French sportswear and the Riviera, Mod, Trad, workwear, heritage revival (2005-2015), zoot suit.
 - Garments: navy blazer, sack suit, repp tie, penny loafer, Shetland sweater, Norfolk jacket, waxed cotton jacket, rugby shirt, tweed sport coat, grey flannel trousers, tennis sweater, duffle coat, Chesterfield coat, chinos.
 - Details: shoulder construction (spalla camicia, roped, natural), lapel roll, trouser break, vents, horn buttons, repp vs regimental stripes, the Harris Tweed orb mark, the detachable collar.
 - Makers: J. Press, Anderson & Sheppard, Henry Poole, Rubinacci, Gant, Alden, Barbour, John Smedley, Lock & Co., Kiton, Cesare Attolini, Izod, Huntsman, Gieves & Hawkes.
-- People: Fred Astaire, Kensuke Ishizu, Ralph Lauren, Gianni Agnelli, René Lacoste, Frederick Scholte (the drape cut), Vincenzo Attolini, Tommy Nutter.
-- Context: Jermyn Street, Harris Tweed, Pitti Uomo, *The Official Preppy Handbook*, Henley Royal Regatta, *Men's Club* magazine.
+- People: Fred Astaire, Kensuke Ishizu, Ralph Lauren, Gianni Agnelli, René Lacoste, Vincenzo Attolini, Tommy Nutter, Per Anderson (trained under Scholte, founded Anderson & Sheppard).
+- Context: Jermyn Street, Harris Tweed, Pitti Uomo, *The Official Preppy Handbook*, Henley Royal Regatta, *Men's Club* magazine, *The West End Gazette* (tailoring trade paper cited for the sack coat's French origin).
 
 ## Folded
 
