@@ -145,7 +145,7 @@ sources:
     url: https://en.wikipedia.org/wiki/Brooks_Brothers
 added: 2026-10-14
 ---
-In the 1890s [[john-e-brooks|John E. Brooks]], grandson of the founder of [[brooks-brothers]], watched English [[polo|polo]] players whose collar points were buttoned to their shirts so they would not flap in the wind. He sent a sample collar back to the New York store with instructions to copy it. Brooks Brothers dates its button-down to 1896; other accounts put the trip and the first sales around 1900.
+In the 1890s, according to the firm, John Brooks, grandson of the founder of [[brooks-brothers]], watched English [[polo|polo]] players whose collar points were buttoned to their shirts so they would not flap in the wind. He sent a sample collar back to the New York store with instructions to copy it. Brooks Brothers dates its button-down to 1896; other accounts put the trip and the first sales around 1900.
 
 The first versions were pullover sport shirts, sold as "polo shirts", a name that a different shirt later took over (see [[polo-shirt]]). The collar was then put on white cotton cheviot, which the trade called oxford, and the shirt became a coat-style shirt that buttons all the way down, first with five buttons and then six.
 

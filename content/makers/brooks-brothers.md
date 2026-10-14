@@ -11,7 +11,6 @@ summary: >-
 regions: [us]
 relations:
   - { to: sack-suit, kind: introduced, year: 1895 }
-  - { to: john-e-brooks, kind: related }
   - { to: j-press, kind: related }
   - { to: ivy-league-look, kind: influenced }
 sources:
@@ -32,7 +31,7 @@ Abraham Lincoln wore a Brooks frock coat to his second inauguration in 1865 and 
 
 ## What Brooks introduced
 
-The firm's list of firsts reads like an index of the American classic wardrobe. In 1895 came the unstructured [[sack-suit]] that the Ivy League would later wear. In 1896 [[john-e-brooks|John E. Brooks]], the founder's grandson, put the [[button-down-collar]] on its shirts, the beginning of the [[ocbd]]. Madras followed in 1902, the Shetland sweater in 1904, Harris Tweed in 1909 and the polo coat around 1910. In the early 1930s it made lightweight summer suits in corduroy and seersucker, in 1953 a wash-and-wear shirt blended with Dacron that it called Brooksweave, and in 1957 it became the first American retailer to make argyle socks for men.
+The firm's list of firsts reads like an index of the American classic wardrobe. In 1895 came the unstructured [[sack-suit]] that the Ivy League would later wear. In 1896, according to the firm, John Brooks, the founder's grandson, put the [[button-down-collar]] on its shirts, the beginning of the [[ocbd]]. Madras followed in 1902, the Shetland sweater in 1904, Harris Tweed in 1909 and the polo coat around 1910. In the early 1930s it made lightweight summer suits in corduroy and seersucker, in 1953 a wash-and-wear shirt blended with Dacron that it called Brooksweave, and in 1957 it became the first American retailer to make argyle socks for men.
 
 Together with [[j-press|J. Press]], Brooks was the main source of suits for the [[ivy-league-look]], and after the Second World War its button-down was the most popular shirt style in the country.
 

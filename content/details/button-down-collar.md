@@ -13,7 +13,6 @@ relations:
   - { to: ocbd, kind: part-of }
   - { to: polo, kind: originated-in }
   - { to: brooks-brothers, kind: introduced-by, year: 1896 }
-  - { to: john-e-brooks, kind: introduced-by }
   - { to: collar-roll, kind: related }
 picture: { kind: drawing, from: ocbd, view: Front, focus: [300, 160], size: 190 }
 sources:
@@ -28,7 +27,7 @@ sources:
     url: https://en.wikipedia.org/wiki/Polo_shirt
 added: 2026-10-14
 ---
-Late nineteenth-century [[polo|polo]] players in England fastened the points of their collars to their shirts so the collars would not flap about during play. [[john-e-brooks|John E. Brooks]] of [[brooks-brothers]] saw this at a match and had the idea copied in New York. Brooks Brothers gives the year as 1896; some accounts put his trip and the first sales in 1900.
+Late nineteenth-century [[polo|polo]] players in England fastened the points of their collars to their shirts so the collars would not flap about during play. According to the firm, John Brooks of [[brooks-brothers]] saw this at a match and had the idea copied in New York. Brooks Brothers gives the year as 1896; some accounts put his trip and the first sales in 1900.
 
 It started as sportswear. Brooks's first soft-collar shirts were pullovers meant for games, and only later did the collar move onto a shirt that buttons all the way down the front, the [[ocbd]].
 

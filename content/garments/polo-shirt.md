@@ -13,7 +13,7 @@ relations:
   - { to: rene-lacoste, kind: introduced-by, year: 1926 }
   - { to: tennis, kind: originated-in }
   - { to: pique, kind: includes, note: The original was knitted in a loose cotton petit piqué }
-  - { to: izod, kind: made-by, note: "Licensed in the United States as Izod Lacoste from 1951 or 1952 until 1993" }
+  - { to: izod, kind: made-by, note: "Licensed in the United States as Izod Lacoste from 1951 or 1952" }
   - { to: fred-perry, kind: made-by, note: "British version with a laurel wreath, late 1940s per Roland-Garros; Analog Shift dates the Fred Perry company to 1952" }
   - { to: ralph-lauren, kind: made-by, year: 1972 }
   - { to: brooks-brothers, kind: related, note: "Sold its 1896 button-down as \"The Original Button-Down Polo Shirt\", according to Heddels" }
@@ -77,7 +77,7 @@ sources:
     url: https://immortallypreppy.beehiiv.com/p/ren-lacoste-and-the-history-of-the-polo-shirt
 added: 2026-10-14
 ---
-The shirt named after polo was made for [[tennis]]. [[rene-lacoste|René Lacoste]], the French champion, found the tennis whites of his day, long-sleeved and worn with a tie, too restrictive, and wore a short-sleeved shirt of his own at the U.S. championships in 1926. Roland-Garros says he wore it on its centre court in 1928.
+The shirt named after polo was made for [[tennis]]. [[rene-lacoste|René Lacoste]], the French champion, found the tennis whites of his day, long-sleeved and worn with a tie, too restrictive, and wore a short-sleeved shirt of his own in 1926 at the tournament his sources call the U.S. Open. Roland-Garros says he wore it on its centre court in 1928.
 
 ## The shirt
 
@@ -91,8 +91,8 @@ Wikipedia credits Lewis Lacey, a Montreal-born polo champion based in Argentina,
 
 ## The name
 
-The word reached shirts earlier, through [[brooks-brothers]]. [[john-e-brooks|John E. Brooks]] saw English [[polo]] players with their collars buttoned down, and in 1896 Brooks introduced the [[button-down-collar]], sold, Heddels says, as "The Original Button-Down Polo Shirt". Smithsonian gives one school of thought, that the name came from British polo players whose shirts John Brooks copied in the US. That shirt is the [[ocbd]], woven and buttoned all the way down, a different garment from this knitted pullover.
+The word reached shirts earlier, through [[brooks-brothers]]. According to the firm, John Brooks saw English [[polo]] players with their collars buttoned down, and in 1896 Brooks introduced the [[button-down-collar]], sold, Heddels says, as "The Original Button-Down Polo Shirt". Smithsonian gives one school of thought, that the name came from British polo players whose shirts John Brooks copied in the US. That shirt is the [[ocbd]], woven and buttoned all the way down, a different garment from this knitted pullover.
 
 ## After the war
 
-[[izod|Izod]] brought the shirt to the United States as Izod Lacoste, in 1952 according to Smithsonian and 1951 according to Heddels. At about $8 it was dear. Roland-Garros dates [[fred-perry|Fred Perry]]'s British version to the late 1940s; Analog Shift dates his company to 1952. In 1972 [[ralph-lauren|Ralph Lauren]] sold a piqué shirt in 24 colours with a polo-player emblem, which Analog Shift and Wikipedia credit with making "polo shirt" the everyday name. As the Izod, it was central to the [[preppy]] look among teenagers in the 1970s and 80s, until it faded in the early 1990s.
+[[izod|Izod]] brought the shirt to the United States as Izod Lacoste, in 1952 according to Smithsonian and 1951 according to Heddels. At about $8 it was dear. Roland-Garros dates [[fred-perry|Fred Perry]]'s British version to the late 1940s; Analog Shift dates his company to 1952. In 1972 [[ralph-lauren|Ralph Lauren]] sold a piqué shirt with a polo-player emblem, which Analog Shift and Wikipedia credit with making "polo shirt" the everyday name. As the Izod, it was central to the [[preppy]] look among teenagers in the 1970s and 80s, until it faded in the early 1990s.

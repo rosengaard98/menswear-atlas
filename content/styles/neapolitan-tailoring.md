@@ -39,15 +39,15 @@ Ask who made the first Neapolitan jacket and you get two family names. The Rubin
 
 ## Where it came from
 
-Before the soft jacket, a smart Neapolitan suit looked like Savile Row or Roman work. Salvatore Morziello's shop in the city sold goods from Lock & Co., Floris and Swaine Adeney Brigg. Gennaro "Bebè" [[rubinacci|Rubinacci]] admired English cloth and called his house London House. According to *The Rake*, in the 1930s he proposed a softer, unlined version of the [[drape-cut]] of [[frederick-scholte|Frederick Scholte]] and Anderson & Sheppard.
+Before the soft jacket, a smart Neapolitan suit looked like [[savile-row|Savile Row]] or Roman work. Salvatore Morziello's shop in the city sold goods from Lock & Co., Floris and Swaine Adeney Brigg. Gennaro "Bebè" [[rubinacci|Rubinacci]] admired English cloth and called his house London House. According to *The Rake*, in the 1930s he proposed a softer, unlined version of the [[drape-cut]] of [[frederick-scholte|Frederick Scholte]] and Anderson & Sheppard.
 
 [[vincenzo-attolini|Vincenzo Attolini]], Morziello's apprentice and later Rubinacci's head cutter, is credited with the original jacket: no pads, little or no lining, very light. Parisian Gentleman repeats the story that his jackets could be folded up to eight times. Wikipedia instead dates the light jacket to the 1920s and names Antonio Caggiula beside Attolini. The Roman tailor Domenico Caraceni comes into it too: The Rake says Attolini borrowed some of Caraceni's soft lines, Parisian Gentleman suggests him as a possible influence, and a 2015 Parisian Gentleman profile of Stile Latino goes further and says Caraceni came first.
 
-Not everything sewn in Naples is Neapolitan. Structured, Roman-style suits are made there too, and Angelo Blasi, a contemporary of Attolini, took the English structured coat as his model.
+Not everything sewn in Naples is Neapolitan. Angelo Blasi, a contemporary of Attolini, took the English structured coat as his model.
 
 ## The jacket
 
-The defining feature is the [[spalla-camicia]], a shoulder set like a shirt sleeve with no pad. The sleevehead is cut larger than the armhole and eased by hand into a high, snug armhole, which leaves small puckers at the top of the sleeve. Other marks are three-roll-two buttoning, a high gorge, a boat-shaped barchetta breast pocket, curved patch pockets, double hand stitching on lapels and pockets, a front dart running to the hem, a slightly short body and tapered sleeves. Parisian Gentleman notes that the three-roll-two front also turns up in Paris and London, and links the high gorge to Cifonelli in Paris.
+The defining feature is the [[spalla-camicia]], a shoulder set like a shirt sleeve with no pad. The sleevehead is cut larger than the armhole and eased by hand into a high, snug armhole, which leaves small puckers at the top of the sleeve. Other marks are three-roll-two buttoning, a high gorge, a boat-shaped barchetta breast pocket, curved patch pockets, double hand stitching on lapels and pockets, a front dart running to the hem, a slightly short body and sleeves cut closer to the arm. Parisian Gentleman notes that the three-roll-two front also turns up in Paris and London, and links the high gorge to Cifonelli in Paris.
 
 ## The houses
 
