@@ -64,6 +64,8 @@ fs.rmSync(path.join(ROOT, "dist"), { recursive: true, force: true });
 fs.mkdirSync(path.join(ROOT, "dist/pictures"), { recursive: true });
 // morning reports are published next to the site: /reports/<date>.pdf
 if (fs.existsSync(path.join(ROOT, "reports"))) fs.cpSync(path.join(ROOT, "reports"), path.join(ROOT, "dist/reports"), { recursive: true });
+// Instagram slides must sit at a public URL for the API to fetch them: /social/<date>/slide-n.jpg
+if (fs.existsSync(path.join(ROOT, "social"))) fs.cpSync(path.join(ROOT, "social"), path.join(ROOT, "dist/social"), { recursive: true });
 
 function pictureOut(n) {
   const p = n.picture;

@@ -17,12 +17,15 @@ The nightly run (`ORCHESTRATOR.md`) is led by the **curator**, who picks about t
 | Fact-checker | tests every sentence, thread and licence against the sources | `agents/fact-checker.md` |
 | Visual reviewer | checks that tonight's pictures belong on the wall | `agents/visual-reviewer.md` |
 | Tester | runs the browser test suite and explains any failure | `agents/tester.md` |
+| Social editor | turns one new entry into an Instagram carousel draft | `agents/social-editor.md` |
 
 The weekly **gardener** (`GARDENER.md`) merges duplicates, adds missing threads, strengthens thin entries, fixes dead sources and opens a GitHub issue with what it did.
 
 Every run writes a log to `runs/`: each agent's status, numbers and problems. The site's **Run log** page (linked in the footer) shows them, with a row of marks per agent across recent runs, so you can see which agent is struggling. The gardener reviews the week's logs and suggests changes to the briefs in its issue.
 
 Each morning you get an email with a short summary and a link to that night's PDF report: what was added, how each agent did, what needs your attention and what comes next.
+
+The night's Instagram post waits for you as a GitHub issue labelled **instagram**; add the **approve** label to publish it (setup in `INSTAGRAM.md`).
 
 To steer the atlas, edit **Next up** in `BACKLOG.md`.
 
@@ -35,6 +38,7 @@ pictures/       public-domain prints after the house treatment
 research/       the researchers' notes, kept for traceability
 runs/           one log per run: what each agent did (SCHEMA.md, Run logs)
 reports/        the morning report PDFs, published at /reports/<date>.pdf
+social/         Instagram drafts: slides and caption per night
 site/           page template, styles and script
 tools/          validate, wanted, web report, render, picture, build, test
 dist/           the built site (not committed)

@@ -1,0 +1,36 @@
+name: Keep the Instagram token alive
+
+# Instagram long-lived tokens last 60 days unless refreshed. This refreshes weekly.
+# If Instagram hands back a different token and the SECRETS_PAT secret exists, the new
+# token is stored automatically; otherwise the run warns you to update it by hand.
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh the token
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.SECRETS_PAT }}
+        run: |
+          if [ -z "$IG_ACCESS_TOKEN" ]; then echo "No IG_ACCESS_TOKEN secret yet; nothing to refresh."; exit 0; fi
+          resp=$(curl -fsS "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$IG_ACCESS_TOKEN")
+          new=$(echo "$resp" | jq -r .access_token)
+          if [ -z "$new" ] || [ "$new" = "null" ]; then echo "::error::Instagram did not return a token: $resp"; exit 1; fi
+          echo "::add-mask::$new"
+          echo "Token now valid for $(( $(echo "$resp" | jq -r .expires_in) / 86400 )) days."
+          if [ "$new" != "$IG_ACCESS_TOKEN" ]; then
+            if [ -n "$GH_TOKEN" ]; then
+              gh secret set IG_ACCESS_TOKEN --body "$new" --repo "$GITHUB_REPOSITORY"
+              echo "Stored the refreshed token."
+            else
+              echo "::warning::Instagram returned a new token, but SECRETS_PAT is not set. Update the IG_ACCESS_TOKEN secret by hand (see INSTAGRAM.md)."
+            fi
+          fi

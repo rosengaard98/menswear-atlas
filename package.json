@@ -11,7 +11,8 @@
     "picture": "node tools/picture.mjs",
     "test": "node tools/test.mjs",
     "check": "node tools/validate.mjs && node tools/build.mjs",
-    "report": "node tools/report.mjs"
+    "report": "node tools/report.mjs",
+    "post": "node tools/post.mjs"
   },
   "license": "UNLICENSED",
   "dependencies": {

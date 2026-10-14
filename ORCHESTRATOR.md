@@ -15,6 +15,7 @@ Quality beats quantity. Three solid, well-connected entries are a good night; on
 | 6 | Fact-checker, fresh context | `agents/fact-checker.md` | opus |
 | 7 | Visual reviewer | `agents/visual-reviewer.md` | opus |
 | 8 | Tester | `agents/tester.md` | sonnet |
+| 9 | Social editor | `agents/social-editor.md` | sonnet |
 
 Spawn each with its brief's Model line. Give each one exactly what its brief says it is given, plus the instruction to read its brief first.
 
@@ -70,20 +71,24 @@ Spawn the visual reviewer with tonight's ids. Fix what it reports, or have the i
 
 Spawn the tester. If it reports failures, fix their causes and run `npm test` yourself until it passes, at most two rounds. If an entry still breaks the site after that, remove tonight's version of it and say so.
 
-## 9. Backlog
+## 9. Instagram draft
+
+If at least one entry was added tonight, spawn the social editor with tonight's new ids and today's date. It renders a carousel into `social/<date>/` and writes the caption. If it reports `skipped` (no entry with a picture that renders), there is no post tonight; log it and move on.
+
+## 10. Backlog
 
 - Remove the Next up lines you finished.
 - Add up to five new topics the team came across to Ideas, in the right group. No duplicates of queued ids.
 
-## 10. Write the run log
+## 11. Write the run log
 
 Write `runs/<date>.json` with every agent's row, the topics with their outcome and source, `totals.before` and `totals.after` (from `npm run web`), `started`, `finished` and notes. Run `npm run validate`; it checks the log too.
 
-## 11. Morning report
+## 12. Morning report
 
 Run `npm run report`. It reads the run log and writes `reports/<date>.pdf`: what was added, how each agent did, what needs Lasse's attention, what comes next. Open the first page with the Read tool (render it with `pdftoppm -r 70 -png -f 1 -l 1 reports/<date>.pdf .preview/report`) to check it reads properly.
 
-## 12. Commit and push
+## 13. Commit and push
 
 One commit on `main`, including the run log and the report:
 
@@ -101,16 +106,26 @@ End with the attribution lines the session tells you to use. Push to `main`; the
 
 Then put the commit's sha into the run log's `commit` field, commit that one-line change ("Run log <date>") and push it.
 
-## 13. Email
+## 14. Email
 
-Wait until the Publish site workflow for your last push has finished, checking with `gh api "repos/rosengaard98/menswear-atlas/actions/runs?per_page=1"` every 30 seconds for at most 6 minutes. Then send exactly one email with the Gmail tool to rosengaard98@gmail.com (Lasse asked for it):
+Wait until the Publish site workflow for your last push has finished, checking with `gh api "repos/rosengaard98/menswear-atlas/actions/runs?per_page=1"` every 30 seconds for at most 6 minutes.
+
+If there is an Instagram draft tonight, open the approval issue now that its slides are online:
+
+```
+gh api repos/rosengaard98/menswear-atlas/issues -f title="Instagram: <entry name> (<date>)" -f "labels[]=instagram" -f body="<body>"
+```
+
+The body shows the three slides as images (`![slide 1](https://rosengaard98.github.io/menswear-atlas/social/<date>/slide-1.jpg)` and so on), then the caption, then the line `post: social/<date>/post.json`, then: "Add the **approve** label to publish. Close this issue to skip." Note the issue URL for the email.
+
+Then send exactly one email with the Gmail tool to rosengaard98@gmail.com (Lasse asked for it):
 
 - Subject: `Menswear Atlas, <day month>: <n> new entries` (or `no new entries`).
-- HTML body, short: the same four parts as the final message below, then the report link `https://rosengaard98.github.io/menswear-atlas/reports/<date>.pdf` and the run log link. Do not attach the PDF.
+- HTML body, short: the same four parts as the final message below, then the report link `https://rosengaard98.github.io/menswear-atlas/reports/<date>.pdf`, the Instagram approval issue link if there is one, and the run log link. Do not attach anything.
 
 If the email cannot be sent, say so in the final message.
 
-## 14. Final message
+## 15. Final message
 
 This message is what Lasse sees in the notification, so lead with the outcome and keep it short:
 

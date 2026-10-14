@@ -349,3 +349,26 @@ export function findChromium() {
   }
   return undefined;
 }
+
+// Instagram drafts in social/<date>/post.json (see agents/social-editor.md)
+export function checkPosts(nodes) {
+  const dir = path.join(ROOT, "social");
+  const errors = [];
+  if (!fs.existsSync(dir)) return errors;
+  for (const d of fs.readdirSync(dir).sort()) {
+    const p = path.join(dir, d, "post.json");
+    if (!fs.existsSync(p)) continue;
+    const where = `social/${d}/post.json`;
+    let post;
+    try { post = JSON.parse(fs.readFileSync(p, "utf8")); } catch (e) { errors.push(`${where}: not valid JSON`); continue; }
+    if (!nodes.has(post.entry)) errors.push(`${where}: entry "${post.entry}" does not exist`);
+    if (!post.caption || /^TODO/.test(post.caption)) errors.push(`${where}: the caption is not written yet`);
+    else {
+      if (post.caption.length > 2200) errors.push(`${where}: caption is ${post.caption.length} characters; Instagram allows 2200`);
+      if ((post.caption.match(/#\w+/g) ?? []).length > 10) errors.push(`${where}: more than 10 hashtags`);
+    }
+    if (!Array.isArray(post.slides) || post.slides.length < 1 || post.slides.length > 10) errors.push(`${where}: needs 1 to 10 slides`);
+    for (const s of post.slides ?? []) if (!fs.existsSync(path.join(dir, d, path.basename(s)))) errors.push(`${where}: slide ${path.basename(s)} is missing`);
+  }
+  return errors;
+}
