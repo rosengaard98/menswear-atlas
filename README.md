@@ -22,6 +22,8 @@ The weekly **gardener** (`GARDENER.md`) merges duplicates, adds missing threads,
 
 Every run writes a log to `runs/`: each agent's status, numbers and problems. The site's **Run log** page (linked in the footer) shows them, with a row of marks per agent across recent runs, so you can see which agent is struggling. The gardener reviews the week's logs and suggests changes to the briefs in its issue.
 
+Each morning you get an email with a short summary and a link to that night's PDF report: what was added, how each agent did, what needs your attention and what comes next.
+
 To steer the atlas, edit **Next up** in `BACKLOG.md`.
 
 ## Files
@@ -32,6 +34,7 @@ illustrations/  original SVG drawings
 pictures/       public-domain prints after the house treatment
 research/       the researchers' notes, kept for traceability
 runs/           one log per run: what each agent did (SCHEMA.md, Run logs)
+reports/        the morning report PDFs, published at /reports/<date>.pdf
 site/           page template, styles and script
 tools/          validate, wanted, web report, render, picture, build, test
 dist/           the built site (not committed)

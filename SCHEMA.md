@@ -128,5 +128,6 @@ npm run render -- <id>  # draw an entry's plates and picture to .preview/ with h
 npm run picture -- <id> <commons file page> --write   # fetch and treat a public-domain print
 npm run build         # validate, then write dist/
 npm test              # build, then click through the whole site in a headless browser
+npm run report        # the morning report PDF for the newest run log, in reports/
 npm run check         # validate + build
 ```

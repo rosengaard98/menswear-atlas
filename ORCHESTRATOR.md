@@ -79,9 +79,13 @@ Spawn the tester. If it reports failures, fix their causes and run `npm test` yo
 
 Write `runs/<date>.json` with every agent's row, the topics with their outcome and source, `totals.before` and `totals.after` (from `npm run web`), `started`, `finished` and notes. Run `npm run validate`; it checks the log too.
 
-## 11. Commit and push
+## 11. Morning report
 
-One commit on `main`:
+Run `npm run report`. It reads the run log and writes `reports/<date>.pdf`: what was added, how each agent did, what needs Lasse's attention, what comes next. Open the first page with the Read tool (render it with `pdftoppm -r 70 -png -f 1 -l 1 reports/<date>.pdf .preview/report`) to check it reads properly.
+
+## 12. Commit and push
+
+One commit on `main`, including the run log and the report:
 
 ```
 Nightly <date>: <name>, <name>, <name>
@@ -93,18 +97,27 @@ Nightly <date>: <name>, <name>, <name>
 - notes: <anything dropped, ambiguous or failed>
 ```
 
-End with the attribution lines the session tells you to use. Push to `main`; the Pages workflow publishes the site. If the push is rejected because `main` moved on (someone else pushed), run `git pull --rebase` once and push again. If it still fails, say so clearly.
+End with the attribution lines the session tells you to use. Push to `main`; the Pages workflow publishes the site and the report. If the push is rejected because `main` moved on (someone else pushed), run `git pull --rebase` once and push again. If it still fails, say so clearly, skip the email's report link, and say so in the email.
 
 Then put the commit's sha into the run log's `commit` field, commit that one-line change ("Run log <date>") and push it.
 
-## 12. Final message
+## 13. Email
+
+Wait until the Publish site workflow for your last push has finished, checking with `gh api "repos/rosengaard98/menswear-atlas/actions/runs?per_page=1"` every 30 seconds for at most 6 minutes. Then send exactly one email with the Gmail tool to rosengaard98@gmail.com (Lasse asked for it):
+
+- Subject: `Menswear Atlas, <day month>: <n> new entries` (or `no new entries`).
+- HTML body, short: the same four parts as the final message below, then the report link `https://rosengaard98.github.io/menswear-atlas/reports/<date>.pdf` and the run log link. Do not attach the PDF.
+
+If the email cannot be sent, say so in the final message.
+
+## 14. Final message
 
 This message is what Lasse sees in the notification, so lead with the outcome and keep it short:
 
 1. One sentence: what was added (names) and entries/relations/queued before and after.
 2. One line with every agent's status, worst first, with a few words for anything not ok, for example: "Illustrator partial (Commons rate limit, one entry without picture); researchers, writer, weaver, fact-checker, visual reviewer, tester ok."
 3. Anything that failed, was dropped or needs Lasse's decision.
-4. The run log: https://rosengaard98.github.io/menswear-atlas/#run-log
+4. The report: https://rosengaard98.github.io/menswear-atlas/reports/<date>.pdf
 
 ## Never
 

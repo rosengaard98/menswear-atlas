@@ -337,3 +337,15 @@ export function loadRuns() {
   runs.sort((a, b) => (b.date + b.file).localeCompare(a.date + a.file));
   return { runs, errors };
 }
+
+// Headless Chromium for tests and reports: CHROMIUM_PATH, or the newest browser Playwright installed.
+export function findChromium() {
+  if (process.env.CHROMIUM_PATH) return process.env.CHROMIUM_PATH;
+  const base = process.env.PLAYWRIGHT_BROWSERS_PATH || "/opt/pw-browsers";
+  if (!fs.existsSync(base)) return undefined;
+  for (const d of fs.readdirSync(base).filter((d) => d.startsWith("chromium-")).sort().reverse()) {
+    const p = path.join(base, d, "chrome-linux", "chrome");
+    if (fs.existsSync(p)) return p;
+  }
+  return undefined;
+}

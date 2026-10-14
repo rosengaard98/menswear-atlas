@@ -6,20 +6,9 @@ import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { chromium } from "playwright-core";
-import { ROOT, loadAll, wantedList } from "./lib.mjs";
+import { ROOT, loadAll, wantedList, findChromium } from "./lib.mjs";
 
 execFileSync("node", [path.join(ROOT, "tools/build.mjs")], { stdio: "inherit" });
-
-function findChromium() {
-  if (process.env.CHROMIUM_PATH) return process.env.CHROMIUM_PATH;
-  const base = process.env.PLAYWRIGHT_BROWSERS_PATH || "/opt/pw-browsers";
-  if (!fs.existsSync(base)) return undefined;
-  for (const d of fs.readdirSync(base).filter((d) => d.startsWith("chromium-")).sort().reverse()) {
-    const p = path.join(base, d, "chrome-linux", "chrome");
-    if (fs.existsSync(p)) return p;
-  }
-  return undefined;
-}
 
 const out = path.join(ROOT, ".preview/test");
 fs.rmSync(out, { recursive: true, force: true });
