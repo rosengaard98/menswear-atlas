@@ -99,7 +99,12 @@ Then put the commit's sha into the run log's `commit` field, commit that one-lin
 
 ## 12. Final message
 
-Two to four sentences: what was added (names), what pictures they got, entries/relations/queued before and after, and anything that failed or was dropped.
+This message is what Lasse sees in the notification, so lead with the outcome and keep it short:
+
+1. One sentence: what was added (names) and entries/relations/queued before and after.
+2. One line with every agent's status, worst first, with a few words for anything not ok, for example: "Illustrator partial (Commons rate limit, one entry without picture); researchers, writer, weaver, fact-checker, visual reviewer, tester ok."
+3. Anything that failed, was dropped or needs Lasse's decision.
+4. The run log: https://rosengaard98.github.io/menswear-atlas/#run-log
 
 ## Never
 
