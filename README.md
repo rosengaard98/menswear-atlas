@@ -20,6 +20,8 @@ The nightly run (`ORCHESTRATOR.md`) is led by the **curator**, who picks about t
 
 The weekly **gardener** (`GARDENER.md`) merges duplicates, adds missing threads, strengthens thin entries, fixes dead sources and opens a GitHub issue with what it did.
 
+Every run writes a log to `runs/`: each agent's status, numbers and problems. The site's **Run log** page (linked in the footer) shows them, with a row of marks per agent across recent runs, so you can see which agent is struggling. The gardener reviews the week's logs and suggests changes to the briefs in its issue.
+
 To steer the atlas, edit **Next up** in `BACKLOG.md`.
 
 ## Files
@@ -29,6 +31,7 @@ content/        one Markdown file per entry, by kind (SCHEMA.md)
 illustrations/  original SVG drawings
 pictures/       public-domain prints after the house treatment
 research/       the researchers' notes, kept for traceability
+runs/           one log per run: what each agent did (SCHEMA.md, Run logs)
 site/           page template, styles and script
 tools/          validate, wanted, web report, render, picture, build, test
 dist/           the built site (not committed)

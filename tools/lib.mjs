@@ -303,3 +303,37 @@ export function wantedList(nodes) {
   for (const w of wanted.values()) w.label ??= humanize(w.id);
   return [...wanted.values()].sort((a, b) => b.linkedFrom.length - a.linkedFrom.length || a.id.localeCompare(b.id));
 }
+
+// ---------- run logs: one JSON file per run in runs/, written by the curator or gardener ----------
+export const RUNS = path.join(ROOT, "runs");
+export const ROLES = ["curator", "researcher", "writer", "weaver", "illustrator", "fact-checker", "visual-reviewer", "tester", "gardener"];
+const STATUS = ["ok", "partial", "failed", "skipped"];
+
+export function loadRuns() {
+  const runs = [];
+  const errors = [];
+  if (!fs.existsSync(RUNS)) return { runs, errors };
+  for (const f of fs.readdirSync(RUNS).filter((f) => f.endsWith(".json")).sort()) {
+    const file = path.join("runs", f);
+    let r;
+    try { r = JSON.parse(fs.readFileSync(path.join(RUNS, f), "utf8")); } catch (e) { errors.push(`${file}: not valid JSON (${e.message})`); continue; }
+    const err = (m) => errors.push(`${file}: ${m}`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(r.date ?? "")) err("date must be YYYY-MM-DD");
+    if (!["nightly", "gardener", "test"].includes(r.kind)) err('kind must be "nightly", "gardener" or "test"');
+    if (!Array.isArray(r.agents) || !r.agents.length) err("agents must be a non-empty list");
+    for (const [i, a] of (r.agents ?? []).entries()) {
+      if (!ROLES.includes(a.role)) err(`agents[${i}].role "${a.role}" is not one of ${ROLES.join(", ")}`);
+      if (!STATUS.includes(a.status)) err(`agents[${i}].status must be one of ${STATUS.join(", ")}`);
+      if (!a.summary) err(`agents[${i}] needs a one-line summary`);
+      if (a.numbers !== undefined && (typeof a.numbers !== "object" || Array.isArray(a.numbers))) err(`agents[${i}].numbers must be an object of counts`);
+      if (a.problems !== undefined && !Array.isArray(a.problems)) err(`agents[${i}].problems must be a list`);
+    }
+    for (const [i, t] of (r.topics ?? []).entries()) {
+      if (!t.id) err(`topics[${i}] needs an id`);
+      if (!["added", "dropped", "folded", "changed"].includes(t.outcome)) err(`topics[${i}].outcome must be added, dropped, folded or changed`);
+    }
+    runs.push({ ...r, file: f });
+  }
+  runs.sort((a, b) => (b.date + b.file).localeCompare(a.date + a.file));
+  return { runs, errors };
+}

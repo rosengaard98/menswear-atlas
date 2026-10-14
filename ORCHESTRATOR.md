@@ -18,13 +18,15 @@ Quality beats quantity. Three solid, well-connected entries are a good night; on
 
 Spawn each with its brief's Model line. Give each one exactly what its brief says it is given, plus the instruction to read its brief first.
 
+**Keep the run log as you go.** Every brief ends with a Report block. When an agent returns, copy its status, summary, numbers and problems into your run log (format in SCHEMA.md, Run logs), with its role, model and topic. If an agent crashes or returns nothing usable, log it as `failed` with what happened. Add your own `curator` row at the end: what you chose and why, what you fixed after the fact-checker and reviewer, and anything that blocked you. The log must be written even when the run goes badly; a bad night with an honest log is more useful than a quiet one.
+
 ## 0. Set up
 
 1. `npm ci`.
 2. Read README.md, SCHEMA.md, STYLE.md and BACKLOG.md. You do not need to read the agent briefs in full; the agents do.
 3. Today's date (Europe/Copenhagen) is the `added` date for new entries.
 4. `npm run validate`. If the repo is already broken, fix only what is needed to pass and say so at the end.
-5. Note the counts from `npm run web` (entries, relations, queued) for the final message.
+5. Note the counts from `npm run web` (entries, relations, queued) and the time; they go in the run log as `totals.before` and `started`.
 
 ## 1. Choose tonight's topics
 
@@ -73,7 +75,11 @@ Spawn the tester. If it reports failures, fix their causes and run `npm test` yo
 - Remove the Next up lines you finished.
 - Add up to five new topics the team came across to Ideas, in the right group. No duplicates of queued ids.
 
-## 10. Commit and push
+## 10. Write the run log
+
+Write `runs/<date>.json` with every agent's row, the topics with their outcome and source, `totals.before` and `totals.after` (from `npm run web`), `started`, `finished` and notes. Run `npm run validate`; it checks the log too.
+
+## 11. Commit and push
 
 One commit on `main`:
 
@@ -87,9 +93,11 @@ Nightly <date>: <name>, <name>, <name>
 - notes: <anything dropped, ambiguous or failed>
 ```
 
-End with the attribution lines the session tells you to use. Push to `main`; the Pages workflow publishes the site. If the push fails, say so clearly.
+End with the attribution lines the session tells you to use. Push to `main`; the Pages workflow publishes the site. If the push is rejected because `main` moved on (someone else pushed), run `git pull --rebase` once and push again. If it still fails, say so clearly.
 
-## 11. Final message
+Then put the commit's sha into the run log's `commit` field, commit that one-line change ("Run log <date>") and push it.
+
+## 12. Final message
 
 Two to four sentences: what was added (names), what pictures they got, entries/relations/queued before and after, and anything that failed or was dropped.
 

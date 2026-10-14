@@ -27,7 +27,19 @@ unsupported  | content/garments/polo-shirt.md | relation influenced-by: rene-lac
 licence      | content/people/duke-of-windsor.md | picture | Commons page says CC BY-SA 4.0
 ```
 
-End with counts: claims checked, supported, unsupported, contradicted; relations checked; pictures checked.
+## Report (your final message)
+
+After the list of problems, end with:
+
+```
+status: ok | partial | failed
+summary: <one line>
+numbers: claims=<n>, supported=<n>, unsupported=<n>, contradicted=<n>, relations=<n>, relationsUnsupported=<n>, pictures=<n>, licenceProblems=<n>
+problems:
+- <the three most serious findings, one line each; omit if none>
+```
+
+`ok` means nothing contradicted and at most a few unsupported claims; `partial` means real fixes are needed; `failed` means sources could not be opened at all.
 
 ## Rules
 

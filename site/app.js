@@ -75,7 +75,7 @@
     return `<header class="masthead"><div class="wrap">${mark}<span class="masthead-meta">${nodes.size} entries, ${DATA.edges.length} connections, ${wanted.size} being researched</span></div><div class="tie" aria-hidden="true"></div></header>`;
   }
   function footer() {
-    return `<footer class="foot"><div class="wrap"><span>Updated ${esc(DATA.built)}. Every entry lists its sources; pictures are original drawings or public-domain prints.</span><span>New entries are researched and added every night.</span></div></footer>`;
+    return `<footer class="foot"><div class="wrap"><span>Updated ${esc(DATA.built)}. Every entry lists its sources; pictures are original drawings or public-domain prints.</span><span>New entries are researched and added every night. <a href="#run-log">Run log</a></span></div></footer>`;
   }
 
   // ---------- the web ----------
@@ -551,6 +551,55 @@
       ${footer()}`;
   }
 
+  // ---------- run log: what each agent did on each run ----------
+  const ROLE_NAMES = { curator: "Curator", researcher: "Researcher", writer: "Writer", weaver: "Weaver", illustrator: "Illustrator", "fact-checker": "Fact-checker", "visual-reviewer": "Visual reviewer", tester: "Tester", gardener: "Gardener" };
+  const pill = (st) => `<span class="pill pill-${esc(st)}">${esc(st)}</span>`;
+  const nums = (o) => o ? Object.entries(o).map(([k, v]) => `<span class="num"><span class="soft">${esc(k.replace(/([A-Z])/g, " $1").toLowerCase())}</span> ${esc(String(v))}</span>`).join("") : "";
+  // one dot per run for each role: the worst status that role had in that run
+  function roleHealth(runs) {
+    const rank = { failed: 3, partial: 2, ok: 1, skipped: 0 };
+    const roles = Object.keys(ROLE_NAMES).filter((r) => runs.some((run) => run.agents.some((a) => a.role === r)));
+    return roles.map((role) => {
+      const recent = runs.slice(0, 12).map((run) => {
+        const mine = run.agents.filter((a) => a.role === role);
+        if (!mine.length) return null;
+        return mine.reduce((w, a) => (rank[a.status] > rank[w] ? a.status : w), "skipped");
+      }).reverse();
+      const last = runs.find((run) => run.agents.some((a) => a.role === role));
+      const lastAgents = last.agents.filter((a) => a.role === role);
+      const problems = runs.slice(0, 6).flatMap((run) => run.agents.filter((a) => a.role === role).flatMap((a) => a.problems ?? []));
+      return { role, recent, model: lastAgents[0]?.model ?? "", problems };
+    });
+  }
+  function renderRuns() {
+    document.title = `Run log | ${SITE.title}`;
+    const runs = DATA.runs ?? [];
+    const health = roleHealth(runs);
+    const healthHTML = health.length ? `<section class="block" aria-labelledby="h-health"><div class="block-head"><h2 id="h-health">How each agent is doing</h2><p>One mark per run, oldest on the left. Recurring problems from the last six runs are listed beside it.</p></div>
+      <div class="table-wrap"><table class="runtable"><thead><tr><th>Agent</th><th>Model</th><th>Recent runs</th><th>Recurring problems</th></tr></thead><tbody>
+      ${health.map((h) => `<tr><td>${esc(ROLE_NAMES[h.role])}</td><td class="soft">${esc(h.model)}</td><td><span class="dots">${h.recent.map((st) => st ? `<span class="dot dot-${st}" title="${st}"></span>` : `<span class="dot dot-none" title="did not run"></span>`).join("")}</span></td><td>${h.problems.length ? `<ul class="probs">${[...new Set(h.problems)].slice(0, 4).map((p) => `<li>${esc(p)}</li>`).join("")}</ul>` : '<span class="soft">none</span>'}</td></tr>`).join("")}
+      </tbody></table></div></section>` : "";
+    const runHTML = runs.map((r) => {
+      const t = r.totals ?? {};
+      const delta = t.before && t.after ? ["entries", "relations", "wanted"].map((k) => `<span class="num"><span class="soft">${k === "wanted" ? "queued" : k}</span> ${t.before[k] ?? "?"} \u2192 ${t.after[k] ?? "?"}</span>`).join("") : "";
+      const topics = (r.topics ?? []).map((tp) => `<li>${nodes.has(tp.id) ? `<a href="#${esc(tp.id)}">${esc(nameOf(tp.id))}</a>` : esc(tp.id)} <span class="pill pill-${tp.outcome === "dropped" ? "failed" : tp.outcome === "folded" ? "partial" : "ok"}">${esc(tp.outcome)}</span>${tp.reason ? ` <span class="soft">${esc(tp.reason)}</span>` : ""}</li>`).join("");
+      const rows = r.agents.map((a) => `<tr><td>${esc(ROLE_NAMES[a.role] ?? a.role)}${a.topic ? `<div class="soft small">${esc(a.topic)}</div>` : ""}</td><td class="soft">${esc(a.model ?? "")}</td><td>${pill(a.status)}</td><td>${esc(a.summary)}${a.numbers ? `<div class="nums">${nums(a.numbers)}</div>` : ""}${a.problems?.length ? `<ul class="probs">${a.problems.map((p) => `<li>${esc(p)}</li>`).join("")}</ul>` : ""}</td></tr>`).join("");
+      return `<article class="run"><header class="run-head"><h3>${esc(r.date)} <span class="soft">${esc(r.kind)}${r.started ? `, ${esc(r.started)}\u2013${esc(r.finished ?? "")}` : ""}</span></h3><div class="nums">${delta}${r.commit ? `<span class="num"><span class="soft">commit</span> <a href="https://github.com/rosengaard98/menswear-atlas/commit/${esc(r.commit)}" target="_blank" rel="noopener">${esc(r.commit.slice(0, 7))}</a></span>` : ""}</div></header>
+        ${topics ? `<ul class="topics">${topics}</ul>` : ""}
+        <div class="table-wrap"><table class="runtable"><thead><tr><th>Agent</th><th>Model</th><th>Status</th><th>What it did</th></tr></thead><tbody>${rows}</tbody></table></div>
+        ${r.notes?.length ? `<ul class="probs">${r.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}</article>`;
+    }).join("");
+    app.innerHTML = `${masthead(false)}
+      <main class="wrap runlog">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="#">The web</a> / Run log</nav>
+        <h1>Run log</h1>
+        <p class="summary">What the agents did on each nightly and weekly run: what they found, what they changed, and what went wrong.</p>
+        ${runs.length ? healthHTML + `<section class="block" aria-labelledby="h-runs"><div class="block-head"><h2 id="h-runs">Runs</h2><p>${runs.length} so far, newest first.</p></div>${runHTML}</section>`
+          : `<p class="empty-state">No runs logged yet. The first nightly run writes its log here.</p>`}
+      </main>
+      ${footer()}`;
+  }
+
   function renderMissing(id) {
     document.title = SITE.title;
     app.innerHTML = `${masthead(false)}<main class="wrap"><article class="entry"><div class="entry-text"><p class="kind sc">No entry</p><h1>Nothing called “${esc(id)}” yet</h1><p class="summary">The link may be old, or the entry may have been renamed. <a href="#">Go back to the web</a> and use Find.</p></div></article></main>${footer()}`;
@@ -574,6 +623,7 @@
     pageAbort?.abort();
     pageAbort = new AbortController();
     if (!raw) renderHome();
+    else if (raw === "run-log") renderRuns();
     else if (raw.startsWith("~")) renderHome(raw.slice(1));
     else if (nodes.has(raw)) renderEntry(nodes.get(raw));
     else if (wanted.has(raw)) renderWanted(wanted.get(raw));

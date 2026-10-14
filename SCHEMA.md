@@ -91,6 +91,32 @@ Every entry except eras should have a picture; it is what hangs in the web. Thre
 
 No logos or brand marks, no photographs of living people, nothing whose licence you have not seen stated on the source page.
 
+## Run logs
+
+Every run leaves one JSON file in `runs/`, named `<date>.json` (add `-2` if the name is taken). The site shows them on the run log page, and the gardener reads them to spot what keeps going wrong. `npm run validate` checks the shape.
+
+```json
+{
+  "date": "2026-10-15",
+  "kind": "nightly",
+  "started": "00:54",
+  "finished": "02:03",
+  "commit": "<sha of the run's commit, added after committing; may be empty>",
+  "totals": { "before": { "entries": 18, "relations": 56, "wanted": 25 }, "after": { "entries": 21, "relations": 70, "wanted": 31 } },
+  "topics": [
+    { "id": "neapolitan-tailoring", "source": "next-up", "outcome": "added" },
+    { "id": "john-e-brooks", "source": "next-up", "outcome": "dropped", "reason": "one independent source" }
+  ],
+  "agents": [
+    { "role": "researcher", "model": "sonnet", "topic": "neapolitan-tailoring", "status": "ok",
+      "summary": "One line on what it did.", "numbers": { "sources": 4 }, "problems": ["Anything that went wrong or was hard"] }
+  ],
+  "notes": ["Anything about the run as a whole"]
+}
+```
+
+`kind` is `nightly`, `gardener` or `test`. `role` is one of curator, researcher, writer, weaver, illustrator, fact-checker, visual-reviewer, tester, gardener. `status` is `ok`, `partial`, `failed` or `skipped`. `topic.source` is where the curator found the topic: `next-up`, `gap`, `wanted` or `ideas`. `outcome` is `added`, `dropped`, `folded` or `changed`. Each agent's numbers are the ones its brief lists under Report. Problems are short and specific, written so the same problem reads the same way on different nights.
+
 ## Commands
 
 ```bash

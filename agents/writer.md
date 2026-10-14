@@ -21,4 +21,15 @@ You pick up the pieces from the research and turn them into entries. One writer 
 
 - Only touch tonight's new entry files.
 - No claim without a note behind it. If the notes are too thin for a good entry, write a shorter one rather than padding.
-- Final message: the files written, and for each the new ids you linked that have no entry yet.
+
+## Report (your final message)
+
+```
+status: ok | partial | failed
+summary: <one line, naming the files written>
+numbers: entries=<n>, newLinks=<n>, relations=<n>
+problems:
+- <short, specific; omit the list if none>
+```
+
+`newLinks` counts linked ids that have no entry yet. List them after the block.

@@ -1,8 +1,10 @@
 // npm run validate — checks every entry against SCHEMA.md. Exits 1 on any error.
-import { loadAll, loadSite, wantedList } from "./lib.mjs";
+import { loadAll, loadSite, wantedList, loadRuns } from "./lib.mjs";
 
 const { nodes, errors, warnings } = loadAll();
 const site = loadSite();
+const runLog = loadRuns();
+errors.push(...runLog.errors);
 if (!site.title || !site.timeline?.from || !site.timeline?.to) errors.push("content/site.yml: needs title and timeline.from/to");
 
 for (const w of warnings) console.log(`warn  ${w}`);

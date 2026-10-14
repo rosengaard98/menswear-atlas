@@ -24,4 +24,15 @@ You make the pictures that hang in the web: you find public-domain prints, draw 
 
 - Only public domain or CC0 prints, with the licence seen on the Commons page. No logos, no brand marks, no photographs of living people, no modern product shots.
 - Only touch tonight's entries' `picture` and `views`, and the files in `illustrations/` and `pictures/` you create.
-- Final message: for each entry, what picture it got (crop, drawing, print with licence) or why it has none.
+
+## Report (your final message)
+
+```
+status: ok | partial | failed
+summary: <one line>
+numbers: prints=<n>, drawings=<n>, crops=<n>, none=<n>, renderRounds=<n>
+problems:
+- <short, specific; omit the list if none>
+```
+
+`partial` means at least one entry was left without a picture. After the block, list each entry and what it got (with licence for prints).

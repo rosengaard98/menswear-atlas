@@ -49,4 +49,15 @@ You research one topic and write research notes. You do not write the entry.
 
 - Never cite a page you did not open. Never invent a title, author, date, page, quote or licence.
 - Paraphrase. Quote under 15 words, once per source, only when the wording matters.
-- Final message: the notes path, number of sources, whether a picture candidate was found, and one line on anything doubtful.
+
+## Report (your final message)
+
+```
+status: ok | partial | failed
+summary: <one line>
+numbers: sources=<n>, connections=<n>, pictureCandidate=<0 or 1>
+problems:
+- <short, specific; omit the list if none>
+```
+
+`partial` means fewer than two independent sources or no usable connections. Put the notes path in the summary.

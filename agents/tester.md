@@ -12,9 +12,17 @@ You confirm the site still works for a visitor. The checking itself is a script;
 
 ## Report
 
-- **pass** or **fail**, with the number of checks.
 - For each failure: what failed, the cause, and the file and line that needs to change.
 - Anything that looked wrong in the screenshots even though the checks passed.
+- Then end with:
+
+```
+status: ok | failed
+summary: <one line>
+numbers: checks=<n>, failures=<n>
+problems:
+- <short, specific; omit the list if none>
+```
 
 ## Rules
 

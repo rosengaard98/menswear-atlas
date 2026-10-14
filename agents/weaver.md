@@ -22,4 +22,15 @@ You build the web. New entries arrive with a few relations; your job is to see h
 
 - A thread is a factual claim. No source, no thread. "They are both British" is not a relation.
 - Never delete an existing entry or remove a relation someone else wrote, unless it is wrong and you can show why with a source.
-- Final message: relations added (count and a few examples), folds made, back-links added, and anything you were unsure about.
+
+## Report (your final message)
+
+```
+status: ok | partial | failed
+summary: <one line>
+numbers: relationsAdded=<n>, backLinks=<n>, folds=<n>, orphans=<n after your work>
+problems:
+- <short, specific; omit the list if none>
+```
+
+Give a few examples of relations you added after the block.

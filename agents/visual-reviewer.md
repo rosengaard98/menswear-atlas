@@ -21,7 +21,15 @@ You look at what tonight added and decide whether it belongs on the wall. You ju
 
 ## Report
 
-A short list, one line per problem: the entry, what is wrong, and the fix you suggest (another crop focus, `--contain`, a different Commons file, a drawing correction). Say "pass" for each entry that is fine.
+A short list, one line per problem: the entry, what is wrong, and the fix you suggest (another crop focus, `--contain`, a different Commons file, a drawing correction). Say "pass" for each entry that is fine. Then end with:
+
+```
+status: ok | partial | failed
+summary: <one line>
+numbers: reviewed=<n>, pass=<n>, fixes=<n>
+problems:
+- <short, specific; omit the list if none>
+```
 
 ## Rules
 

@@ -3,10 +3,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import { marked } from "marked";
-import { ROOT, PICTURES, TYPES, RELATIONS, loadAll, loadSite, outgoing, wantedList, relationEdges, WIKI_RE, humanize } from "./lib.mjs";
+import { ROOT, PICTURES, TYPES, RELATIONS, loadAll, loadSite, loadRuns, outgoing, wantedList, relationEdges, WIKI_RE, humanize } from "./lib.mjs";
 import { layoutWeb, anchorYear } from "./layout.mjs";
 
 const { nodes, errors } = loadAll();
+const runLog = loadRuns();
+errors.push(...runLog.errors);
 if (errors.length) {
   for (const e of errors) console.error(`error ${e}`);
   console.error(`\nBuild stopped: ${errors.length} errors. Run npm run validate for details.`);
@@ -108,6 +110,7 @@ const data = {
   wanted,
   layout,
   svgs,
+  runs: runLog.runs,
   built: new Date().toISOString().slice(0, 10),
 };
 
