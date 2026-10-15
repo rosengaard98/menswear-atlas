@@ -39,7 +39,7 @@ Ask who made the first Neapolitan jacket and you get two family names. The Rubin
 
 ## Where it came from
 
-Before the soft jacket, a smart Neapolitan suit looked like [[savile-row|Savile Row]] or Roman work. Salvatore Morziello's shop in the city sold goods from Lock & Co., Floris and Swaine Adeney Brigg. Gennaro "Bebè" [[rubinacci|Rubinacci]] admired English cloth and called his house London House. According to *The Rake*, in the 1930s he proposed a softer, unlined version of the [[drape-cut]] of [[frederick-scholte|Frederick Scholte]] and Anderson & Sheppard.
+Before the soft jacket, a smart Neapolitan suit looked like [[savile-row|Savile Row]] or Roman work. Salvatore Morziello's shop in the city sold goods from Lock & Co., Floris and Swaine Adeney Brigg. Gennaro "Bebè" [[rubinacci|Rubinacci]] admired English cloth and called his house London House. According to *The Rake*, in the 1930s he proposed a softer, unlined version of the [[drape-cut]] of [[frederick-scholte|Frederick Scholte]] and [[anderson-sheppard|Anderson & Sheppard]].
 
 [[vincenzo-attolini|Vincenzo Attolini]], Morziello's apprentice and later Rubinacci's head cutter, is credited with the original jacket: no pads, little or no lining, very light. Parisian Gentleman repeats the story that his jackets could be folded up to eight times. Wikipedia instead dates the light jacket to the 1920s and names Antonio Caggiula beside Attolini. The Roman tailor Domenico Caraceni comes into it too: The Rake says Attolini borrowed some of Caraceni's soft lines, Parisian Gentleman suggests him as a possible influence, and a 2015 Parisian Gentleman profile of Stile Latino goes further and says Caraceni came first.
 

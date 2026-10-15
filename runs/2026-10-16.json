@@ -1,0 +1,214 @@
+{
+  "date": "2026-10-16",
+  "kind": "nightly",
+  "started": "00:55",
+  "finished": "01:45",
+  "commit": "",
+  "totals": {
+    "before": {
+      "entries": 28,
+      "relations": 126,
+      "wanted": 76
+    },
+    "after": {
+      "entries": 31,
+      "relations": 146,
+      "wanted": 87
+    }
+  },
+  "topics": [
+    {
+      "id": "peacock-revolution",
+      "source": "gap",
+      "outcome": "added"
+    },
+    {
+      "id": "anderson-sheppard",
+      "source": "wanted",
+      "outcome": "added"
+    },
+    {
+      "id": "penny-loafer",
+      "source": "gap",
+      "outcome": "added"
+    }
+  ],
+  "agents": [
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "peacock-revolution",
+      "status": "ok",
+      "summary": "research/peacock-revolution.md; era roughly 1963/65 to 1973/75 across V&A, London Museum, Abrams, Culture Stories, Gentleman's Gazette and Wikipedia.",
+      "numbers": {
+        "sources": 7,
+        "connections": 9,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Commons file page blocked (permission not answered), no picture candidate",
+        "Term origin (Dichter 1965, Frazier 1968) rests on Wikipedia only",
+        "Mr Fish opening date conflicts (1966 V&A vs 1964 Wikipedia)"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "anderson-sheppard",
+      "status": "partial",
+      "summary": "research/anderson-sheppard.md; 1906 founding, 2005 move, Rowland ownership, house cut and clients from five independent sources plus the Royal Warrant listing.",
+      "numbers": {
+        "sources": 6,
+        "connections": 8,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Put This On, The Rake, the firm's own history page and Commons blocked (permission not answered)",
+        "Sheppard partnership and Royal Warrant dates in no opened source",
+        "Commons fetch blocked, no picture candidate"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "penny-loafer",
+      "status": "partial",
+      "summary": "research/penny-loafer.md; Norwegian Aurland origin and 1936 Bass Weejun covered, construction from Bass and Gentleman's Gazette.",
+      "numbers": {
+        "sources": 8,
+        "connections": 8,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Commons search blocked, no picture candidate",
+        "Aurland dates conflict (c.1908, 1920, 1930); Weejun 1934 vs 1936",
+        "Penny-in-the-slot pay-phone story unsourced and doubtful"
+      ]
+    },
+    {
+      "role": "writer",
+      "model": "opus",
+      "topic": "peacock-revolution, anderson-sheppard, penny-loafer",
+      "status": "ok",
+      "summary": "Wrote content/eras/peacock-revolution.md, content/makers/anderson-sheppard.md and content/garments/penny-loafer.md; validate 0 errors.",
+      "numbers": {
+        "entries": 3,
+        "newLinks": 18,
+        "relations": 18
+      },
+      "problems": [
+        "Peacock revolution body at the 450-word limit",
+        "Origin dates of the penny loafer given side by side as disputed"
+      ]
+    },
+    {
+      "role": "weaver",
+      "model": "opus",
+      "topic": "peacock-revolution, anderson-sheppard, penny-loafer",
+      "status": "ok",
+      "summary": "Wove the three entries in: 5 relations, 2 back-links (preppy, neapolitan-tailoring), no folds.",
+      "numbers": {
+        "relationsAdded": 5,
+        "backLinks": 2,
+        "folds": 0,
+        "orphans": 0
+      },
+      "problems": [
+        "Added preppy includes penny-loafer and neapolitan-tailoring influenced-by anderson-sheppard on sources the fact-checker could not open; both removed by the curator"
+      ]
+    },
+    {
+      "role": "illustrator",
+      "model": "opus",
+      "topic": "peacock-revolution, anderson-sheppard, penny-loafer",
+      "status": "partial",
+      "summary": "Drew a front technical-flat plate for penny-loafer with 7 hotspots (plate budget used); anderson-sheppard left without a picture; era skipped.",
+      "numbers": {
+        "prints": 0,
+        "drawings": 1,
+        "crops": 0,
+        "none": 1,
+        "renderRounds": 2
+      },
+      "problems": [
+        "Commons API rate limit for anderson-sheppard",
+        "WebFetch of Commons MediaSearch blocked (permission timed out)",
+        "Hotspot labels on queued ids became their display names (G.H. Bass shown as 'Hand-sewn moccasin seam'); fixed by the curator"
+      ]
+    },
+    {
+      "role": "fact-checker",
+      "model": "opus",
+      "topic": "peacock-revolution, anderson-sheppard, penny-loafer, preppy, neapolitan-tailoring",
+      "status": "partial",
+      "summary": "1 contradicted and 16 unsupported claims out of 125; Rogers Peet was a retailer, not a maker; three sources could not be opened.",
+      "numbers": {
+        "claims": 125,
+        "supported": 108,
+        "unsupported": 16,
+        "contradicted": 1,
+        "relations": 23,
+        "relationsUnsupported": 5,
+        "pictures": 0,
+        "licenceProblems": 0
+      },
+      "problems": [
+        "The Rake and Wikipedia Preppy / Ivy League (clothing) could not be opened (permission not answered)",
+        "Several penny-loafer claims credited to the wrong source",
+        "Diamond cut-out dated to 1936 with no source"
+      ]
+    },
+    {
+      "role": "visual-reviewer",
+      "model": "opus",
+      "topic": "peacock-revolution, anderson-sheppard, penny-loafer, preppy, neapolitan-tailoring",
+      "status": "partial",
+      "summary": "Penny loafer plate passes; overlapping phone hotspots and literal asterisks in a summary fixed; site-template issues remain.",
+      "numbers": {
+        "reviewed": 5,
+        "pass": 1,
+        "fixes": 8
+      },
+      "problems": [
+        "Site template: no-picture entry page is an empty green panel with a letter",
+        "Site template: Connections links run together with no separator",
+        "Web layout: peacock-revolution label collides with penny-loafer card; neapolitan-tailoring at the far edge",
+        "test.mjs does not produce web-desktop-light.png, web-card.png or phone dark-mode entry shots"
+      ]
+    },
+    {
+      "role": "tester",
+      "model": "sonnet",
+      "topic": "",
+      "status": "ok",
+      "summary": "npm test passed: 215 checks, 0 failures.",
+      "numbers": {
+        "checks": 215,
+        "failures": 0
+      },
+      "problems": []
+    },
+    {
+      "role": "curator",
+      "model": "opus",
+      "topic": "",
+      "status": "ok",
+      "summary": "Next up was empty. Chose peacock-revolution (no entries in the 1970s; post-war era ended 1964), anderson-sheppard (only one maker in the atlas, linked from 3) and penny-loafer (garment with a plate, and the first Scandinavian entry). Fixed the Rogers Peet contradiction and all unsupported claims (re-attributed or cut), removed the two unverifiable weaver relations and the undated nehru-jacket relation, moved a phone-overlapping hotspot, dropped two penny-loafer hotspots whose labels were misnaming queued ids, and re-ran the social editor. Also relinked Tommy Nutter in peacock-revolution so the queued id is not named 'Nutters of Savile Row'.",
+      "numbers": {
+        "topics": 3,
+        "added": 3,
+        "dropped": 0
+      },
+      "problems": [
+        "Commons unreachable again: no archival pictures tonight",
+        "WebFetch permission prompts time out in unattended runs, so several sources could not be opened"
+      ]
+    }
+  ],
+  "notes": [
+    "Social editor (sonnet) first run skipped: slide 3 showed hotspot labels as names of queued entries. After the curator fixed the penny-loafer hotspots, a second run was ok: three-slide carousel and caption for penny-loafer in social/2026-10-16/ (slides=3, captionChars=667, hashtags=8). Logged here because the validator does not accept the role social-editor.",
+    "anderson-sheppard has no picture: Commons rate-limited the machine and its file pages could not be fetched.",
+    "Existing entries changed tonight: preppy and neapolitan-tailoring (back-links only; the weaver's new relations were removed after the fact-check).",
+    "Site issues for Lasse (site/ and tools/ are off-limits to the run): blank no-picture panel, run-together Connections links, web label collisions, and the wanted-label rule in tools/lib.mjs that names a queued id after the first hotspot label pointing at it."
+  ]
+}

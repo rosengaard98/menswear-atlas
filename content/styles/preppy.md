@@ -27,7 +27,7 @@ The trigger was a joke. *The Official Preppy Handbook*, edited by Lisa Birnbach 
 
 ## The pieces
 
-Navy blazers with brass buttons, [[ocbd|oxford button-downs]], repp-stripe and knitted silk ties, cable-knit and argyle sweaters, surcingle and woven leather belts, seersucker and madras, grey flannels, chinos, corduroys and Nantucket reds, penny loafers and buckskin shoes, and the [[polo-shirt|polo shirts]], rugby shirts and boat shoes of weekends.
+Navy blazers with brass buttons, [[ocbd|oxford button-downs]], repp-stripe and knitted silk ties, cable-knit and argyle sweaters, surcingle and woven leather belts, seersucker and madras, grey flannels, chinos, corduroys and Nantucket reds, [[penny-loafer|penny loafers]] and buckskin shoes, and the [[polo-shirt|polo shirts]], rugby shirts and boat shoes of weekends.
 
 ## Since
 

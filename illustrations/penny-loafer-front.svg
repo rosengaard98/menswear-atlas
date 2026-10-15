@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720">
+  <!-- Penny loafer (right shoe), seen from above with the toe at the top, technical flat. Classes: see STYLE.md -->
+
+  <!-- leather sole, showing as a narrow rim around the upper -->
+  <path class="cloth-alt" d="M296,32 C228,34 180,106 177,222 C175,322 208,402 210,470 C212,552 207,636 234,672 C250,694 278,700 300,700 C326,700 356,694 374,672 C400,636 398,560 395,480 C394,402 432,332 432,240 C432,132 374,34 296,32 Z"/>
+
+  <!-- upper: one tubular moccasin piece wrapping the foot -->
+  <path class="cloth" d="M296,42 C236,44 192,110 188,222 C185,320 218,400 220,470 C222,550 217,630 242,664 C256,684 280,690 300,690 C324,690 350,684 366,664 C390,630 388,560 385,480 C384,400 422,330 422,240 C422,140 368,44 296,42 Z"/>
+  <path class="fold" d="M200,250 C206,262 212,276 216,292 M410,250 C404,262 398,276 394,292"/>
+
+  <!-- moccasin apron (plug) on top of the toe, with its raised hand-sewn seam -->
+  <path class="cloth" d="M236,410 C232,330 224,262 228,200 C234,122 264,90 300,88 C336,90 370,122 376,200 C380,262 376,330 372,410 Z"/>
+  <path class="seam" d="M242,404 C238,330 231,262 235,202 C240,130 268,97 300,95 C332,97 362,130 369,202 C373,262 370,330 366,404"/>
+  <path class="line" d="M229,410 C225,330 217,262 221,200 C227,116 260,82 300,81 C340,82 377,116 383,200 C387,262 383,330 379,410"/>
+  <path class="fold" d="M262,262 C280,270 320,270 338,262"/>
+  <path class="fold" d="M266,300 C284,306 316,306 334,300"/>
+
+  <!-- beefrolls: the vamp edge gathered into a crimped roll where the seam meets the saddle -->
+  <path class="cloth" d="M219,376 C215,388 216,412 222,424 L240,424 C244,410 244,388 240,376 Z"/>
+  <path class="fold" d="M219,384 L240,384 M218,392 L242,392 M218,400 L242,400 M219,408 L242,408 M220,416 L241,416"/>
+  <path class="cloth" d="M381,376 C385,388 384,412 378,424 L360,424 C356,410 356,388 360,376 Z"/>
+  <path class="fold" d="M381,384 L360,384 M382,392 L358,392 M382,400 L358,400 M381,408 L358,408 M380,416 L359,416"/>
+
+  <!-- saddle strap across the instep, with the diamond cut-out -->
+  <path class="cloth" d="M226,410 C262,398 338,398 374,410 C378,424 378,442 374,456 C338,446 262,446 226,456 C222,442 222,424 226,410 Z"/>
+  <path class="seam" d="M230,415 C264,404 336,404 370,415 M230,451 C264,441 336,441 370,451"/>
+  <path class="shade" d="M270,428 L300,417 L330,428 L300,439 Z"/>
+  <path class="line" d="M270,428 L300,417 L330,428 L300,439 Z"/>
+
+  <!-- the opening: low topline, footbed inside, heel counter at the back -->
+  <path class="cloth-alt" d="M236,486 C238,468 262,460 300,460 C338,460 362,468 364,486 C370,550 366,620 350,648 C337,666 318,672 300,672 C282,672 263,666 250,648 C234,620 230,550 236,486 Z"/>
+  <path class="shade" d="M246,492 C248,478 268,472 300,472 C332,472 352,478 354,492 C360,550 356,612 344,638 C333,655 318,662 300,662 C282,662 267,655 256,638 C244,612 240,550 246,492 Z"/>
+  <path class="seam" d="M230,478 C224,550 226,624 244,655 C258,674 280,679 300,679 C320,679 342,674 356,655 C374,624 376,550 370,478"/>
+  <path class="line" d="M300,679 L300,690"/>
+</svg>
