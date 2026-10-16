@@ -14,6 +14,10 @@ The nightly curator takes topics from **Next up** first, top down, then fills ga
 - People: Fred Astaire, Kensuke Ishizu, Ralph Lauren, Gianni Agnelli, René Lacoste, Vincenzo Attolini, Tommy Nutter.
 - Context: Jermyn Street, Harris Tweed, Pitti Uomo, *The Official Preppy Handbook*, Henley Royal Regatta, *Men's Club* magazine, *The West End Gazette* (tailoring trade paper cited for the sack coat's French origin), *Dress for Success* (John T. Molloy, 1975; Wikipedia treats it as the end of the peacock revolution), the 1960s London boutiques Hung On You, Granny Takes a Trip and Blades (V&A).
 - Makers (from tonight): Turnbull & Asser (Jermyn Street shirtmaker where Michael Fish made kipper ties).
+- Details (2026-10-17): roped shoulder and the structured shoulder (the contrast Ivy Style draws with the natural shoulder).
+- Makers (2026-10-17): Cifonelli (Paris, roped shoulder), Martin Greenfield (Brooklyn suit maker named in the natural-shoulder measurements), Paul Stuart.
+- Pictures (2026-10-17): ralph-lauren has none; a public-domain period photograph of the Rhinelander mansion (his 1986 flagship) on Commons is worth a look when Commons is not rate-limiting.
+- Threads (2026-10-17): drape-cut ~ natural-shoulder and preppy ~ penny-loafer were proposed by the weaver but left out because their sources (Wikipedia, The Rake, Put This On) could not be opened tonight.
 
 ## Folded
 

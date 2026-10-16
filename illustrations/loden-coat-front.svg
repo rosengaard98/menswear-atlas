@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720">
+  <!-- Loden coat (Hubertus type), front, technical flat. Classes: see STYLE.md.
+       Drawn from the research notes only: roomy, unlined, roughly knee length; turn-down
+       collar buttoned to the throat; shoulders and upper chest doubled; leather football
+       buttons; hip pockets; vents under the arms. Roetzel says there is no single original
+       design, so this is a common form. The deep inverted pleat is at the back and not shown.
+       Proportions, not measurements. -->
+
+  <!-- sleeves -->
+  <path class="cloth" d="M174,118 C150,128 132,150 122,190 C106,290 88,400 72,506 C92,514 114,518 134,518 C140,420 146,330 152,252 C160,206 166,160 174,118 Z"/>
+  <path class="cloth" d="M426,118 C450,128 468,150 478,190 C494,290 512,400 528,506 C508,514 486,518 466,518 C460,420 454,330 448,252 C440,206 434,160 426,118 Z"/>
+  <path class="line" d="M77,474 C96,482 116,486 137,486 M523,474 C504,482 484,486 463,486"/>
+  <path class="seam" d="M76,500 C95,507 115,511 135,512 M524,500 C505,507 485,511 465,512"/>
+  <path class="fold" d="M112,280 C104,340 98,390 94,430 M488,280 C496,340 502,390 506,430"/>
+
+  <!-- body: unwaisted, widening a little to the hem -->
+  <path class="cloth" d="M262,74 C232,88 200,104 174,118 C166,160 160,206 152,252 C146,400 138,560 130,688 C186,696 414,696 470,688 C462,560 454,400 448,252 C440,206 434,160 426,118 C400,104 368,88 338,74 C318,68 282,68 262,74 Z"/>
+  <path class="seam" d="M135,682 C190,689 410,689 465,682"/>
+  <path class="fold" d="M214,560 C208,600 204,640 202,684 M386,560 C392,600 396,640 398,684"/>
+
+  <!-- vents under the arms -->
+  <path class="cloth-alt" d="M152,262 C147,280 146,300 148,318 C153,300 154,280 152,262 Z"/>
+  <path class="cloth-alt" d="M448,262 C453,280 454,300 452,318 C447,300 446,280 448,262 Z"/>
+
+  <!-- doubled shoulders and upper chest: the lower edge of the second layer -->
+  <path class="line" d="M159,214 C200,232 256,244 312,246 C356,244 402,232 441,214"/>
+  <path class="seam" d="M162,208 C202,226 256,238 312,240 C356,238 400,226 438,208"/>
+
+  <!-- front edge of the overlapping forepart -->
+  <path class="line" d="M312,108 L312,690"/>
+  <path class="seam" d="M306,112 L306,684"/>
+
+  <!-- hip pockets, slanted flaps -->
+  <path class="cloth" d="M176,452 L250,440 L254,470 C230,476 204,480 180,484 Z"/>
+  <path class="seam" d="M182,478 C206,474 230,470 250,465"/>
+  <path class="cloth" d="M424,452 L350,440 L346,470 C370,476 396,480 420,484 Z"/>
+  <path class="seam" d="M418,478 C394,474 370,470 350,465"/>
+
+  <!-- leather football buttons -->
+  <circle class="button" cx="296" cy="150" r="6"/>
+  <circle class="button" cx="296" cy="226" r="6"/>
+  <circle class="button" cx="296" cy="302" r="6"/>
+  <circle class="button" cx="296" cy="378" r="6"/>
+  <circle class="button" cx="296" cy="454" r="6"/>
+  <circle class="button" cx="296" cy="530" r="6"/>
+
+  <!-- inside of the neck -->
+  <path class="shade" d="M276,92 C290,86 310,86 324,92 L300,108 Z"/>
+
+  <!-- turn-down collar, buttoned at the throat -->
+  <path class="cloth" d="M300,108 L266,140 L244,90 C258,62 342,62 356,90 L334,140 Z"/>
+  <path class="cloth-alt" d="M260,84 C282,72 318,72 340,84 L324,92 C310,86 290,86 276,92 Z"/>
+  <path class="seam" d="M296,114 L268,134 L251,92 M304,114 L332,134 L349,92"/>
+</svg>
