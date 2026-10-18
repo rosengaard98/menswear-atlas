@@ -1,0 +1,214 @@
+{
+  "date": "2026-10-19",
+  "kind": "nightly",
+  "started": "00:54",
+  "finished": "01:25",
+  "commit": "",
+  "totals": {
+    "before": {
+      "entries": 34,
+      "relations": 160,
+      "wanted": 101
+    },
+    "after": {
+      "entries": 37,
+      "relations": 185,
+      "wanted": 112
+    }
+  },
+  "topics": [
+    {
+      "id": "j-press",
+      "source": "wanted",
+      "outcome": "added"
+    },
+    {
+      "id": "spalla-camicia",
+      "source": "gap",
+      "outcome": "added"
+    },
+    {
+      "id": "tommy-nutter",
+      "source": "gap",
+      "outcome": "added"
+    }
+  ],
+  "agents": [
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "j-press",
+      "status": "partial",
+      "summary": "research/j-press.md; history, house look and Japan from Wikipedia, the firm, New Haven Independent, two Ivy Style pieces and FIT.",
+      "numbers": {
+        "sources": 6,
+        "connections": 9,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Commons fetch blocked (permission not answered), no picture candidate",
+        "Sack-suit and natural-shoulder links rest on one 2009 store-manager interview",
+        "Sources disagree on Jacobi Press's origin (Latvia vs Pale of Russia) and on founding vs buying Goldbaum's shop",
+        "New Haven Independent page undated"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "spalla-camicia",
+      "status": "partial",
+      "summary": "research/spalla-camicia.md; construction, terms and the Attolini/Rubinacci story from Permanent Style, The Vou, The Rake, Styleforum, Wikipedia and Parisian Gentleman.",
+      "numbers": {
+        "sources": 6,
+        "connections": 8,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "No Commons picture found",
+        "Sources disagree on whether shirring is part of the term",
+        "1920s (Wikipedia) vs 1930s (The Rake) for Attolini's soft jacket",
+        "10 cm sleeve figure from Wikipedia only"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "tommy-nutter",
+      "status": "partial",
+      "summary": "research/tommy-nutter.md; life, Nutters of Savile Row and clients from Wikipedia, The Rake, Mr Porter, Put This On and Archived Dreams.",
+      "numbers": {
+        "sources": 5,
+        "connections": 8,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Commons fetch blocked (permission not answered), no picture candidate",
+        "Sources disagree on reopening year (1982 vs 1983), the Batman claim and the 1976 exit",
+        "Archived Dreams page title inferred from its URL"
+      ]
+    },
+    {
+      "role": "writer",
+      "model": "opus",
+      "status": "ok",
+      "summary": "Wrote j-press, spalla-camicia and tommy-nutter from the notes; disagreements named in the text.",
+      "numbers": {
+        "entries": 3,
+        "newLinks": 21,
+        "relations": 21
+      },
+      "problems": [
+        "Archived Dreams title unchecked",
+        "j-press era thread rests on the founding date"
+      ]
+    },
+    {
+      "role": "weaver",
+      "model": "opus",
+      "status": "ok",
+      "summary": "Added 4 sourced threads (j-press makes ocbd, j-press interwar, tommy-nutter peacock-revolution era, tommy-nutter peak-lapel); no folds, no orphans.",
+      "numbers": {
+        "relationsAdded": 4,
+        "backLinks": 0,
+        "folds": 0,
+        "orphans": 0
+      },
+      "problems": [
+        "nutters-of-savile-row is a possible fold into tommy-nutter; left for Lasse (BACKLOG Ideas)",
+        "Missing links on older entries left alone; no source opened tonight"
+      ]
+    },
+    {
+      "role": "illustrator",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Drew the spalla-camicia close-up plate (tonight's plate) with 6 hotspots; j-press and tommy-nutter have no picture.",
+      "numbers": {
+        "prints": 0,
+        "drawings": 1,
+        "crops": 0,
+        "none": 2,
+        "renderRounds": 2
+      },
+      "problems": [
+        "Commons search blocked (WebFetch permission not answered); no file page opened, no hotlink possible"
+      ]
+    },
+    {
+      "role": "fact-checker",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Opened all 17 sources; 3 contradicted and 9 unsupported claims, all fixed or softened by the curator; every relation supported.",
+      "numbers": {
+        "claims": 112,
+        "supported": 100,
+        "unsupported": 9,
+        "contradicted": 3,
+        "relations": 25,
+        "relationsUnsupported": 0,
+        "pictures": 0,
+        "licenceProblems": 0
+      },
+      "problems": [
+        "contradicted: tommy-nutter firm spelled Donaldson, Williams & Ward (sources: Williamson)",
+        "contradicted: spalla-camicia said Wikipedia treats shirring as part of the term",
+        "quote: j-press natural-shoulder quote misworded",
+        "Several claims credited to the wrong source (Mr Porter vs Put This On, The Rake vs The Vou)"
+      ]
+    },
+    {
+      "role": "visual-reviewer",
+      "model": "opus",
+      "status": "partial",
+      "summary": "spalla-camicia drawing passes; j-press and tommy-nutter entry pages show a blank placeholder; Connections links run together (site template).",
+      "numbers": {
+        "reviewed": 3,
+        "pass": 1,
+        "fixes": 2
+      },
+      "problems": [
+        "Entry-page no-picture fallback is an empty green panel with one letter (site template)",
+        "Connections links run together without separators on entry pages (site template)",
+        "spalla-camicia caption partly hidden under the Natural shoulder card in the web (site/web.js)",
+        "Brief names web-desktop-light.png and web-card.png, which npm test does not create"
+      ]
+    },
+    {
+      "role": "tester",
+      "model": "sonnet",
+      "status": "ok",
+      "summary": "npm test passed 262 checks with 0 failures.",
+      "numbers": {
+        "checks": 262,
+        "failures": 0
+      },
+      "problems": [
+        "Same visual oddities as the visual reviewer: Connections spacing, empty no-picture panel",
+        "Dotted links look dim in dark mode"
+      ]
+    },
+    {
+      "role": "curator",
+      "model": "opus",
+      "status": "ok",
+      "summary": "Chose j-press (most-wanted, 4 links), spalla-camicia (Italian construction detail; Italy has one style) and tommy-nutter (fills the empty 1970s); fixed every fact-check finding.",
+      "numbers": {
+        "topics": 3,
+        "added": 3,
+        "dropped": 0,
+        "fixes": 13
+      },
+      "problems": [
+        "Subagents' WebFetch to Commons blocked by unanswered permission prompts in unattended runs; fourth night running",
+        "Social editor's npm run post was blocked by the permission classifier; the curator did not run it on its behalf, so no Instagram draft tonight",
+        "Run-log validator rejects role social-editor; its row moved to notes (fourth night; tools/validate.mjs needs it added)",
+        "Did not add the visual reviewer's optional tommy-nutter ~ savile-row thread: savile-row already has a related thread to him"
+      ]
+    }
+  ],
+  "notes": [
+    "Date taken as 2026-10-19 (Europe/Copenhagen); the run began at 00:54 local on the 19th while the UTC clock read the 18th, so there is no run log for 2026-10-18.",
+    "Social editor (sonnet) failed: picked spalla-camicia, but `npm run post` was denied by the session's permission classifier twice; no slides, no caption, no approval issue tonight. The curator did not run the blocked command itself. Logged here because the validator does not accept the role social-editor.",
+    "Site template issues for Lasse (curator may not edit site/): no-picture fallback on entry pages looks blank; Connections links need separators; spalla-camicia caption overlapped by Natural shoulder card in the web."
+  ]
+}

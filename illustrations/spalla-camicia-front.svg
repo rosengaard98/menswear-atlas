@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600">
+  <!-- Spalla camicia: the right shoulder of an unpadded Neapolitan jacket, front, close up.
+       Technical flat. Classes: see STYLE.md. Drawn from the research notes only: no shoulder
+       pad, soft sloping shoulder line, sleeve set so it seems to run under the shoulder as on
+       a shirt, seam allowance turned toward the body (stitching on the body side), a sleeve
+       head larger than the armhole eased in with small gathers, fewer toward the front, and a
+       slight flare at the top of the sleeve. Proportions, not measurements. -->
+
+  <!-- sleeve, with its head cut fuller than the armhole -->
+  <path class="cloth" d="M175,125 C150,135 112,165 98,215 C84,300 74,430 68,572 L222,582 C232,480 244,390 252,310 C232,240 198,170 175,125 Z"/>
+  <path class="seam" d="M73,560 L221,570"/>
+  <path class="fold" d="M112,300 C106,380 102,450 100,520"/>
+  <!-- gathers (repecchie) at the sleeve head: dense at the top, fewer toward the front -->
+  <path class="fold" d="M166,131 L170,143 M156,137 L162,149 M146,144 L153,155 M136,152 L144,162 M126,161 L135,170"/>
+  <path class="fold" d="M176,136 L164,152 M182,149 L168,163 M189,163 L175,176 M198,182 L184,192 M211,208 L198,216"/>
+
+  <!-- body, its armhole edge lying over the sleeve -->
+  <path class="cloth" d="M388,72 C318,88 240,108 175,125 C198,170 232,240 252,310 C258,400 262,500 266,612 L492,612 L492,60 C455,62 420,66 388,72 Z"/>
+  <!-- hand stitching on the body side of the armhole seam -->
+  <path class="seam" d="M185,128 C206,170 237,236 256,298"/>
+  <path class="fold" d="M268,140 C271,190 274,230 278,270"/>
+
+  <!-- chest pocket -->
+  <path class="cloth" d="M284,300 L346,288 L348,300 L286,312 Z"/>
+
+  <!-- inside of the neck -->
+  <path class="shade" d="M402,140 C420,240 448,360 470,470 L492,470 L492,92 C460,96 425,110 402,140 Z"/>
+
+  <!-- lapel -->
+  <path class="cloth" d="M470,470 C445,385 362,285 316,198 L352,184 L402,140 C420,240 448,360 470,470 Z"/>
+  <path class="seam" d="M469,448 C446,378 370,284 328,205"/>
+
+  <!-- collar -->
+  <path class="cloth" d="M352,184 L336,168 C348,132 366,98 388,72 C420,66 455,62 492,60 L492,92 C460,96 425,110 402,140 Z"/>
+  <path class="seam" d="M343,166 C354,134 371,102 392,79"/>
+
+  <circle class="button" cx="472" cy="505" r="6"/>
+</svg>

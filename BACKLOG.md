@@ -18,6 +18,11 @@ The nightly curator takes topics from **Next up** first, top down, then fills ga
 - Makers (2026-10-17): Cifonelli (Paris, roped shoulder), Martin Greenfield (Brooklyn suit maker named in the natural-shoulder measurements), Paul Stuart.
 - Pictures (2026-10-17): ralph-lauren has none; a public-domain period photograph of the Rhinelander mansion (his 1986 flagship) on Commons is worth a look when Commons is not rate-limiting.
 - Threads (2026-10-17): drape-cut ~ natural-shoulder and preppy ~ penny-loafer were proposed by the weaver but left out because their sources (Wikipedia, The Rake, Put This On) could not be opened tonight.
+- Makers (2026-10-19): Chittleborough & Morgan (Savile Row, still cuts Nutter's shapes per Mr Porter), Austin Reed (its Cue Shop showed Nutter's first ready-to-wear in 1979).
+- Details (2026-10-19): con rollino, the Neapolitan sleeve head with a roll of wadding that reduces shirring (Wikipedia ties it to formal jackets).
+- People (2026-10-19): Caggiula, named by Wikipedia with Vincenzo Attolini as turning Naples away from the British model in the 1920s.
+- Pictures (2026-10-19): j-press and tommy-nutter have none; a public-domain photograph of the York Street shop or of Nutter (d. 1992) on Commons is worth a look. Subagents' Commons searches were blocked again tonight.
+- Folds (2026-10-19): nutters-of-savile-row is queued but tommy-nutter covers the firm to 1976; decide whether to fold it in or give the firm its own entry (it continued under Edward Sexton).
 
 ## Folded
 
