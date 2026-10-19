@@ -1,0 +1,221 @@
+{
+  "date": "2026-10-20",
+  "kind": "nightly",
+  "started": "00:55",
+  "finished": "01:35",
+  "commit": "",
+  "totals": {
+    "before": {
+      "entries": 37,
+      "relations": 185,
+      "wanted": 112
+    },
+    "after": {
+      "entries": 40,
+      "relations": 211,
+      "wanted": 119
+    }
+  },
+  "topics": [
+    {
+      "id": "tracht",
+      "source": "gap",
+      "outcome": "added"
+    },
+    {
+      "id": "rene-lacoste",
+      "source": "wanted",
+      "outcome": "added"
+    },
+    {
+      "id": "armhole",
+      "source": "wanted",
+      "outcome": "added"
+    }
+  ],
+  "agents": [
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "tracht",
+      "status": "partial",
+      "summary": "research/tracht.md; revival, courts, clubs, Lodenfrey and the Nazi era from Wikipedia, Austria-Forum, habsburger.net, Museum Joanneum, Jüdische Allgemeine and others.",
+      "numbers": {
+        "sources": 11,
+        "connections": 11,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Commons fetch blocked (permission not answered), no picture candidate",
+        "Wikipedia Loden page blocked and der Standard paywalled; no source for the wetterfleck link",
+        "Sources disagree on the first Trachtenverein (1859 Miesbach vs 1883 Vogl)",
+        "Janker and Lederhosen construction partly from a hobby blog and a retailer blog",
+        "Lodenfrey dates are the maker's own claims"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "rene-lacoste",
+      "status": "partial",
+      "summary": "research/rene-lacoste.md; career, the shirt's dating and the crocodile stories from Wikipedia, Smithsonian, histoiredutennis, New World Encyclopedia and Openers.",
+      "numbers": {
+        "sources": 5,
+        "connections": 9,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Commons fetch blocked (permission not answered), no picture candidate",
+        "Smithsonian articles URL blocked; blogs URL used instead",
+        "Shirt dating disagrees: 1926, 1927, 1929; business 1933",
+        "Crocodile origin in three versions, all stories",
+        "No book or museum source"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "armhole",
+      "status": "ok",
+      "summary": "research/armhole.md; construction and the high-armhole argument from Parisian Gentleman, The Rake, Permanent Style and Wikipedia.",
+      "numbers": {
+        "sources": 9,
+        "connections": 8,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "No source gives a numeric armhole height; forum figures marked unverified",
+        "Forum and seller's blog flagged as weak sources",
+        "No Commons candidate; crop of an existing drawing suggested"
+      ]
+    },
+    {
+      "role": "writer",
+      "model": "opus",
+      "status": "ok",
+      "summary": "Wrote content/styles/tracht.md, content/people/rene-lacoste.md and content/details/armhole.md.",
+      "numbers": {
+        "entries": 3,
+        "newLinks": 16,
+        "relations": 20
+      },
+      "problems": [
+        "tracht period.from 1823 is the writer's choice (the Hofkanzlei ban); no source gives a start year",
+        "Weak sources left out: retailer blog, forum and seller's blog",
+        "interwar.md's 1927 crocodile date is not in tonight's sources; left alone"
+      ]
+    },
+    {
+      "role": "weaver",
+      "model": "opus",
+      "status": "ok",
+      "summary": "Added 8 threads and 4 back-links for armhole, rene-lacoste and tracht; no folds, no orphans.",
+      "numbers": {
+        "relationsAdded": 8,
+        "backLinks": 4,
+        "folds": 0,
+        "orphans": 0
+      },
+      "problems": [
+        "interwar.md and polo-shirt.md give 1927 for the crocodile; sources tell it as a story with varying dates",
+        "rene-lacoste ~ lacoste kept apart (person vs company)",
+        "Lacoste cloth: jersey (New World Encyclopedia) vs piqué (polo-shirt.md)"
+      ]
+    },
+    {
+      "role": "illustrator",
+      "model": "opus",
+      "status": "partial",
+      "summary": "armhole: crop of the drape-cut Front drawing; rene-lacoste and tracht left without a picture.",
+      "numbers": {
+        "prints": 0,
+        "drawings": 0,
+        "crops": 1,
+        "none": 2
+      },
+      "problems": [
+        "Commons rate limit on npm run picture (5 tries, killed at the 5-minute timeout)",
+        "WebFetch could not open Commons file pages (URL_NOT_FOUND); no licence seen, no hotlink written"
+      ]
+    },
+    {
+      "role": "fact-checker",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Checked 12 files: 97 claims, 2 contradicted and 11 unsupported; 3 of 28 relations unsupported; no licence problems.",
+      "numbers": {
+        "claims": 97,
+        "supported": 84,
+        "unsupported": 11,
+        "contradicted": 2,
+        "relations": 28,
+        "relationsUnsupported": 3,
+        "pictures": 0,
+        "licenceProblems": 0
+      },
+      "problems": [
+        "rene-lacoste: polo players' shirts were collarless (Openers), not collared",
+        "rene-lacoste: withdrew in 1929 with a 1932 comeback, not around 1930",
+        "Ivy Style, Lapham's Quarterly, EBSCO and Put This On pages could not be opened (permission timed out)",
+        "Attribution slips in armhole (Heywood vs The Rake, Adamson) and tracht (AEIOU vs Jüdische Allgemeine)"
+      ]
+    },
+    {
+      "role": "visual-reviewer",
+      "model": "opus",
+      "status": "partial",
+      "summary": "armhole crop missed the underarm; entry-page fallback for pictureless entries is a blank panel; Connections links run together.",
+      "numbers": {
+        "reviewed": 3,
+        "pass": 0,
+        "fixes": 3
+      },
+      "problems": [
+        "armhole crop centred on lapel and shoulder point, underarm cut off",
+        "Entry-page no-picture fallback shows an empty green panel with a stray initial, not a swatch (site template)",
+        "Connections links have no separators (site template)",
+        "Brief names screenshots web-desktop-light.png and web-card.png that the test no longer produces"
+      ]
+    },
+    {
+      "role": "tester",
+      "model": "sonnet",
+      "status": "ok",
+      "summary": "npm test passed, 275 checks, 0 failures; screenshots show the blank picture fallback and run-together Connections links.",
+      "numbers": {
+        "checks": 275,
+        "failures": 0
+      },
+      "problems": [
+        "Entry-page picture fallback blank for tracht and rene-lacoste (not caught by tests)",
+        "Connections links without separators at phone width (not caught by tests)"
+      ]
+    },
+    {
+      "role": "curator",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Next up was empty. Chose tracht (Germany/Austria had no style), rene-lacoste (wanted, 3 links, France) and armhole (most-linked wanted, construction). All three added.",
+      "numbers": {
+        "topics": 3,
+        "added": 3,
+        "dropped": 0,
+        "fixesAfterChecks": 15
+      },
+      "problems": [
+        "Removed natural-shoulder→armhole and ametora→sack-suit relations: sources could not be opened by the fact-checker",
+        "Fixed both contradicted Lacoste claims and softened 9 unsupported claims or notes in rene-lacoste, armhole, tracht, savile-row and polo",
+        "Refocused the armhole crop to [446, 205], size 270 so the underarm shows (one round)",
+        "Commons file pages unreachable for the curator too (URL_NOT_FOUND); two entries left without pictures",
+        "Template issues (blank picture fallback on entry pages, unseparated Connections links) are in site/, which the run may not edit",
+        "Run-log validator rejects role social-editor; its row moved to notes"
+      ]
+    }
+  ],
+  "notes": [
+    "Copenhagen date 2026-10-20 (the run started at 00:55 CEST; the scheduler's UTC date was 2026-10-19).",
+    "Social editor (sonnet) ok: armhole carousel, 3 slides, caption 757 characters, 8 hashtags in social/2026-10-20/; only armhole had a picture. Logged here because the validator does not accept the role social-editor (fifth night; tools/validate.mjs needs it added).",
+    "Commons was rate-limited for the picture tool and file pages could not be opened by WebFetch; no retries beyond one each.",
+    "Needs Lasse: the entry-page picture fallback and the Connections separators in site/ (outside what the run may edit)."
+  ]
+}

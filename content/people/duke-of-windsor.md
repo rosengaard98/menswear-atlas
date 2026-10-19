@@ -13,6 +13,7 @@ relations:
   - { to: frederick-scholte, kind: related, note: "His principal tailor from 1919 until Scholte's death in 1948, according to Wikipedia" }
   - { to: savile-row, kind: related, note: "His principal tailor from 1919 to 1948, Frederick Scholte, was a Savile Row tailor, according to Wikipedia" }
   - { to: drape-cut, kind: related, note: "According to Wikipedia, Scholte developed the drape suit for him; introduced in the 1930s" }
+  - { to: armhole, kind: related, note: "Wikipedia: the drape suit Scholte made for him took roomy armholes from Household Cavalry uniform" }
   - { to: glen-check, kind: wore, year: 1940, note: "V&A suit in mustard Glen Urquhart or Prince of Wales check, by Trimingham" }
   - { to: windsor-knot, kind: related, note: "Carries his name, though by his own account he neither invented nor tied it" }
   - { to: evening-dress, kind: influenced, note: The Met credits him with midnight blue evening wear in the 1920s as an alternative to black }
@@ -46,7 +47,7 @@ He was born at White Lodge in Richmond Park on 23 June 1894, became Prince of Wa
 
 ## His tailors
 
-Wikipedia says [[frederick-scholte|Frederick Scholte]], an Amsterdam-born [[savile-row]] tailor, was his principal tailor from 1919 until Scholte died in 1948; some sources give 1959, which Wikipedia calls a mistake. According to Wikipedia, Scholte invented the [[drape-cut|drape]] suit for him, introduced in the 1930s: wide shoulders, roomy armholes and a narrow waist borrowed from Household Cavalry uniform, against the tighter Victorian cut.
+Wikipedia says [[frederick-scholte|Frederick Scholte]], an Amsterdam-born [[savile-row]] tailor, was his principal tailor from 1919 until Scholte died in 1948; some sources give 1959, which Wikipedia calls a mistake. According to Wikipedia, Scholte invented the [[drape-cut|drape]] suit for him, introduced in the 1930s: wide shoulders, roomy [[armhole|armholes]] and a narrow waist borrowed from Household Cavalry uniform, against the tighter Victorian cut.
 
 The Met holds one of his evening suits, designed by Scholte. When the Duke was Governor of the Bahamas in the Second World War, H. Harris, a New York tailor trained in London, made duplicate trousers for it, an arrangement the Duchess called an "international compromise". The Met also credits him with bringing midnight blue [[evening-dress|evening wear]] in the 1920s as an alternative to the conventional black.
 

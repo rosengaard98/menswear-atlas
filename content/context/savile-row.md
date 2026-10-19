@@ -16,6 +16,7 @@ relations:
   - { to: anderson-sheppard, kind: related, note: "Founded 1906; Per Anderson made the London cut its house style" }
   - { to: gieves-and-hawkes, kind: related, note: "Hawkes & Co came to No. 1 in 1912; credited as the first Row house to offer ready-to-wear" }
   - { to: frederick-scholte, kind: related, note: "His English drape was taken up on the Row in the early 1900s" }
+  - { to: armhole, kind: related, note: "The Rake says the British drape is cut with a small, high armhole" }
   - { to: tommy-nutter, kind: related, note: "Opened Nutters of Savile Row with Edward Sexton in 1969" }
   - { to: evening-dress, kind: related, note: "Henry Poole's house tradition credits it with the dinner jacket, made for the future Edward VII" }
   - { to: beau-brummell, kind: related, note: "His tailors worked on nearby Cork Street, not on the Row itself" }

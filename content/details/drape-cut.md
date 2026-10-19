@@ -76,7 +76,7 @@ A drape coat carries more cloth through the chest and shoulders than the body st
 
 The trade gives it to [[frederick-scholte|Frederick Scholte]] (1865 to 1948), an Amsterdam-born [[savile-row]] tailor who was principal tailor to the Prince of Wales, the future [[duke-of-windsor|Duke of Windsor]], from 1919 until his death. Wikipedia's Scholte page quotes a 1917 *Tailor & Cutter* review that warned against crediting any one man with a method, so treat this as the usual attribution.
 
-The origin stories differ. Wikipedia's Scholte page says he was apprenticed to the Household Cavalry's tailors and took wide shoulders, roomy armholes and a narrow waist from their uniform. Put This On says he saw that belting a Guardsman's coat filled out the chest and nipped the waist. On dates, Wikipedia says the 1930s, while a 2021 *Rake* piece by Freddie Anderson says the soft look had caught on by the 1920s. [[anderson-sheppard|Anderson & Sheppard]] was founded by Scholte's protégé Per Anderson, with the trouser cutter Sidney Horatio Sheppard.
+The origin stories differ. Wikipedia's Scholte page says he was apprenticed to the Household Cavalry's tailors and took wide shoulders, roomy [[armhole|armholes]] and a narrow waist from their uniform. Put This On says he saw that belting a Guardsman's coat filled out the chest and nipped the waist. On dates, Wikipedia says the 1930s, while a 2021 *Rake* piece by Freddie Anderson says the soft look had caught on by the 1920s. [[anderson-sheppard|Anderson & Sheppard]] was founded by Scholte's protégé Per Anderson, with the trouser cutter Sidney Horatio Sheppard.
 
 ## The cut
 

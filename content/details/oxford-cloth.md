@@ -12,6 +12,7 @@ relations:
   - { to: ocbd, kind: part-of }
   - { to: polo, kind: related, note: Early polo players wore shirts of oxford cotton }
   - { to: brooks-brothers, kind: related, note: Brooks put its polo collar on oxford cloth }
+  - { to: button-down-collar, kind: related, note: "Brooks moved its button-down polo collar onto oxford, the cloth of the OCBD" }
 picture: { kind: drawing, svg: oxford-cloth-weave.svg }
 sources:
   - title: Plain weave

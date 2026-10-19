@@ -14,6 +14,7 @@ relations:
   - { to: victorian, kind: belongs-to-era }
   - { to: rene-lacoste, kind: related }
   - { to: ralph-lauren, kind: related }
+  - { to: brooks-brothers, kind: related, year: 1896, note: "Wikipedia: John Brooks saw the buttoned collar at a polo match in England; Brooks made the shirt from 1896" }
 sources:
   - title: "King of Games: Politics, Polo, and the Raj"
     publisher: History Today

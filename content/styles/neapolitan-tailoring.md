@@ -47,7 +47,7 @@ Not everything sewn in Naples is Neapolitan. Angelo Blasi, a contemporary of Att
 
 ## The jacket
 
-The defining feature is the [[spalla-camicia]], a shoulder set like a shirt sleeve with no pad. The sleevehead is cut larger than the armhole and eased by hand into a high, snug armhole, which leaves small puckers at the top of the sleeve. Other marks are three-roll-two buttoning, a high gorge, a boat-shaped barchetta breast pocket, curved patch pockets, double hand stitching on lapels and pockets, a front dart running to the hem, a slightly short body and sleeves cut closer to the arm. Parisian Gentleman notes that the three-roll-two front also turns up in Paris and London, and links the high gorge to Cifonelli in Paris.
+The defining feature is the [[spalla-camicia]], a shoulder set like a shirt sleeve with no pad. The sleevehead is cut larger than the [[armhole]] and eased by hand into a high, snug armhole, which leaves small puckers at the top of the sleeve. Other marks are three-roll-two buttoning, a high gorge, a boat-shaped barchetta breast pocket, curved patch pockets, double hand stitching on lapels and pockets, a front dart running to the hem, a slightly short body and sleeves cut closer to the arm. Parisian Gentleman notes that the three-roll-two front also turns up in Paris and London, and links the high gorge to Cifonelli in Paris.
 
 ## The houses
 

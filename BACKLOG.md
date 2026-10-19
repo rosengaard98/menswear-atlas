@@ -23,6 +23,11 @@ The nightly curator takes topics from **Next up** first, top down, then fills ga
 - People (2026-10-19): Caggiula, named by Wikipedia with Vincenzo Attolini as turning Naples away from the British model in the 1920s.
 - Pictures (2026-10-19): j-press and tommy-nutter have none; a public-domain photograph of the York Street shop or of Nutter (d. 1992) on Commons is worth a look. Subagents' Commons searches were blocked again tonight.
 - Folds (2026-10-19): nutters-of-savile-row is queued but tommy-nutter covers the firm to 1976; decide whether to fold it in or give the firm its own entry (it continued under Edward Sexton).
+- Makers (2026-10-20): lacoste (La Chemise Lacoste, 1933, with André Gillier; Smithsonian and Openers cover it), lodenfrey (Munich, 1842 by its own account).
+- People (2026-10-20): archduke-johann (painted in Styrian dress by Kupelwieser, 1828; habsburger.net), four-musketeers (Lacoste, Borotra, Cochet, Brugnon).
+- Garments (2026-10-20): steireranzug, janker and lederhosen, the Alpine pieces tracht links to (Austria-Forum, Joanneum and Wikipedia were opened tonight).
+- Pictures (2026-10-20): rene-lacoste and tracht have none; Commons file pages could not be opened tonight. Candidates to check: File:Rene_Lacoste_1922.jpg, File:René_Lacoste.jpg, the 1924 Agence Rol Croix-Catelan doubles photo (BnF), and Kupelwieser's portrait of Archduke Johann (File:Leopold_Kupelwieser_001.jpg / Erzherzog_johann.jpg).
+- Threads (2026-10-20): natural-shoulder ~ armhole (Ivy Style "A Tale of Two Suits") and ametora ~ sack-suit (Lapham's Quarterly) were removed after the fact-checker could not open those pages; re-add if they open.
 
 ## Folded
 
