@@ -3,7 +3,7 @@
   "kind": "nightly",
   "started": "00:55",
   "finished": "01:50",
-  "commit": "",
+  "commit": "f5118d4ff54c9ae8a30c3f67c7876a6729a2ef86",
   "totals": {
     "before": {
       "entries": 40,
