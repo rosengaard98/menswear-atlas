@@ -25,7 +25,7 @@ views:
         x: 185
         y: 98
         label: Soft shoulder
-        note: Wikipedia says Scholte left the shoulder unpadded and later makers padded it lightly. Colin Heywood of Anderson & Sheppard describes minimal padding; Put This On calls it soft and sloping.
+        note: Wikipedia says Scholte left the shoulder unpadded and describes the cut as lightly padded. Colin Heywood of Anderson & Sheppard describes minimal padding; Put This On calls it soft and sloping.
       - target: sleevehead
         x: 128
         y: 165
@@ -45,12 +45,12 @@ views:
         x: 431
         y: 232
         label: Small, high armhole
-        note: Heywood says a small, high armhole keeps the coat in place and lets the arm move freely. Wikipedia says Scholte's early armhole was roomy and became higher and narrower by the mid-1930s.
+        note: Heywood says a high armhole keeps the coat in place and lets the arm move freely. Wikipedia says Scholte's early armhole was roomy and became higher and narrower by the mid-1930s.
       - target: drape-cut
         x: 201
         y: 412
         label: Suppressed waist
-        note: Wikipedia describes the waist as slightly nipped and raised, forming a V. Hill's English version is less tapered than the American one, with a straight skirt where the American flares.
+        note: Wikipedia describes the waist as slightly nipped and raised, forming a V. Wikipedia, citing Gentleman's Gazette, says the English version is less tapered than the American one, with a straight skirt where the American flares.
 picture: { kind: drawing, view: Front }
 sources:
   - title: Drape suit
@@ -82,9 +82,9 @@ The origin stories differ. Wikipedia's Scholte page says he was apprenticed to t
 
 Put This On describes shaped front panels and a chest piece cut on the bias, so the chest stands slightly off the body and spare cloth gathers near the armhole. *The Rake* adds a very soft canvas that supports the cloth without controlling it.
 
-Shoulders and armholes are described differently. Wikipedia says Scholte's shoulders were unpadded and later ones lightly padded; Colin Heywood of Anderson & Sheppard, in *The Rake*, describes a natural line with minimal padding; Put This On calls it soft and sloping, sometimes extended. Wikipedia says the early armhole was roomy and became higher and narrower by the mid-1930s. Heywood describes a small, high armhole with extra fullness in the sleevehead. Wikipedia adds a slightly raised waist forming a V and full pleated trousers.
+Shoulders and armholes are described differently. Wikipedia says Scholte's shoulders were unpadded and describes the cut as lightly padded; Colin Heywood of Anderson & Sheppard, in *The Rake*, describes a natural line with minimal padding; Put This On calls it soft and sloping, sometimes extended. Wikipedia says the early armhole was roomy and became higher and narrower by the mid-1930s. *The Rake* describes a small, high armhole with extra fullness in the [[sleevehead]]; Heywood says the high armhole keeps the coat in place. Wikipedia adds a slightly raised waist forming a V and full pleated trousers.
 
-Wikipedia, citing Hill's *American Menswear*, separates two versions. The English coat has a less tapered waist, a straight skirt and small puckers at the sleevehead; the American one is more tapered, with a flared skirt and a smooth roll at the armscye. Heywood says [[neapolitan-tailoring|Neapolitan]] tailors use less drape.
+Wikipedia separates two versions. Citing Hill's *American Menswear*, it gives the English coat small puckers at the sleevehead and the American one a smooth roll at the armscye; citing Gentleman's Gazette, it gives the English coat a less tapered waist and a straight skirt, the American one more taper and a flared skirt. Heywood says [[neapolitan-tailoring|Neapolitan]] tailors use less drape.
 
 ## Spread
 

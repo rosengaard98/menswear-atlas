@@ -12,6 +12,7 @@ summary: >-
 relations:
   - { to: anderson-sheppard, kind: related, note: "Trained Per Anderson, who founded the firm in 1906, according to Anderson & Sheppard and Put This On" }
   - { to: henry-poole, kind: related, note: "Wikipedia says Scholte's shop overlooked Henry Poole & Co" }
+  - { to: sleevehead, kind: related, note: "The Rake lists extra fullness in the sleeve head among the marks of his drape" }
   - { to: interwar, kind: belongs-to-era, note: "Principal tailor to the Prince of Wales from 1919; Wikipedia dates his drape to the 1930s" }
 sources:
   - title: Frederick Scholte
@@ -50,7 +51,7 @@ Anderson & Sheppard says he began working at 7 [[savile-row|Savile Row]] around 
 
 ## The drape
 
-Anderson & Sheppard, Put This On, *The Rake* and Wikipedia all credit him with the London cut or English [[drape-cut|drape]], and that is the usual attribution rather than a settled fact. Derek Guy at Put This On describes more room over the chest and shoulder blades, soft folds falling from the collarbone, high [[armhole|armholes]] and unpadded shoulders. *The Rake* adds a small, high armhole, extra fullness in the sleevehead and a [[natural-shoulder|natural shoulder]]. Only Wikipedia says he was apprenticed with the Household Cavalry and took the wide shoulders, roomy armholes and narrow waist of their uniform into his cut.
+Anderson & Sheppard, Put This On, *The Rake* and Wikipedia all credit him with the London cut or English [[drape-cut|drape]], and that is the usual attribution rather than a settled fact. Derek Guy at Put This On describes more room over the chest and shoulder blades, soft folds falling from the collarbone, high [[armhole|armholes]] and unpadded shoulders. *The Rake* adds a small, high armhole, extra fullness in the [[sleevehead]] and a [[natural-shoulder|natural shoulder]]. Only Wikipedia says he was apprenticed with the Household Cavalry and took the wide shoulders, roomy armholes and narrow waist of their uniform into his cut.
 
 The dates do not agree. Anderson & Sheppard puts his work on the cut around 1900, while Wikipedia dates the drape to the 1930s. Per Anderson trained under him, says Put This On, and founded his own firm in 1906 as Anderson & Simmons; it took the name Anderson & Sheppard after Simmons sold his stake to the trouser cutter Sidney Sheppard.
 

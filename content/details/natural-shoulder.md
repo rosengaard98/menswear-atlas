@@ -12,6 +12,7 @@ relations:
   - { to: ivy-league-look, kind: related, note: "Ivy Style calls the natural shoulder the defining characteristic of the Ivy look" }
   - { to: brooks-brothers, kind: related, note: "Ivy Style found a soft, rippled natural shoulder on mid-century Brooks jackets, used for a brief period" }
   - { to: j-press, kind: related, note: "FIT calls J. Press the best maker of the natural shoulder suit; Ivy Style ties it to the 6 1/8 inch seam" }
+  - { to: sleevehead, kind: related, note: "Ivy Style: a generously draped sleevehead, against the roped shoulders of Cifonelli" }
   - { to: spalla-camicia, kind: related, note: "Overlapping terms: Permanent Style says spalla camicia need not mean a small, natural shoulder" }
 picture: { kind: drawing, from: sack-suit, view: Front, focus: [188, 150], size: 210 }
 sources:

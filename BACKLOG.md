@@ -28,6 +28,10 @@ The nightly curator takes topics from **Next up** first, top down, then fills ga
 - Garments (2026-10-20): steireranzug, janker and lederhosen, the Alpine pieces tracht links to (Austria-Forum, Joanneum and Wikipedia were opened tonight).
 - Pictures (2026-10-20): rene-lacoste and tracht have none; Commons file pages could not be opened tonight. Candidates to check: File:Rene_Lacoste_1922.jpg, File:René_Lacoste.jpg, the 1924 Agence Rol Croix-Catelan doubles photo (BnF), and Kupelwieser's portrait of Archduke Johann (File:Leopold_Kupelwieser_001.jpg / Erzherzog_johann.jpg).
 - Threads (2026-10-20): natural-shoulder ~ armhole (Ivy Style "A Tale of Two Suits") and ametora ~ sack-suit (Lapham's Quarterly) were removed after the fact-checker could not open those pages; re-add if they open.
+- Garments (2026-10-21): dinner-jacket and homburg, both credited to Edward VII (Poole, Favourbrook, The Met and Wikipedia were opened tonight); capa, the long Spanish cape at the centre of the 1766 Esquilache riots.
+- People (2026-10-21): goya, whose tapestry cartoons and portraits show majo dress (see research/majo.md).
+- Eras (2026-10-21): majo has no era; no existing era covers Spain c.1750-1825 (regency is British). A Spanish or wider late-18th-century era would give it a band and pull it away from the 1960s pieces it now sits beside on the web.
+- Pictures (2026-10-21): edward-vii and majo have none; Commons file pages could not be opened again. Candidates: File:El_quitasol,_Francisco_Goya.jpg (Prado; not the Rome Pinacoteca Capitolina painting) for majo, and a public-domain portrait of Edward VII. edward-vii also needs a sourced birth year for its period (life dates on its ticket).
 
 ## Folded
 

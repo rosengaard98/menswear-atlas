@@ -1,0 +1,215 @@
+{
+  "date": "2026-10-21",
+  "kind": "nightly",
+  "started": "00:55",
+  "finished": "01:50",
+  "commit": "",
+  "totals": {
+    "before": {
+      "entries": 40,
+      "relations": 211,
+      "wanted": 119
+    },
+    "after": {
+      "entries": 43,
+      "relations": 232,
+      "wanted": 130
+    }
+  },
+  "topics": [
+    {
+      "id": "majo",
+      "source": "gap",
+      "outcome": "added"
+    },
+    {
+      "id": "sleevehead",
+      "source": "wanted",
+      "outcome": "added"
+    },
+    {
+      "id": "edward-vii",
+      "source": "wanted",
+      "outcome": "added"
+    }
+  ],
+  "agents": [
+    {
+      "role": "tester",
+      "model": "sonnet",
+      "status": "failed",
+      "summary": "292 checks, 1 failure: web hover lands on the legend because the English country swatch now settles under #tw-kinds; passes on the previous commit.",
+      "numbers": {
+        "checks": 292,
+        "failures": 1
+      },
+      "problems": [
+        "web hover: English country swatch covered by the legend button (tools/test.mjs:103); layout shift from the combined content set, not one file",
+        "Edward VII and Majo entry pages show a letter placeholder (no picture)"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "sleevehead",
+      "status": "partial",
+      "summary": "Notes on smooth, roped and Neapolitan sleeve-head finishes, English vs American drape, grinze and repecchia; no Commons picture.",
+      "numbers": {
+        "sources": 8,
+        "connections": 6,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "WebFetch refused The Vou and a Permanent Style page (permission/provenance)",
+        "Rollino vs English rope unresolved; English vs American pucker claim conflicts",
+        "Only one Commons search; no picture candidate"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "edward-vii",
+      "status": "partial",
+      "summary": "Notes on the dinner jacket, Homburg, turn-ups, creases, Glen Urquhart check and the waistcoat-button story; no picture candidate.",
+      "numbers": {
+        "sources": 12,
+        "connections": 9,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Commons file pages and Wikipedia Edward VII page blocked (permission prompt unanswered)",
+        "Norfolk jacket claim rests only on Henry Poole's own page",
+        "Dinner jacket dates conflict: 1860 vs 1865"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "majo",
+      "status": "partial",
+      "summary": "Notes on Madrid majo dress, the 1766 Esquilache cape and hat decree, the V&A majo suit and Goya; no verified picture.",
+      "numbers": {
+        "sources": 11,
+        "connections": 8,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Commons file pages did not open (permission timeout, API rate limit)",
+        "Prado, The Met, Museo del Traje and Britannica not reached",
+        "Link to traje de luces is inferred, not stated by a source"
+      ]
+    },
+    {
+      "role": "illustrator",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Sleevehead got a crop of the spalla-camicia plate; edward-vii and majo have no picture.",
+      "numbers": {
+        "prints": 0,
+        "drawings": 0,
+        "crops": 1,
+        "none": 2,
+        "renderRounds": 3
+      },
+      "problems": [
+        "Picture tool timed out on Commons (rate limit); not retried",
+        "WebFetch of Commons file pages: permission not answered; licence not seen"
+      ]
+    },
+    {
+      "role": "fact-checker",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Checked 8 entries: 6 contradictions (Heywood/Rake misattribution, Hill vs Gentleman's Gazette citation, Poole waistcoat reason, Homburg 'hedged') and about 14 unsupported claims, mostly where pages could not be opened.",
+      "numbers": {
+        "claims": 275,
+        "supported": 255,
+        "unsupported": 14,
+        "contradicted": 6,
+        "relations": 50,
+        "relationsUnsupported": 1,
+        "pictures": 0,
+        "licenceProblems": 0
+      },
+      "problems": [
+        "6 of 53 source URLs could not be opened (Met x2, HRP, Permanent Style x2, UCM)",
+        "Heywood credited with The Rake writer's words in sleevehead and drape-cut"
+      ]
+    },
+    {
+      "role": "visual-reviewer",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Sleevehead crop and drape-cut flat pass; majo floats beside Peacock revolution on the web; edward-vii lacks life dates; hover test failure is new tonight.",
+      "numbers": {
+        "reviewed": 8,
+        "pass": 6,
+        "fixes": 3
+      },
+      "problems": [
+        "web: English country swatch fitted under the legend",
+        "majo: no typed relation to an existing entry, so it sits among 1960s pieces",
+        "edward-vii: no period, so no life dates on its ticket",
+        "site-wide: pictureless entry pages show a blank plate with a stray initial; Connections links run together"
+      ]
+    },
+    {
+      "role": "writer",
+      "model": "opus",
+      "status": "ok",
+      "summary": "Wrote sleevehead, edward-vii and majo from the notes; validate 0 errors.",
+      "numbers": {
+        "entries": 3,
+        "newLinks": 16,
+        "relations": 17
+      },
+      "problems": [
+        "majo has no era: none covers Spain 1750-1825",
+        "majo period 1750-1825 is the writer's reading of the notes",
+        "edward-vii has no period (no birth or death dates in the notes)"
+      ]
+    },
+    {
+      "role": "weaver",
+      "model": "opus",
+      "status": "ok",
+      "summary": "Threaded the three new entries into the web; no folds; 0 orphans.",
+      "numbers": {
+        "relationsAdded": 4,
+        "backLinks": 4,
+        "folds": 0,
+        "orphans": 0
+      },
+      "problems": [
+        "majo: no existing entry touches Spain or its period, so no new threads"
+      ]
+    },
+    {
+      "role": "curator",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Next up was empty. Chose majo (Spain had no entries; nothing in the 1770s-1790s), sleevehead (most-linked wanted, construction) and edward-vii (wanted, 3 links, thin 1860s-1880s). All three added.",
+      "numbers": {
+        "topics": 3,
+        "added": 3,
+        "dropped": 0,
+        "fixesAfterChecks": 16
+      },
+      "problems": [
+        "Fixed all 6 contradictions and softened 10 unsupported claims or notes in sleevehead, drape-cut, edward-vii, majo, savile-row and natural-shoulder",
+        "Left pre-existing claims in frederick-scholte (Met, HRP), neapolitan-tailoring (Permanent Style Rubinacci, milanese-tailoring) and natural-shoulder (Permanent Style ?p=70530) unchanged: verified on earlier nights, only unreachable tonight",
+        "npm test hover check fails from a layout shift (English country under the legend); the fix belongs in site/web.js, which the run may not edit; no single entry causes it, so none was removed",
+        "Did not add edward-vii's period: no opened page gives his birth year",
+        "Commons file pages unreachable for the curator too (permission not answered); two entries without pictures",
+        "Run-log validator rejects role social-editor; its row moved to notes"
+      ]
+    }
+  ],
+  "notes": [
+    "Copenhagen date 2026-10-21 (the run started at 00:55 CEST; the scheduler's UTC date was 2026-10-20).",
+    "Social editor (sonnet) ok: sleevehead carousel, 3 slides, caption 683 characters, 8 hashtags in social/2026-10-21/; only sleevehead had a picture. Logged here because the validator does not accept the role social-editor.",
+    "npm test: 292 checks, 1 failure (web hover). The Pages workflow runs npm run check only, so the deploy is not blocked.",
+    "Commons was rate-limited for the picture tool and file pages could not be opened by WebFetch; no retries beyond one each.",
+    "Needs Lasse: keep web pieces clear of the legend in site/web.js; entry-page picture fallback and Connections separators in site/; an era for majo; add social-editor to the run-log roles in tools/validate.mjs."
+  ]
+}
