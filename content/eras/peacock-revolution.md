@@ -16,6 +16,7 @@ relations:
   - { to: tommy-nutter, kind: related, year: 1969, note: "Nutters of Savile Row opened at 35a in 1969, per the London Museum" }
   - { to: savile-row, kind: influenced, year: 1969, note: "New tailors settled near the Row and Nutters brought fashion into bespoke, per the London Museum" }
   - { to: ralph-lauren, kind: related, note: "Rose with Bill Blass on the 1930s-inspired clothes that followed Bonnie and Clyde (1967), per Wikipedia" }
+  - { to: dress-for-success, kind: related, year: 1975, note: "Wikipedia (Peacock revolution) says the book marked the return to conservative business dress" }
   - { to: kipper-tie, kind: era-of, note: "Michael Fish made kipper ties by widening ties at Turnbull & Asser, per Culture Stories" }
 sources:
   - title: "The peacock revolution: 1960s menswear"
@@ -54,4 +55,4 @@ Wikipedia says the look arrived around 1964 with the British Invasion. John Step
 
 ## The end
 
-By the late 1960s, the V&A says, the Vietnam War and student uprisings in France turned some young people towards second-hand clothes and 1930s and 1940s vintage. In Wikipedia's account *Bonnie and Clyde* (1967) revived 1930s dress, which [[ralph-lauren|Ralph Lauren]] and Bill Blass built on, and John T. Molloy's *Dress for Success* (1975) marked the return to conservative business dress. The same page argues the revolution's reach has been exaggerated and that many men never took it up.
+By the late 1960s, the V&A says, the Vietnam War and student uprisings in France turned some young people towards second-hand clothes and 1930s and 1940s vintage. In Wikipedia's account *Bonnie and Clyde* (1967) revived 1930s dress, which [[ralph-lauren|Ralph Lauren]] and Bill Blass built on, and John T. Molloy's [[dress-for-success|*Dress for Success*]] (1975) marked the return to conservative business dress. The same page argues the revolution's reach has been exaggerated and that many men never took it up.

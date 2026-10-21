@@ -32,6 +32,11 @@ The nightly curator takes topics from **Next up** first, top down, then fills ga
 - People (2026-10-21): goya, whose tapestry cartoons and portraits show majo dress (see research/majo.md).
 - Eras (2026-10-21): majo has no era; no existing era covers Spain c.1750-1825 (regency is British). A Spanish or wider late-18th-century era would give it a band and pull it away from the 1960s pieces it now sits beside on the web.
 - Pictures (2026-10-21): edward-vii and majo have none; Commons file pages could not be opened again. Candidates: File:El_quitasol,_Francisco_Goya.jpg (Prado; not the Rome Pinacoteca Capitolina painting) for majo, and a public-domain portrait of Edward VII. edward-vii also needs a sourced birth year for its period (life dates on its ticket).
+- Context (2026-10-22): india (only polo and madras touch it) and east-india-company (founded Madras partly for its cloth, per research/madras.md).
+- People and makers (2026-10-22): john-t-molloy (author of *Dress for Success*; no life dates found tonight), hathaway (shirtmaker; David Ogilvy's "guaranteed to bleed" madras ads).
+- Styles (2026-10-22): power-dressing and dress-down-friday, the 1980s rise and 1990s backlash Entwistle ties to *Dress for Success*; with no era after 1975, a late-20th-century era is worth considering.
+- Pictures (2026-10-22): henry-poole and dress-for-success have none; Commons was unreachable again (picture tool hung, file pages url_not_found). Candidate: File:Savile_Row-_Tailoring_at_Henry_Poole_and_Co.,_London,_England,_UK,_1944_D21864.jpg (IWM, 1944); check its licence on Commons.
+- Facts (2026-10-22): Brooks Brothers dates its madras to 1902, but Heddels cites an 1897 Sears catalogue; the gardener should reconcile brooks-brothers, edwardian and madras.
 
 ## Folded
 

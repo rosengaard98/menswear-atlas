@@ -10,6 +10,7 @@ summary: >-
 regions: [uk, us]
 relations:
   - { to: edward-vii, kind: era-of }
+  - { to: madras, kind: era-of, year: 1902, note: "Brooks Brothers introduced madras from India in 1902, by the Brooks dates this entry cites" }
 sources:
   - title: Edwardian era
     publisher: Wikipedia
@@ -35,4 +36,4 @@ Strictly, the Edwardian era is the reign of [[edward-vii|Edward VII]], from 1901
 
 In those years the sober, single-coloured suit replaced the black frock coat as a man's regular daywear, and it took the name [[lounge-suit]]. Evening and formal dress loosened too: the dinner suit and the black lounge suit known as the stroller appeared as less formal alternatives to white tie and morning dress.
 
-Across the Atlantic, [[brooks-brothers]] was assembling the American classic wardrobe. Its button-down shirt dated from 1896. In 1901, by the date Die, Workwear! and Bonne Gueule give (Wikipedia says 1895), it named its plain version of the [[sack-suit|sack coat]], a cut the Museum at FIT dates to the 1840s and 1850s, the No. 1 Sack Suit. It introduced madras from India in 1902, the Shetland sweater in 1904 and Harris Tweed in 1909, with the polo coat following around 1910.
+Across the Atlantic, [[brooks-brothers]] was assembling the American classic wardrobe. Its button-down shirt dated from 1896. In 1901, by the date Die, Workwear! and Bonne Gueule give (Wikipedia says 1895), it named its plain version of the [[sack-suit|sack coat]], a cut the Museum at FIT dates to the 1840s and 1850s, the No. 1 Sack Suit. It introduced [[madras]] from India in 1902, the Shetland sweater in 1904 and Harris Tweed in 1909, with the polo coat following around 1910.

@@ -1,0 +1,212 @@
+{
+  "date": "2026-10-22",
+  "kind": "nightly",
+  "started": "00:55",
+  "finished": "01:35",
+  "commit": "",
+  "totals": {
+    "before": {
+      "entries": 43,
+      "relations": 232,
+      "wanted": 130
+    },
+    "after": {
+      "entries": 46,
+      "relations": 252,
+      "wanted": 142
+    }
+  },
+  "topics": [
+    {
+      "id": "madras",
+      "source": "wanted",
+      "outcome": "added"
+    },
+    {
+      "id": "henry-poole",
+      "source": "wanted",
+      "outcome": "added"
+    },
+    {
+      "id": "dress-for-success",
+      "source": "gap",
+      "outcome": "added"
+    }
+  ],
+  "agents": [
+    {
+      "role": "fact-checker",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Checked 7 entries: 3 contradictions in dress-for-success (Lurie reviewed the women's book; two misattributions to Wikipedia and Crawford) and 6 unsupported claims in madras and dress-for-success; henry-poole clean.",
+      "numbers": {
+        "claims": 118,
+        "supported": 109,
+        "unsupported": 6,
+        "contradicted": 3,
+        "relations": 20,
+        "relationsUnsupported": 0,
+        "pictures": 0,
+        "licenceProblems": 0
+      },
+      "problems": [
+        "Lurie's 1978 NYRB review is of The Woman's Dress for Success Book",
+        "Wikipedia quotes Molloy's own 'scientific research' claim; the focus-group comparison is Crawford's"
+      ]
+    },
+    {
+      "role": "illustrator",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Drew an original madras swatch; henry-poole and dress-for-success have no picture.",
+      "numbers": {
+        "prints": 0,
+        "drawings": 1,
+        "crops": 0,
+        "none": 2,
+        "renderRounds": 3
+      },
+      "problems": [
+        "Commons unreachable: picture tool hung, file pages url_not_found; not retried",
+        "Book cover is copyrighted; no honest drawing or crop for dress-for-success or henry-poole"
+      ]
+    },
+    {
+      "role": "visual-reviewer",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Madras swatch passes; henry-poole and dress-for-success entry pages show a blank panel with a lone initial; Connections names run together at phone width.",
+      "numbers": {
+        "reviewed": 3,
+        "pass": 1,
+        "fixes": 4
+      },
+      "problems": [
+        "site-wide: pictureless entry pages show a blank plate with a stray initial",
+        "site-wide: Connections links run together at phone width",
+        "henry-poole: web label wrapped as 'Henry Poole & / Co'",
+        "Brief names web-desktop-light.png and web-card.png, which the tests no longer make"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "madras",
+      "status": "partial",
+      "summary": "Notes on the Chennai handloom origin, RMHK trade to West Africa, bleeding dyes, the 1958 Brooks Brothers episode and the 1960s boom; no picture candidate.",
+      "numbers": {
+        "sources": 6,
+        "connections": 11,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Commons category fetch blocked (permission not answered); not retried",
+        "Importer/exporter names conflict (Nair, C.P. Nair, C.P. Krishnan)",
+        "1718 Yale gift and 1902 Brooks date weakly sourced"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "henry-poole",
+      "status": "partial",
+      "summary": "Notes on the firm's 1806 start, the 1846 Savile Row entrance, warrants, ledgers and the dinner-jacket story; no picture candidate.",
+      "numbers": {
+        "sources": 6,
+        "connections": 9,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Commons category page blocked (permission not answered); not retried",
+        "Dinner-jacket claim rests on the firm and sources repeating it; 1865 vs 1860",
+        "Early premises number unclear (32 vs 37)"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "dress-for-success",
+      "status": "partial",
+      "summary": "Notes on Molloy's 1975 book: publisher, method, advice, the 1977 women's book and its influence on power dressing; no picture candidate.",
+      "numbers": {
+        "sources": 7,
+        "connections": 3,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "No opened source links the book to the peacock revolution",
+        "Concrete men's rules mostly second-hand; no life dates for Molloy",
+        "Commons search refused by the permission layer; cover is copyrighted"
+      ]
+    },
+    {
+      "role": "writer",
+      "model": "opus",
+      "status": "ok",
+      "summary": "Wrote madras, henry-poole and dress-for-success from the notes; validate 0 errors.",
+      "numbers": {
+        "entries": 3,
+        "newLinks": 17,
+        "relations": 18
+      },
+      "problems": [
+        "dress-for-success has no era (none covers 1975 onward)",
+        "Heddels title not shown by fetch (fact-checker later found it)"
+      ]
+    },
+    {
+      "role": "weaver",
+      "model": "opus",
+      "status": "ok",
+      "summary": "Threaded the new entries in with 2 sourced relations (peacock-revolution~dress-for-success, edwardian era-of madras) and 4 back-links; no folds; 0 orphans.",
+      "numbers": {
+        "relationsAdded": 2,
+        "backLinks": 4,
+        "folds": 0,
+        "orphans": 0
+      },
+      "problems": [
+        "henry-poole: no new sourced threads beyond existing links",
+        "Brooks madras 1902 vs Sears 1897 date clash left for the gardener"
+      ]
+    },
+    {
+      "role": "tester",
+      "model": "sonnet",
+      "status": "ok",
+      "summary": "310 checks, 0 failures.",
+      "numbers": {
+        "checks": 310,
+        "failures": 0
+      },
+      "problems": [
+        "Pictureless entry pages look near-empty at 400px",
+        "Connections chips have no visible spacing"
+      ]
+    },
+    {
+      "role": "curator",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Next up was empty. Chose madras (wanted, India has one entry, construction/cloth), henry-poole (most-linked wanted maker, thin 1800s) and dress-for-success (gap: no entries in the 1970s). All three added.",
+      "numbers": {
+        "topics": 3,
+        "added": 3,
+        "dropped": 0,
+        "fixesAfterChecks": 10
+      },
+      "problems": [
+        "Fixed 3 contradictions and 6 unsupported claims in dress-for-success and madras; set the Heddels source title the fact-checker found",
+        "Gave henry-poole a non-breaking space in its name so its web label does not wrap",
+        "Commons unreachable for the curator too (picture tool hung, WebFetch url_not_found); two entries without pictures",
+        "Run-log validator rejects role social-editor; its row moved to notes"
+      ]
+    }
+  ],
+  "notes": [
+    "Copenhagen date 2026-10-22 (started 00:55 CEST; UTC date was 2026-10-21).",
+    "Social editor (sonnet) ok: madras carousel, 3 slides, caption 613 characters, 8 hashtags in social/2026-10-22/; only madras had a picture. Logged here because the validator does not accept the role social-editor.",
+    "Needs Lasse (site/ and tools/, which the run may not edit): entry-page fallback for pictureless entries (blank plate with a lone initial); spacing between Connections links; add social-editor to the run-log roles; visual-reviewer brief names screenshots the tests no longer make; footer 'Updated' date is a day behind the Copenhagen date.",
+    "No era covers 1975 onward, so dress-for-success has none."
+  ]
+}
