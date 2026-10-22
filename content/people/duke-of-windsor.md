@@ -15,6 +15,7 @@ relations:
   - { to: drape-cut, kind: related, note: "According to Wikipedia, Scholte developed the drape suit for him; introduced in the 1930s" }
   - { to: armhole, kind: related, note: "Wikipedia: the drape suit Scholte made for him took roomy armholes from Household Cavalry uniform" }
   - { to: glen-check, kind: wore, year: 1940, note: "V&A suit in mustard Glen Urquhart or Prince of Wales check, by Trimingham" }
+  - { to: lounge-suit, kind: wore, year: 1940, note: "V&A T.717&A-1974: a single-breasted lounge suit of his in mustard Glen Urquhart check, by Trimingham" }
   - { to: windsor-knot, kind: related, note: "Carries his name, though by his own account he neither invented nor tied it" }
   - { to: evening-dress, kind: influenced, note: The Met credits him with midnight blue evening wear in the 1920s as an alternative to black }
 sources:
@@ -53,7 +54,7 @@ The Met holds one of his evening suits, designed by Scholte. When the Duke was G
 
 ## Checks and golf
 
-The V&A has a 1940 single-breasted lounge suit of his in mustard wool [[glen-check|Glen Urquhart or Prince of Wales check]], made by Trimingham. He gave it to Cecil Beaton for the 1971 exhibition *Fashion: An Anthology*. For how that check got its royal name, see [[english-country]].
+The V&A has a 1940 single-breasted [[lounge-suit|lounge suit]] of his in mustard wool [[glen-check|Glen Urquhart or Prince of Wales check]], made by Trimingham. He gave it to Cecil Beaton for the 1971 exhibition *Fashion: An Anthology*. For how that check got its royal name, see [[english-country]].
 
 A 1922 press photograph in the Royal Collection shows him as captain of the golf club at St Andrews, driving off in [[plus-fours]]. A V&A Dundee blog says a 1920s [[fair-isle|Fair Isle]] jumper design was famously worn by a Prince of Wales at golf, which helped the knitters of Shetland and Fair Isle; it gives no date.
 

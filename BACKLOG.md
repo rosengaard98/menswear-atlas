@@ -37,6 +37,11 @@ The nightly curator takes topics from **Next up** first, top down, then fills ga
 - Styles (2026-10-22): power-dressing and dress-down-friday, the 1980s rise and 1990s backlash Entwistle ties to *Dress for Success*; with no era after 1975, a late-20th-century era is worth considering.
 - Pictures (2026-10-22): henry-poole and dress-for-success have none; Commons was unreachable again (picture tool hung, file pages url_not_found). Candidate: File:Savile_Row-_Tailoring_at_Henry_Poole_and_Co.,_London,_England,_UK,_1944_D21864.jpg (IWM, 1944); check its licence on Commons.
 - Facts (2026-10-22): Brooks Brothers dates its madras to 1902, but Heddels cites an 1897 Sears catalogue; the gardener should reconcile brooks-brothers, edwardian and madras.
+- People (2026-10-23): thom-browne (Marx in *The Business of Fashion* dates the trad re-evaluation to his 2004 grey suit), domenico-caraceni (Roman tailor The Rake credits with ideas in Attolini's soft jacket; Parisian Gentleman doubts it).
+- Makers (2026-10-23): self-edge (denim shop opened 2006, importing Iron Heart and Flat Head), beams-plus (Japanese select shop Marx names in the heritage boom).
+- Context (2026-10-23): tailor-and-cutter, the trade paper Cathcart London leans on for the lounge suit's Victorian dates.
+- Pictures (2026-10-23): vincenzo-attolini (Commons search returned no files) and heritage-revival (Commons API rate-limited; a period print is unlikely, photographs would show living people) have none.
+- Facts (2026-10-23): heritage-revival has no end year; sources say "twilight by 2012" (InsideHook) or dead by 2020. vincenzo-attolini has no life dates in any page opened; the jacket is dated 1920s, 1930 or 1930s.
 
 ## Folded
 

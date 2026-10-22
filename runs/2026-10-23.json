@@ -1,0 +1,212 @@
+{
+  "date": "2026-10-23",
+  "kind": "nightly",
+  "started": "00:55",
+  "finished": "01:40",
+  "commit": "",
+  "totals": {
+    "before": {
+      "entries": 46,
+      "relations": 252,
+      "wanted": 142
+    },
+    "after": {
+      "entries": 49,
+      "relations": 278,
+      "wanted": 150
+    }
+  },
+  "topics": [
+    {
+      "id": "lounge-suit",
+      "source": "gap",
+      "outcome": "added"
+    },
+    {
+      "id": "vincenzo-attolini",
+      "source": "wanted",
+      "outcome": "added"
+    },
+    {
+      "id": "heritage-revival",
+      "source": "gap",
+      "outcome": "added"
+    }
+  ],
+  "agents": [
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "lounge-suit",
+      "status": "partial",
+      "summary": "Notes in research/lounge-suit.md; dated claims solid but no picture candidate and no museum source opened for the 1870s-80s.",
+      "numbers": {
+        "sources": 9,
+        "connections": 6,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "Commons fetch blocked by a permission prompt in the subagent",
+        "V&A 1860s/1870s captions read only via a third-party page",
+        "The Met's 'Lounge suit' record is a lounging robe, a trap"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "vincenzo-attolini",
+      "status": "partial",
+      "summary": "Notes in research/vincenzo-attolini.md; role, soft jacket, Rubinacci link and son Cesare sourced; no life dates and no picture candidate.",
+      "numbers": {
+        "sources": 9,
+        "connections": 7,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "No birth or death year in any opened source",
+        "Jacket dated 1920s, 1930 or 1930s; London House 1931 or 1932",
+        "Commons fetch blocked by a permission prompt in the subagent"
+      ]
+    },
+    {
+      "role": "researcher",
+      "model": "sonnet",
+      "topic": "heritage-revival",
+      "status": "partial",
+      "summary": "Notes in research/heritage-revival.md; usable as a style but loosely dated and no picture candidate.",
+      "numbers": {
+        "sources": 10,
+        "connections": 10,
+        "pictureCandidate": 0
+      },
+      "problems": [
+        "No source states a start or end year; starts 2004-2010, end 'twilight by 2012' or dead by 2020",
+        "Few sources independent of W. David Marx and InsideHook",
+        "Commons fetch blocked by a permission prompt in the subagent"
+      ]
+    },
+    {
+      "role": "writer",
+      "model": "opus",
+      "status": "ok",
+      "summary": "Wrote content/garments/lounge-suit.md, content/people/vincenzo-attolini.md, content/styles/heritage-revival.md; validate passes.",
+      "numbers": {
+        "entries": 3,
+        "newLinks": 17,
+        "relations": 21
+      },
+      "problems": [
+        "vincenzo-attolini has no period (no life dates); anchor 1930 is the family firm's date",
+        "heritage-revival period has no end year, so the site shows it as still going"
+      ]
+    },
+    {
+      "role": "weaver",
+      "model": "opus",
+      "status": "ok",
+      "summary": "Wove the three entries in with 5 sourced relations and 1 back-link (duke-of-windsor wore lounge-suit, 1940); no folds, no orphans.",
+      "numbers": {
+        "relationsAdded": 5,
+        "backLinks": 1,
+        "folds": 0,
+        "orphans": 0
+      },
+      "problems": [
+        "lounge-suit summary called the sack suit 'the same garment'; curator softened it",
+        "None of the 15 possible missing links had text support"
+      ]
+    },
+    {
+      "role": "illustrator",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Drew a Front plate with 8 hotspots for lounge-suit (fixed fronts and left lapel after review); vincenzo-attolini and heritage-revival have no picture.",
+      "numbers": {
+        "prints": 0,
+        "drawings": 1,
+        "crops": 0,
+        "none": 2,
+        "renderRounds": 3
+      },
+      "problems": [
+        "Commons search for Vincenzo Attolini returned 0 files",
+        "Commons API rate-limited the heritage-revival search; not retried"
+      ]
+    },
+    {
+      "role": "fact-checker",
+      "model": "opus",
+      "status": "partial",
+      "summary": "Checked 4 entries: 2 contradictions (Red Wing wording, a Permanent Style 'photograph') and 5 unsupported claims, all in heritage-revival, vincenzo-attolini and lounge-suit; relations all supported.",
+      "numbers": {
+        "claims": 92,
+        "supported": 85,
+        "unsupported": 5,
+        "contradicted": 2,
+        "relations": 26,
+        "relationsUnsupported": 0,
+        "pictures": 0,
+        "licenceProblems": 0
+      },
+      "problems": [
+        "Basa says only Red Wing boots were well worn",
+        "Permanent Style describes Attolini's pattern on the wall, not a photograph",
+        "Chang lists shifts before heritage faded; he does not blame them",
+        "WebFetch on the V&A blocked by a permission prompt; read once with curl"
+      ]
+    },
+    {
+      "role": "visual-reviewer",
+      "model": "opus",
+      "status": "ok",
+      "summary": "Reviewed 4 entries, 3 passed; lounge-suit plate needed 2 drawing fixes (morning-coat V fronts, left lapel seam), both fixed.",
+      "numbers": {
+        "reviewed": 4,
+        "pass": 3,
+        "fixes": 2
+      },
+      "problems": [
+        "Site: entry pages without a picture show a blank green panel with a stray letter (.monogram has no CSS)",
+        "Site: Connections links on entry pages run together with no separator (app.js joins with '')",
+        "Brief names web-desktop-light.png and web-card.png, which the test no longer saves"
+      ]
+    },
+    {
+      "role": "tester",
+      "model": "sonnet",
+      "status": "ok",
+      "summary": "332 checks, 0 failures, but only with CHROMIUM_PATH set; plain npm test cannot launch the browser.",
+      "numbers": {
+        "checks": 332,
+        "failures": 0
+      },
+      "problems": [
+        "tools/lib.mjs findChromium() looks for chrome-linux, browser is in chrome-linux64",
+        "duke-of-windsor not in report.json; unclear whether changed entries are checked"
+      ]
+    },
+    {
+      "role": "curator",
+      "model": "opus",
+      "status": "ok",
+      "summary": "Next up was empty; chose lounge-suit (empty 1870s-80s, 3 links), vincenzo-attolini (Italy, queued twice) and heritage-revival (nothing after 1990). Fixed all 7 fact-check findings by rewording or softening and softened the lounge-suit summary.",
+      "numbers": {
+        "topics": 3,
+        "added": 3,
+        "dropped": 0
+      },
+      "problems": [
+        "Subagent WebFetch calls to Commons and the V&A hit unanswered permission prompts; curl from Bash worked",
+        "Could not fix the two site problems or the test's Chromium lookup: site/ and tools/ are off limits",
+        "Run-log validator rejects role social-editor; its row moved to notes"
+      ]
+    }
+  ],
+  "notes": [
+    "Copenhagen date is 2026-10-23 (run started 00:55 CEST); the site footer and tester use UTC and read 2026-10-22.",
+    "All three researchers were partial for pictures; only lounge-suit has a picture tonight (a drawn plate).",
+    "heritage-revival has period.from 2004 and no end year; sources disagree on when it ended.",
+    "Social editor (sonnet) ok: lounge-suit carousel, 3 slides, caption 597 characters, 8 hashtags in social/2026-10-23/; slide 3 shows '?' frames for unwritten ids (No tails, Long front dart, Morning coats). Logged here because the validator does not accept the role social-editor.",
+    "Still needs Lasse (site/ and tools/, which the run may not edit; also reported 2026-10-22): blank entry-page panel for pictureless entries; no separator between Connections links; findChromium misses chrome-linux64 so plain npm test fails; add social-editor to run-log roles; visual-reviewer brief names screenshots the tests no longer make."
+  ]
+}

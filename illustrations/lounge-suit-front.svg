@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720">
+  <!-- Lounge jacket, late Victorian, front, technical flat. Classes: see STYLE.md.
+       Drawn from the research notes only: single-breasted, high opening with small notched
+       lapels, four buttons, the fronts hanging straight and rounded at the hem, four
+       flapped pockets, a long front dart in place of a waist seam, edge stitching, no tails.
+       Pocket placement is the illustrator's choice; the sources give only the count.
+       Proportions, not measurements. -->
+
+  <!-- sleeves -->
+  <path class="cloth" d="M142,118 C158,116 188,124 208,140 L212,400 L184,606 L122,600 C104,470 104,280 142,118 Z"/>
+  <path class="cloth" d="M458,118 C442,116 412,124 392,140 L388,400 L416,606 L478,600 C496,470 496,280 458,118 Z"/>
+  <path class="fold" d="M128,250 C124,320 122,380 122,440 M472,250 C476,320 478,380 478,440"/>
+
+  <!-- body: lightly shaped at the waist, no waist seam, no tails; fronts hang straight and round off at the hem -->
+  <path class="cloth" d="M256,80 C210,92 172,106 142,118 C152,176 182,250 186,300 C190,360 196,400 196,430 C194,520 188,600 184,672 C206,676 232,677 254,676 C274,674 288,656 290,628 C292,656 310,674 346,676 C370,677 396,676 416,672 C412,600 406,520 404,430 C404,400 410,360 414,300 C418,250 448,176 458,118 C428,106 390,92 344,80 C323,72 277,72 256,80 Z"/>
+  <!-- front edge of the overlapping forepart, rounding off at the hem -->
+  <path class="line" d="M288,236 L288,600 C288,612 289,620 290,628"/>
+  <!-- edge stitching along the front edges -->
+  <path class="seam" d="M293,244 L293,628 C294,652 312,668 346,671"/>
+  <path class="seam" d="M254,671 C270,669 282,656 285,640"/>
+
+  <!-- long front darts, chest to hip, in place of a waist seam -->
+  <path class="line" d="M232,346 C230,410 230,470 234,538"/>
+  <path class="line" d="M368,346 C370,410 370,470 366,538"/>
+
+  <!-- four flapped pockets: two at the chest, two at the hips -->
+  <path class="cloth" d="M206,312 L258,310 L258,330 C240,332 222,332 206,331 Z"/>
+  <path class="seam" d="M210,326 C226,328 242,328 254,326"/>
+  <path class="cloth" d="M342,310 L394,312 L394,331 C378,332 360,332 342,330 Z"/>
+  <path class="seam" d="M346,326 C358,328 374,328 390,326"/>
+  <path class="cloth" d="M202,540 L268,542 L266,570 C246,572 222,572 201,568 Z"/>
+  <path class="seam" d="M206,563 C224,566 246,566 262,564"/>
+  <path class="cloth" d="M398,540 L332,542 L334,570 C354,572 378,572 399,568 Z"/>
+  <path class="seam" d="M394,563 C376,566 354,566 338,564"/>
+
+  <!-- four buttons, fastening high -->
+  <circle class="button" cx="300" cy="254" r="6"/>
+  <circle class="button" cx="300" cy="314" r="6"/>
+  <circle class="button" cx="300" cy="374" r="6"/>
+  <circle class="button" cx="300" cy="432" r="6"/>
+
+  <!-- inside of the neck, between the roll lines -->
+  <path class="shade" d="M272,118 L275,104 C289,92 311,92 325,104 L328,118 C318,160 296,200 288,236 C284,200 278,160 272,118 Z"/>
+
+  <!-- small lapels, breaking above the top button -->
+  <path class="cloth" d="M288,236 C276,206 242,182 228,160 L262,148 L272,118 C278,160 284,200 288,236 Z"/>
+  <path class="cloth" d="M288,236 C306,206 344,180 360,158 L338,148 L328,118 C318,160 296,200 288,236 Z"/>
+  <path class="seam" d="M283,218 C275,200 248,180 234,161 M296,220 C310,200 336,182 352,162"/>
+
+  <!-- collar, its back seen over the neck; notches between collar and lapel points -->
+  <path class="cloth" d="M262,148 L248,140 C252,118 252,96 256,80 C277,72 323,72 344,80 C348,96 348,118 352,140 L338,148 L328,118 L325,104 C311,92 289,92 275,104 L272,118 Z"/>
+  <path class="seam" d="M253,136 C257,116 257,98 261,86 C279,80 321,80 339,86 C343,98 343,116 347,136"/>
+</svg>
